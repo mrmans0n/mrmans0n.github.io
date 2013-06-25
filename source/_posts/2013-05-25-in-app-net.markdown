@@ -1,0 +1,14 @@
+---
+layout: post
+title: "In App.net!"
+date: 2013-05-25 22:00
+comments: true
+categories: app.net
+---
+
+*Link*: [https://alpha.app.net/nlopez](https://alpha.app.net/nlopez)
+
+At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.
+
+So I’m 
+[@nlopez](https://alpha.app.net/nlopez), feel free to talk to me in there too.

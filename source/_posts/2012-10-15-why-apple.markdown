@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Why, Apple?"
+date: 2012-10-15 22:00
+comments: true
+categories: [xcode, rant]
+---
+
+I’m always forgetting to install Xcode’s 
+**Command Line Tools**
+ after every Xcode update.
+
+![](http://mrm.perry.es/uploads/admin/image/image/15/thumb_clt.png)
+
+I mean, if I install it once, why shouldn’t it be installed automatically after each update? Is it really that difficult?
+
+I remember with love and fluffy feelings how my life was before all this. The command line tools were always there, you never had to do anything special… Ah, better times.
+
+This post was powered by an awful day frustration.
