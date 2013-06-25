@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bikeshare | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/bikeshare/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-06-25T18:36:03+02:00</updated>
+  <updated>2013-06-25T18:38:24+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[BikeShare! for iOS]]></title>
@@ -140,38 +153,6 @@ REST methods I wanted in about 10 minutes of code.</p>
 <p>Moving from a class used in demand to a local service for handling the location with the app already in production wasn’t an easy task. Also I had the urge to tweak a little the user interface and improve some usability stuff, so a lot of time was invested in that area too.</p>
 
 <p>In short, a week and a half work used in solving issues pointed out by an already lost user. But now it’s better. And I’m glad he said so.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Presenting my new Android app: BikeShare!]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/07/15/presenting-my-new-android-app-bikeshare/"/>
-    <updated>2012-07-15T22:00:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/07/15/presenting-my-new-android-app-bikeshare</id>
-    <content type="html"><![CDATA[<p>I’ve been working in my free time lately coding a little app for
-<strong>Android 2.2+</strong>
- in order to train myself in some disciplines I’ve never had the chance to use, and… just because. Its name is
-<strong>BikeShare!</strong></p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/1/thumb_bikeshare_logo.png" alt="" /></p>
-
-<p>You can visit its web for more information:
-<a href="http://bikeshar.es">bikeshar.es</a></p>
-
-<p>For the lazy ones: it’s an app to use daily if you use public bikes in one of the 45 different supported cities. It allows you to favorite and see the details of all stations near you and helps you to find them if you don’t know the neighbourhood.</p>
-
-<p>I have a
-very big roadmap for this one, with lots of things I’d like to do, but I’ll see how is it working first. Don’t want to repeat past mistakes, when I only published things to the public after lots and lots and lots of features were done. Now
-<strong>I’ll start from a simple approach</strong>
- and I’ll see how it goes and what the users ask me to do.</p>
-
-<p>Probably one thing I’ll do either way will be to
-<strong>implement some widgets</strong>
- to the app.</p>
-
-<p>Well, I hope you like it – and you find it useful :)</p>
-
-<p><a href="http://play.google.com/store/apps/details?id=com.bikeshare"><img src="http://www.android.com/images/brand/get_it_on_play_logo_large.png" alt="Get it on Google Play" /></a></p>
 ]]></content>
   </entry>
   

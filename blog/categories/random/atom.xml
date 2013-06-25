@@ -4,7 +4,7 @@
   <title><![CDATA[Category: random | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/random/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-06-25T18:36:03+02:00</updated>
+  <updated>2013-06-25T18:38:24+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Changed my blog to Octopress]]></title>
@@ -80,29 +93,6 @@ IDE gets updated and improved, because we can’t find a shortcut or whatever, o
 VCS. We shouldn’t because we would have two problems then: the whining and the original problem.</p>
 
 <p>We have to keep learning, even if we’re not comfortable with it. If you want to be stuck, well, then maybe you should reconsider your career. No offense. Let’s get out of our comfort zone and improve ourselves!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why do people who can't read buy smartphones?]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/07/30/why-do-people-who-can-t-read-buy-smartphones/"/>
-    <updated>2012-07-30T22:00:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/07/30/why-do-people-who-can-t-read-buy-smartphones</id>
-    <content type="html"><![CDATA[<p>I know one must keep the cool in these situations but they make it hard. At least I know I must not answer, just ignoring them does the trick.</p>
-
-<p>Ah, well, haven’t said it yet. I’m talking about the people who
-<strong>punish your app</strong>
- in the stores (App Store and Google Play mainly) just because the app doesn’t do this or that: they just downloaded your app by its name and didn’t read the
-<strong>very first line of the description</strong>
-.
-“Oh, it’s crap, you can’t
-XXXX with this shit” it’s one of the most repeated statements, and of course it comes with the typical
-<strong>one star</strong>
- rating.</p>
-
-<p>There are a lot of useful comments though, the ones suggesting new features you haven’t even thought of are a perfect example. They are encouraged. Though even if you add the feature requested, some people don’t bother to update their comments, and it also bugs me a little bit. At least in the App Store you can see at first glance the comments of the current version because the others are a little bit hidden.</p>
-
-<p>Well, that’s about everything I wanted to rant about today.</p>
 ]]></content>
   </entry>
   

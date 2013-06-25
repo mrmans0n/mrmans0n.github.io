@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-06-25T18:36:03+02:00</updated>
+  <updated>2013-06-25T18:38:24+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Changed my blog to Octopress]]></title>
@@ -455,27 +468,6 @@ printing tutorials a gogo guys, experience agrees with me.</p>
 
 <p>Ah, man, I feel relieved now. I’ve got something to do to BikeShare! in the following days… remove the hacky part and
 do it right. At last.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What to look for if you want to improve your Android app]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/12/02/what-to-look-for-if-you-want-to-improve-your-android-app/"/>
-    <updated>2012-12-02T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/12/02/what-to-look-for-if-you-want-to-improve-your-android-app</id>
-    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://www.curious-creature.org/docs/android-performance-case-study-1.html">http://www.curious-creature.org/docs/android-performance-case-study-1.html</a></p>
-
-<p>I’ve been witness to some technical Android UI performance discussion between
-<a href="http://twitter.com/joenrv">Joaquim Vergès</a> (developer of the recently released and awesome Falcon Pro twitter client) and
-<a href="http://twitter.com/romainguy">Romain Guy</a> (Google Android engineer), and by reading them I realized
-<strong>how often we ignore some very clear guidelines that even lint tells us</strong>
- (such as overdrawing issues), that impact in the framerate of our scrolling in Android apps.</p>
-
-<p>After all the discussion, Romain Guy synthesized his analysis
-<a href="http://www.curious-creature.org/docs/android-performance-case-study-1.html">in a post in his web</a>.
-<strong>Very recommended reading</strong>
- for a Sunday morning
-IMHO.</p>
 ]]></content>
   </entry>
   
