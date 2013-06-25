@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changed my blog to Octopress]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress/"/>
+    <updated>2013-06-22T19:20:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;m kind of bored with the design stuff on my blog, so I just wanted to spice up things a little. Also, I&rsquo;ve wanted to try <em>Octopress</em> for a while&hellip; So what the heck, I wrote some export functions to my old blog, and programmed a little import script that converted all that info into Octopress compliant posts. So here it is.</p>
+
+<p>Now I&rsquo;ll have to <em>find a new design</em> that makes me feel at home, and everything will be ready.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New additions to the family]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family/"/>
+    <updated>2013-06-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family</id>
+    <content type="html"><![CDATA[<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[And this is how you sell a product]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/10/and-this-is-how-you-sell-a-product/"/>
+    <updated>2013-06-10T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/10/and-this-is-how-you-sell-a-product</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://www.apple.com/mac-pro/">http://www.apple.com/mac-pro/</a></p>
+
+<p>Despite what the impression today’s
+WWDC keynote left on me (not so great), one thing is clear:
+<a href="http://www.apple.com/mac-pro/">they know how to sell stuff</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[In App.net!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/25/in-app-net/"/>
+    <updated>2013-05-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/25/in-app-net</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://alpha.app.net/nlopez">https://alpha.app.net/nlopez</a></p>
+
+<p>At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.</p>
+
+<p>So I’m
+<a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
+    <updated>2013-05-17T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
+    <content type="html"><![CDATA[<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Address changed!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/04/address-changed/"/>
+    <updated>2013-05-04T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/04/address-changed</id>
+    <content type="html"><![CDATA[<p>Now instead of nlopez.in this site will be accessible through
+<a href="http://nlopez.io">nlopez.io</a>.</p>
+
+<p>The .in domain will work for some more time, though.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android's Camera Intent killing my Application]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application/"/>
+    <updated>2013-04-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application</id>
+    <content type="html"><![CDATA[<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! for iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios/"/>
+    <updated>2013-04-06T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
+
+<p>The wait seemed so long… 6 and a half days later,
+<strong>BikeShare! is on the App Store</strong>
+. As
+<a href="http://mrmans0n.github.io/shipping-as-fast-as-possible">I said it would</a> before.</p>
+
+<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
+
+<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
+
+<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
+    <updated>2013-03-19T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
+    <content type="html"><![CDATA[<p>I’ve been working in a
+<strong>clustering code ready for Maps v2</strong>
+, as I didn’t found any full example I could use in some of my apps.</p>
+
+<p>So here you have it: a working example of
+<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
+
+<p>All the
+<strong>setup instructions are in GitHub</strong>
+.</p>
+
+<p>You are more than welcome to change things, report issues and make pull requests!</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
+
+<p>Some screenshots of the example project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A basic Rails API with OAuth2]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2/"/>
+    <updated>2013-03-13T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">https://github.com/mrmans0n/oauth2-doorkeeper-for-api</a></p>
+
+<p>I’ve prepared (mostly for myself)
+<a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">a GitHub repo with a pretty basic Rails project featuring Bootstrap and Devise authentication</a> for the backend, and OAuth2 with Doorkeeper for the
+API. The
+API is prepared for versioning and has a pretty basic example for its use.</p>
+
+<p>Hopefully somebody other than me will find some use to it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is your code clean?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean</id>
+    <content type="html"><![CDATA[<p>I’ve been reading some technical stuff lately. My latest prey has been
+<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, by “Uncle Bob” Robert C. Martin.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/23/CleanCode.jpg" alt="" /></p>
+
+<p>It has been very revealing about a ton of stuff and made me think a lot about what I could improve, although I don’t 100% agree with everything Bob says. I’ve also applied some of the key points to the Android coding style I recently wrote for
+<a href="http://www.mobivery.com">Mobivery</a>, in the naming conventions for example.</p>
+
+<p>Well… It’s very recommended for everyone! I wish I read it in college.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interruptions suck!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://blog.ninlabs.com/2013/01/programmer-interrupted/">http://blog.ninlabs.com/2013/01/programmer-interrupted/</a></p>
+
+<p>Some time ago this article spread like wildfire, stating the scientific facts we all coders know but are too lazy to look for.</p>
+
+<p>What was my resolution then?</p>
+
+<p><a href="http://www.amazon.com/Sennheiser-HD-439-Auriculares-abiertos/dp/B005N8W1TM"><img src="http://mrm.perry.es/uploads/admin/image/image/24/thumb_sennheiser-439.jpg" alt="" /></a></p>
+
+<p>I bought them.</p>
+
+<p>I always try to get into the zone with good headphones and music (ahem, Spotify premium). That, and a little
+respect of the people around me do the magic. Also, closing Mail and Messages help a little. And caffeine. Aren’t we coders picky?</p>
+
+<p>An interrupted programmer is a buggy and angry one, and very prone to produce horrendous
+code smells our future selves would be suicidal with.
+<strong>Let us work, dammit!</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ditching Eclipse, at last]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/02/11/ditching-eclipse-at-last/"/>
+    <updated>2013-02-11T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/02/11/ditching-eclipse-at-last</id>
+    <content type="html"><![CDATA[<p>I’m kind of
+<strong>fed up with Eclipse</strong>
+. I acknowledge it’s a good
+IDE, but too broad and too cluttered for me.</p>
+
+<p>So after I returned to work after my forced leave, I finally got to put in practice one of my new year resolutions: switch to
+<a href="http://www.jetbrains.com/idea/">IntelliJ
+IDEA</a>. And when I finally got it to work with my maven setup it was all joy and happiness tears.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/22/darcula-minimized.png" alt="" /></p>
+
+<p>And also switched my Ruby / Rails
+IDE to
+<a href="http://www.jetbrains.com/ruby/">RubyMine 5</a>, though I haven’t bought it yet (still on trial though).</p>
+
+<p>But AppCode still doesn’t do it for me.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solving problems with rails-api and wrap_parameters]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters/"/>
+    <updated>2013-01-11T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters</id>
+    <content type="html"><![CDATA[<p>In the 0.0.3 version of
+<a href="https://github.com/rails-api/rails-api">rails-api</a> this issue is closed, but for previously generated code that doesn’t work anymore you have to do it manually.</p>
+
+<p>The crash I’m referring to is this one, that just happened to me while updating my gems in
+<a href="http://bikeshar.es">BikeShare</a> heroku app:</p>
+
+<p>rake aborted!</p>
+
+<pre><code>   undefined method `wrap_parameters' for ActionController::API:Class
+   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:8:in `block in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:26:in `block in on_load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `on_load'
+   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:7:in `&lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `block in load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:588:in `block (2 levels) in &lt;class:Engine&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `block in &lt;class:Engine&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `instance_exec'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `run'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:55:in `block in run_initializers'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `run_initializers'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:136:in `initialize!'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/railtie/configurable.rb:30:in `method_missing'
+   /tmp/build_25t936fvt5gh3/config/environment.rb:5:in `&lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `block in require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:103:in `require_environment!'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:93:in `block (2 levels) in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:60:in `block (3 levels) in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:29:in `block (2 levels) in &lt;top (required)&gt;'
+   Tasks: TOP =&gt; environment
+   (See full trace by running task with --trace)
+</code></pre>
+
+<p>If we read it carefully, it seems that it cannot find wrap_parameters method, so we have to make some changes in the file /config/initializers/wrap_parameters.rb, in the first block of code.</p>
+
+<p><strong>We must replace the /config/initializers/wrap_parameters.rb file with this one:</strong></p>
+
+<p>I’ve also posted this workaround in
+<a href="http://stackoverflow.com/questions/14088669/rails-api-app-no-methoderror-when-i-run-foreman-start/14276565#14276565">StackOverflow</a> for future reference.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code detox]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/27/code-detox/"/>
+    <updated>2012-12-27T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/27/code-detox</id>
+    <content type="html"><![CDATA[<p>Due to some health problems (I just recently underwent surgery) I’m stuck for
+<strong>almost a month without being able to code</strong>
+, and even write this lines is an ordeal – I’m doing it using one hand only.</p>
+
+<p>Thanks to all that I’m being able to detox of my last months non-stop coding antics, and improving my skills by reading technical stuff and new libraries.</p>
+
+<p><strong>Hopefully when I’m back I’ll be better than before. Never stop learning and improving yourself.</strong>
+ Kaizen!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Opensourced some old stuff]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/09/opensourced-some-old-stuff/"/>
+    <updated>2012-12-09T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/09/opensourced-some-old-stuff</id>
+    <content type="html"><![CDATA[<p>I’ve just found and posted in GitHub a pair of
+<strong>old and forgotten projects</strong>
+ I had around my HD:
+<a href="https://github.com/mrmans0n/ThumbCreator">ThumbCreator</a> and
+<a href="https://github.com/mrmans0n/Patchwerk">Patchwerk</a>.</p>
+
+<p>Both were developed with Visual Studio (C#). You wouldn’t believe how much I miss that
+IDE now that I’m stuck with Eclipse and Xcode.</p>
+
+<p><strong>They never were Opensource to begin with</strong>
+, but what the heck, they are simple and maybe someone will send some pull requests with improvements or fixes – In fact, you are encouraged to do so.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Do more, print less]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/06/do-more-print-less/"/>
+    <updated>2012-12-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/06/do-more-print-less</id>
+    <content type="html"><![CDATA[<p>I’ve come across many people who were always saying they were learning something but never accomplished anything. Always printing new tutorials, stashing them layer after layer in their tables, but never seemed to really get past transcribing a hello world in a new language. And a lot of trees were cut because of them and their paper heaps.</p>
+
+<p><strong>That “learning” method is wrong</strong>
+.</p>
+
+<p>You can’t learn by simply reading in our developer world. If you are learning a new design pattern, you have to implement in a real scenario. If you are learning a new language, you have to have an accomplishable goal neither easy or hard, just something in between. If you are learning a new technology, you have to put it into practice and experiment with it.</p>
+
+<p>Theory doesn’t work for most people, your coding brain isn’t made for that. You have to learn by being proactive, by
+<strong>doing things</strong>
+. Copying an example doesn’t work. You can use them as a base, sure, but you can’t just copy it. You have to play with it, experiment, change, try, fail, try again, fail again, and finally get what you want working.</p>
+
+<p>It was always this way with me: hitting a wall multiple times and then overcoming the obstacles. I can’t conceive any other way. And with all I’ve seen with the
+printing tutorials a gogo guys, experience agrees with me.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[At last! MapFragment is here!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here/"/>
+    <updated>2012-12-03T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html">http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html</a></p>
+
+<p>We suffered in silence for lots of time, but Google at last heard our cries.
+<strong>MapFragment</strong>
+ is here to stay!</p>
+
+<p>The new upgrade to the api features also
+<strong>PhotoSphere integration</strong>
+. but hey, that’s like the cherry on top of the cherry of a sundae.</p>
+
+<p>Ah, man, I feel relieved now. I’ve got something to do to BikeShare! in the following days… remove the hacky part and
+do it right. At last.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What to look for if you want to improve your Android app]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/02/what-to-look-for-if-you-want-to-improve-your-android-app/"/>
+    <updated>2012-12-02T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/02/what-to-look-for-if-you-want-to-improve-your-android-app</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://www.curious-creature.org/docs/android-performance-case-study-1.html">http://www.curious-creature.org/docs/android-performance-case-study-1.html</a></p>
+
+<p>I’ve been witness to some technical Android UI performance discussion between
+<a href="http://twitter.com/joenrv">Joaquim Vergès</a> (developer of the recently released and awesome Falcon Pro twitter client) and
+<a href="http://twitter.com/romainguy">Romain Guy</a> (Google Android engineer), and by reading them I realized
+<strong>how often we ignore some very clear guidelines that even lint tells us</strong>
+ (such as overdrawing issues), that impact in the framerate of our scrolling in Android apps.</p>
+
+<p>After all the discussion, Romain Guy synthesized his analysis
+<a href="http://www.curious-creature.org/docs/android-performance-case-study-1.html">in a post in his web</a>.
+<strong>Very recommended reading</strong>
+ for a Sunday morning
+IMHO.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: java | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changing values of attributes in Android only accessible by XML]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/06/13/changing-values-of-attributes-in-android-only-accessible-by-xml/"/>
+    <updated>2012-06-13T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/06/13/changing-values-of-attributes-in-android-only-accessible-by-xml</id>
+    <content type="html"><![CDATA[<p>I had to use today the
+<strong>cropToPadding</strong>
+ attribute for an ImageView in Android. It’s the way to go if you want to mimic
+Aspect Fill scaling with Clipped Subviews from iOS, by using it and
+<strong>centerCrop</strong>
+ as scaleType.</p>
+
+<p>For example, if I wanted to do it from a layout, it would be like this.</p>
+
+<p>Pretty simple.</p>
+
+<p>But the problem is… can I do this programmatically?</p>
+
+<p>The short answer is
+not directly. You have no setCropToPadding(true) in the
+API for
+<a href="http://developer.android.com/reference/android/widget/ImageView.html">ImageView</a>.</p>
+
+<p>So, if you want to set a value using a non-existent accessor, you have to do either inflating a style
+XML or with a little hack. I’m not fond of hacks because they tend to give you problems with unreleased versions of the OS, but in this case, it’s kind of a big deal working it out with
+XML defined attributes.</p>
+
+<p>The hacky way that saved my ass today is this.</p>
+
+<p>Worked like a charm.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing malformed JSON strings without quotation marks in its attribute name]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/06/05/fixing-malformed-json-strings-without-quotation-marks-in-its-attribute-name/"/>
+    <updated>2012-06-05T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/06/05/fixing-malformed-json-strings-without-quotation-marks-in-its-attribute-name</id>
+    <content type="html"><![CDATA[<p>Sometimes you find
+JSON web services that doesn’t respect the format, just because javascript and some parsers also work that way. But you want to use it with a parser that only allows strict implementations.</p>
+
+<p>So here you have a little piece of code that saved my butt (in Java). It uses String class
+<strong>replaceAll</strong>
+ method.</p>
+
+<p>malformedJson.replaceAll(&ldquo;(\s)*([a-zA-Z0-9_]+?):&rdquo;, &ldquo;\&rdquo;$2\&ldquo;:&rdquo;);</p>
+
+<p>I’m not the most knowledgeable guy with regular expressions but that one is simple enough.</p>
+]]></content>
+  </entry>
+  
+</feed>

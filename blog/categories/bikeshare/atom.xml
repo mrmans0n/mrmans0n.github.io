@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bikeshare | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/bikeshare/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! for iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios/"/>
+    <updated>2013-04-06T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
+
+<p>The wait seemed so long… 6 and a half days later,
+<strong>BikeShare! is on the App Store</strong>
+. As
+<a href="/shipping-as-fast-as-possible">I said it would</a> before.</p>
+
+<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
+
+<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
+
+<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! and its new features and UI improvements]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/11/18/bikeshare-and-its-new-features-and-ui-improvements/"/>
+    <updated>2012-11-18T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/11/18/bikeshare-and-its-new-features-and-ui-improvements</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://play.google.com/store/apps/details?id=com.bikeshare">https://play.google.com/store/apps/details?id=com.bikeshare</a></p>
+
+<p>Been working hard last week in my spare time, as
+<strong>I haven’t been able of disconnecting my brain after a month and a half non-stop working</strong>
+, in my beloved BikeShare! app.</p>
+
+<p>And I’ve accomplished a lot, in my kaizen and never-stop-learning style. I wanted to check out
+<strong>Heroku</strong>
+ for a rails app, and I wanted to use
+<strong>rails-api gem</strong>
+ for building some functionality without the web overhead in Rails, so I thought of building some services on top of BikeShare! such as
+<strong>comments for stations</strong>
+,
+<strong>problem reporting</strong>
+ and
+<strong>suggestions</strong>
+.</p>
+
+<p>Turns out I liked the experience very much so I’m already thinking of more
+magic I can do with it.</p>
+
+<p>That’s for server side. Client side I wanted to try
+<a href="http://www.springsource.org/spring-android">Spring for Android</a> for consuming my brand new
+REST service. So after some headaches with the
+<a href="http://jackson.codehaus.org/">Jackson</a> configuration needed for my DTOs I got it working. And it was awesome. With very little code I was able to consume all the
+REST methods I wanted in about 10 minutes of code.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/19/2012-11-18_17.38.28.png"><img src="http://mrm.perry.es/uploads/admin/image/image/19/thumb_2012-11-18_17.38.28.png" alt="" /></a>
+<a href="http://mrm.perry.es/uploads/admin/image/image/20/2012-11-18_17.36.22.png"><img src="http://mrm.perry.es/uploads/admin/image/image/20/thumb_2012-11-18_17.36.22.png" alt="" /></a></p>
+
+<p>The UI for comments is pretty simple, though I will be adding more sugar to it if it turns out to be used by people.</p>
+
+<p>I was gonna stop there for this major but I got rid of my lazyness and wanted to experiment a little more, now more UI based stuff. I’ve been wanting to use Android 3.0+ animations for quite a long time, and had starred
+<a href="http://nineoldandroids.com/">NineOldAndroids</a> in my GitHub for some time too, so it was time to try it for good.</p>
+
+<p>And what a pleasant surprise it was. I’ve been always whining about the animations in Android and how ugly the code for them had to be. But now that’s over. I’ve only used a few animation tricks in the app but it was a delight: simple and clean code, and pretty good performance too. But hey, let them come naturally.</p>
+
+<p>Then I realized
+<strong>I’ve come to despise the simple look of the lists of the app</strong>
+. First I tried to make a cooler favorites section. I like the Foursquare for Android look since the last major UI overhaul, so I tried to make something that resembled the “explore” tab from that app but with the look and feel of the app.</p>
+
+<p>But it’d be weird if only the favorite section had this style. What about the station list? It’s the most used part of the app, and it needed some love too.</p>
+
+<p>For starters, it was shameful it didn’t have any search capabilities. I always ended giving up when trying to add new stations to favorites, because I wasn’t able to find the stations far from home (or the current location whatsoever). That’s the first thing I did. Taking advantage of the recent support in
+<a href="http://actionbarsherlock.com/">ActionBarSherlock</a> of the SearchView it was pretty straightforward to implement.</p>
+
+<p>Then some new design was needed. So what about some “lite” version of the one already in favorites? Said and done.</p>
+
+<p>It’s as fast as before, and has some more relevant information added to it, such as the map background and the real name of the station (comes with the web service). In fact the searching is performed in both the name and the address of the station, so it’s easier to get the one you are looking for.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/17/2012-11-18_17.46.49.png"><img src="http://mrm.perry.es/uploads/admin/image/image/17/thumb_2012-11-18_17.46.49.png" alt="" /></a>
+<a href="http://mrm.perry.es/uploads/admin/image/image/18/2012-11-18_17.47.09.png"><img src="http://mrm.perry.es/uploads/admin/image/image/18/thumb_2012-11-18_17.47.09.png" alt="" /></a></p>
+
+<p>I really hope the users will like it, as I’m really proud of the result. Of course, in a week or so I’ll be pissed with a feature and I’ll want to change it. But hey, I also want the users to send suggestions and report problems with the respective new sections. That’s their raison d’être after all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Revamps and refactors for a lost user]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/15/revamps-and-refactors-for-a-lost-user/"/>
+    <updated>2012-09-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/15/revamps-and-refactors-for-a-lost-user</id>
+    <content type="html"><![CDATA[<p>Last week I was rebuilding almost from scratch some parts of
+<a href="https://play.google.com/store/apps/details?id=com.bikeshare">BikeShare!</a>, my public sharing app for Android.</p>
+
+<p>Overall the app was working okay but some user pointed out some sluggish behavior and problems with location handling, that forced me to do an extensive refactor of the location listeners. He did so with an always hated one star rating.</p>
+
+<p>Moving from a class used in demand to a local service for handling the location with the app already in production wasn’t an easy task. Also I had the urge to tweak a little the user interface and improve some usability stuff, so a lot of time was invested in that area too.</p>
+
+<p>In short, a week and a half work used in solving issues pointed out by an already lost user. But now it’s better. And I’m glad he said so.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Presenting my new Android app: BikeShare!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/07/15/presenting-my-new-android-app-bikeshare/"/>
+    <updated>2012-07-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/07/15/presenting-my-new-android-app-bikeshare</id>
+    <content type="html"><![CDATA[<p>I’ve been working in my free time lately coding a little app for
+<strong>Android 2.2+</strong>
+ in order to train myself in some disciplines I’ve never had the chance to use, and… just because. Its name is
+<strong>BikeShare!</strong></p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/1/thumb_bikeshare_logo.png" alt="" /></p>
+
+<p>You can visit its web for more information:
+<a href="http://bikeshar.es">bikeshar.es</a></p>
+
+<p>For the lazy ones: it’s an app to use daily if you use public bikes in one of the 45 different supported cities. It allows you to favorite and see the details of all stations near you and helps you to find them if you don’t know the neighbourhood.</p>
+
+<p>I have a
+very big roadmap for this one, with lots of things I’d like to do, but I’ll see how is it working first. Don’t want to repeat past mistakes, when I only published things to the public after lots and lots and lots of features were done. Now
+<strong>I’ll start from a simple approach</strong>
+ and I’ll see how it goes and what the users ask me to do.</p>
+
+<p>Probably one thing I’ll do either way will be to
+<strong>implement some widgets</strong>
+ to the app.</p>
+
+<p>Well, I hope you like it – and you find it useful :)</p>
+
+<p><a href="http://play.google.com/store/apps/details?id=com.bikeshare"><img src="http://www.android.com/images/brand/get_it_on_play_logo_large.png" alt="Get it on Google Play" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

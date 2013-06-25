@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ios | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New additions to the family]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family/"/>
+    <updated>2013-06-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family</id>
+    <content type="html"><![CDATA[<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! for iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios/"/>
+    <updated>2013-04-06T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
+
+<p>The wait seemed so long… 6 and a half days later,
+<strong>BikeShare! is on the App Store</strong>
+. As
+<a href="/shipping-as-fast-as-possible">I said it would</a> before.</p>
+
+<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
+
+<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
+
+<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Every cloud has a silver lining]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/10/every-cloud-has-a-silver-lining/"/>
+    <updated>2012-09-10T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/10/every-cloud-has-a-silver-lining</id>
+    <content type="html"><![CDATA[<p>I’ve just been notified my latest compilation of an app submitted to the App Store was
+<strong>rejected</strong>
+. Well, shit happens, kinda expected it after two days in review.</p>
+
+<p>But what startled me was the reason: they said the app couldn’t be used without logging in and for registration purposed I was requesting personal information, like e-mail. Well, could be a valid reason, but I wrote on the
+review notes that the app could be used without logging in, and registering was free. Ten days it was
+waiting for review, ten days for nothing.</p>
+
+<p>Thank god I didn’t have a deadline for that project. Now I’ll just enjoy patiently the wait. Ah, the wait.</p>
+
+<p>But
+<strong>looking on the bright side</strong>
+, I could upload an improved version as 1.0 for it, faster and more reliable. See? It wasn’t all bad. I’m not that cranky (well, not all the time). Heh.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Working with Malcom library in iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/04/working-with-malcom-library-in-ios/"/>
+    <updated>2012-09-04T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/04/working-with-malcom-library-in-ios</id>
+    <content type="html"><![CDATA[<p>I’ve been working with
+<a href="https://github.com/MyMalcom/malcom-lib-ios">Malcom</a> library for quite some time at work, but I decided to use it for personal apps lately too.</p>
+
+<p>It’s what I call a
+<strong>problem-solver library</strong>
+, because with only one integration you have powerful analytics, a wrapper for your ads and
+VERY simplified notifications handling in iOS. You can take a peek to all of their features
+<a href="http://www.mymalcom.com/en/">in their website</a>.</p>
+
+<p>Programming-wise you only have to suffer a rather annoying configuration, but it’s totally worth your time. Once done, you can forget about it.</p>
+
+<h3>In your code</h3>
+
+<p>Use the static library downloaded from
+<a href="https://github.com/MyMalcom/malcom-lib-ios/tree/master/Libraries/static%20library/lib">this address</a> in your project, add these frameworks to your project (the real pain in the ass):</p>
+
+<p>*MediaPlayer.framework</p>
+
+<p>*AVFoundation.framework</p>
+
+<p>*CFNetwork.framework</p>
+
+<p>*SystemConfiguration.framework</p>
+
+<p>*MobileCoreServices.framework</p>
+
+<p>*QuartzCore.framework</p>
+
+<p>*CoreTelephony.framework</p>
+
+<p>*CoreLocation.framework</p>
+
+<p>*AudioToolbox.framework</p>
+
+<p>*MessageUI.framework</p>
+
+<p>*CoreGraphics.framework</p>
+
+<p>*libz.1.dylib</p>
+
+<p>*iAd.framework (only if you want ads from iAd in your project)Only two ministeps left.</p>
+
+<p>In your target, in your production scheme add in
+<strong>Other C Flags</strong>
+ section this flag:</p>
+
+<p>-DDISTRIBUTION=1</p>
+
+<p>And in
+<strong>Other link flags</strong>
+ add:</p>
+
+<p>-all_load -ObjC</p>
+
+<p>And, with everything configured properly, this simple code in
+<strong>application didFinishLaunchingWithOptions</strong>
+ of your
+<strong>AppDelegate</strong>
+ will do the trick:</p>
+
+<p>[MalcomLib initWithUUID:@&ldquo;MALCOM_GENERATED_APP_UUID&rdquo; andSecretKey:@&ldquo;YOUR_SECRET_KEY&rdquo; withAdId:@&ldquo;FILL_ONLY_IF_YOU_USE_ADS&rdquo;];</p>
+
+<h3>In the site</h3>
+
+<p>You can create a free account in
+<a href="https://malcom.mymalcom.com/en/registerform">their site</a>. Then you register your app, configure the modules you’d like to use and that’s all.</p>
+
+<h3>The magic</h3>
+
+<p>My most loved feature of it all: its push api. It takes away the annoyance of handling the apns server side. Take a look to its über simple
+API
+<a href="http://www-dev.mymalcom.com/resources-files/API-interna-APNS-v2_english.pdf">in this pdf file</a>.</p>
+
+<p>For example, with a simple curl like this one you can deliver a notification to all your users (in a sandbox environment).</p>
+
+<p>curl -i -H &ldquo;Accept: application/json&rdquo; -H &ldquo;Content-type: application/json&rdquo; -X POST -u my_malcom_login:my_malcom_password -d &lsquo;{&ldquo;push&rdquo;:{&ldquo;text&rdquo;:&ldquo;This is a test push message&rdquo;}}&rsquo;  <a href="https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push">https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push</a></p>
+
+<p>The push module is very complete, you can segment by user, by groups, tags, and whatever.</p>
+]]></content>
+  </entry>
+  
+</feed>

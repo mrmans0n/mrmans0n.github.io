@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: maven | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/maven/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
+    <updated>2013-05-17T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
+    <content type="html"><![CDATA[<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+]]></content>
+  </entry>
+  
+</feed>

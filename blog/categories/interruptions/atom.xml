@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: interruptions | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/interruptions/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Interruptions suck!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://blog.ninlabs.com/2013/01/programmer-interrupted/">http://blog.ninlabs.com/2013/01/programmer-interrupted/</a></p>
+
+<p>Some time ago this article spread like wildfire, stating the scientific facts we all coders know but are too lazy to look for.</p>
+
+<p>What was my resolution then?</p>
+
+<p><a href="http://www.amazon.com/Sennheiser-HD-439-Auriculares-abiertos/dp/B005N8W1TM"><img src="http://mrm.perry.es/uploads/admin/image/image/24/thumb_sennheiser-439.jpg" alt="" /></a></p>
+
+<p>I bought them.</p>
+
+<p>I always try to get into the zone with good headphones and music (ahem, Spotify premium). That, and a little
+respect of the people around me do the magic. Also, closing Mail and Messages help a little. And caffeine. Aren’t we coders picky?</p>
+
+<p>An interrupted programmer is a buggy and angry one, and very prone to produce horrendous
+code smells our future selves would be suicidal with.
+<strong>Let us work, dammit!</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

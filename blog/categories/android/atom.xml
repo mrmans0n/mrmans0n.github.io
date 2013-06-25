@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: android | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New additions to the family]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family/"/>
+    <updated>2013-06-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family</id>
+    <content type="html"><![CDATA[<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
+    <updated>2013-05-17T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
+    <content type="html"><![CDATA[<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android's Camera Intent killing my Application]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application/"/>
+    <updated>2013-04-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application</id>
+    <content type="html"><![CDATA[<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
+    <updated>2013-03-19T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
+    <content type="html"><![CDATA[<p>I’ve been working in a
+<strong>clustering code ready for Maps v2</strong>
+, as I didn’t found any full example I could use in some of my apps.</p>
+
+<p>So here you have it: a working example of
+<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
+
+<p>All the
+<strong>setup instructions are in GitHub</strong>
+.</p>
+
+<p>You are more than welcome to change things, report issues and make pull requests!</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
+
+<p>Some screenshots of the example project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[At last! MapFragment is here!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here/"/>
+    <updated>2012-12-03T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html">http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html</a></p>
+
+<p>We suffered in silence for lots of time, but Google at last heard our cries.
+<strong>MapFragment</strong>
+ is here to stay!</p>
+
+<p>The new upgrade to the api features also
+<strong>PhotoSphere integration</strong>
+. but hey, that’s like the cherry on top of the cherry of a sundae.</p>
+
+<p>Ah, man, I feel relieved now. I’ve got something to do to BikeShare! in the following days… remove the hacky part and
+do it right. At last.</p>
+]]></content>
+  </entry>
+  
+</feed>

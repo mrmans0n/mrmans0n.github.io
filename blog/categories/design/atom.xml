@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/design/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-06-25T18:36:03+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Doing things right is worth mentioning]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/08/16/doing-things-right-is-worth-mentioning/"/>
+    <updated>2012-08-16T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/08/16/doing-things-right-is-worth-mentioning</id>
+    <content type="html"><![CDATA[<p>I’m always being told that
+<strong>it’s too difficult and even impossible make good interfaces and beautiful apps in Android</strong>
+. And I always say the same: given the time and the thought needed, it is more than possible.</p>
+
+<p>Lately more and more
+multi-platform apps are embracing
+<strong>Holo</strong>
+, and they are doing it right. For example, the last iteration of
+<a href="https://foursquare.com">foursquare</a> it’s a good example of a famous app doing things better.</p>
+
+<p>The most recent app, and the reason I’m writing this is
+<strong>Pinterest</strong>
+.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/11/thumb_pinterest.png" alt="" /></p>
+
+<p>They released their iOS app long time ago and Android was left behind, but I think it was worth, because
+<a href="https://play.google.com/store/apps/details?id=com.pinterest">they just released their Android app</a> and it’s
+gorgeous. Custom smooth animations, clever use of the Action Bar, slick design… It’s really a delight. It’s an example to follow, really, even with its rough edges (due to novelty).</p>
+
+<p>Too bad I don’t care about the social network itself.</p>
+]]></content>
+  </entry>
+  
+</feed>
