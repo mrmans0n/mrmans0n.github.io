@@ -9,9 +9,10 @@
   <meta name="author" content="Nacho Lopez">
 
   
-  <meta name="description" content="I’m always being told that
-it’s too difficult and even impossible make good interfaces and beautiful apps in Android
-. And I always say the same: &hellip;">
+  <meta name="description" content="I’ve been having problems with my latest Rails installation in my
+recently fresh installed Mountain Lion while doing a
+bundle install
+. $ bundle &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +80,240 @@ it’s too difficult and even impossible make good interfaces and beautiful apps
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/20/solving-a-hateful-error-with-the-installation-of-libv8-3-3-10-4/">Solving a Hateful Error With the Installation of Libv8 (3.3.10.4)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-20T22:00:00+02:00" pubdate data-updated="true">Aug 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I’ve been having problems with my latest Rails installation in my
+<strong>recently fresh installed</strong>
+ Mountain Lion while doing a
+<strong>bundle install</strong>
+.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Using rake (0.9.2.2)
+Using RedCloth (4.2.9)
+Using multi_json (1.2.0)
+Using activesupport (3.1.3)
+Using builder (3.0.0)
+Using i18n (0.6.0)
+Using activemodel (3.1.3)
+Using erubis (2.7.0)
+Using rack (1.3.6)
+Using rack-cache (1.2)
+Using rack-mount (0.8.3)
+Using rack-test (0.6.1)
+Using hike (1.2.1)
+Using tilt (1.3.3)
+Using sprockets (2.0.3)
+Using actionpack (3.1.3)
+Using mime-types (1.18)
+Using polyglot (0.3.3)
+Using treetop (1.4.10)
+Using mail (2.3.3)
+Using actionmailer (3.1.3)
+Using arel (2.2.3)
+Using tzinfo (0.3.32)
+Using activerecord (3.1.3)
+Using activeresource (3.1.3)
+Using ansi (1.4.2)
+Using bcrypt-ruby (3.0.1)
+Using will_paginate (3.0.3)
+Using bootstrap-will_paginate (0.0.7)
+Using bundler (1.1.5)
+Using coffee-script-source (1.2.0)
+Using execjs (1.3.0)
+Using coffee-script (2.2.0)
+Using rack-ssl (1.3.2)
+Using json (1.6.6)
+Using rdoc (3.12)
+Using thor (0.14.6)
+Using railties (3.1.3)
+Using coffee-rails (3.1.1)
+Using commonjs (0.2.5)
+Using gchartrb (0.8)
+Using jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.</p>
+
+<p>/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
+<strong><em> extconf.rb failed </em></strong>
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.</p>
+
+<p>Provided configuration options:</p>
+
+<pre><code>--with-opt-dir
+--without-opt-dir
+--with-opt-include
+--without-opt-include=${opt-dir}/include
+--with-opt-lib
+--without-opt-lib=${opt-dir}/lib
+--with-make-prog
+--without-make-prog
+--srcdir=.
+--curdir
+--ruby=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+</code></pre>
+
+<p>extconf.rb:13: uninitialized constant Gem (NameError)
+Checking for Python&hellip;</p>
+
+<p>Gem files will remain installed in /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4 for inspection.
+Results logged to /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4/ext/libv8/gem_make.out
+An error occured while installing libv8 (3.3.10.4), and Bundler cannot continue.
+Make sure that <code>gem install libv8 -v '3.3.10.4'</code> succeeds before bundling.</p>
+
+<p>After some headbanging against the wall, I’ve found that
+<a href="http://stackoverflow.com/questions/8126465/bundle-install-update-libv8-therubyracer-installation-fails-with-native-ex/8127559#8127559">it’s a common error</a> and I tried to solve it with some of the solutions there, like uninstalling therubyracer and libv8 gems. Didn’t worked.</p>
+
+<p>So I tried upgrading bundler.</p>
+
+<p>$ sudo gem install bundler &mdash;pre
+Successfully installed bundler-1.2.0.rc.2
+1 gem installed
+Installing ri documentation for bundler-1.2.0.rc.2&hellip;
+Installing RDoc documentation for bundler-1.2.0.rc.2&hellip;</p>
+
+<p>But didn’t do the trick. Then
+<strong>I checked my ruby and rails versions</strong>
+, and while rails was at its newest,
+<strong>my ruby installation was the one provided by Apple</strong>
+.</p>
+
+<p>$ ruby -v
+ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</p>
+
+<p>Then I realized I hadn’t installed rvm in my new installation of Mountain Lion, so
+<a href="https://rvm.io/rvm/install/">I did it as expected</a> : install it and use the newest ruby version.</p>
+
+<p>Then with this one…</p>
+
+<p>$ ruby -v
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.0.0]</p>
+
+<p>…I tried again to
+<strong>bundle install</strong>
+ and to my surprise, it was fixed. I lost precious work hours because of this, so I hope it helps you too.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Fetching git://github.com/seyhunak/twitter-bootstrap-rails.git
+remote: Counting objects: 2407, done.
+remote: Compressing objects: 100% (1221/1221), done.
+remote: Total 2407 (delta 1035), reused 2256 (delta 916)
+Receiving objects: 100% (2407/2407), 1.14 MiB | 616 KiB/s, done.
+Resolving deltas: 100% (1035/1035), done.
+Using rake (0.9.2.2)
+Installing RedCloth (4.2.9) with native extensions
+Installing multi_json (1.2.0)
+Installing activesupport (3.1.3)
+Installing builder (3.0.0)
+Installing i18n (0.6.0)
+Installing activemodel (3.1.3)
+Installing erubis (2.7.0)
+Installing rack (1.3.6)
+Installing rack-cache (1.2)
+Installing rack-mount (0.8.3)
+Installing rack-test (0.6.1)
+Installing hike (1.2.1)
+Installing tilt (1.3.3)
+Installing sprockets (2.0.3)
+Installing actionpack (3.1.3)
+Installing mime-types (1.18)
+Installing polyglot (0.3.3)
+Installing treetop (1.4.10)
+Installing mail (2.3.3)
+Installing actionmailer (3.1.3)
+Installing arel (2.2.3)
+Installing tzinfo (0.3.32)
+Installing activerecord (3.1.3)
+Installing activeresource (3.1.3)
+Installing ansi (1.4.2)
+Installing bcrypt-ruby (3.0.1) with native extensions
+Installing will_paginate (3.0.3)
+Installing bootstrap-will_paginate (0.0.7)
+Installing coffee-script-source (1.2.0)
+Installing execjs (1.3.0)
+Installing coffee-script (2.2.0)
+Installing rack-ssl (1.3.2)
+Installing json (1.6.6) with native extensions
+Installing rdoc (3.12)
+Installing thor (0.14.6)
+Installing railties (3.1.3)
+Installing coffee-rails (3.1.1)
+Installing commonjs (0.2.5)
+Installing gchartrb (0.8)
+Installing jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Installing therubyracer (0.10.0) with native extensions
+Installing less (2.1.0)
+Installing less-rails (2.2.0)
+Installing polyamorous (0.5.0)
+Installing meta_search (1.1.3)
+Installing mysql2 (0.3.11) with native extensions
+Using bundler (1.1.5)
+Installing rails (3.1.3)
+Installing sass (3.1.15)
+Installing sass-rails (3.1.6)
+Installing sqlite3 (1.3.5) with native extensions
+Installing turn (0.8.2)
+Using twitter-bootstrap-rails (2.0.4) from git://github.com/seyhunak/twitter-bootstrap-rails.git (at master)
+Installing uglifier (1.2.4)
+Your bundle is complete! Use <code>bundle show [gemname]</code> to see where a bundled gem is installed.
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:</p>
+
+<p>&lt;= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data &mdash;install
+ = 1.9.1 : gem install rdoc-data; rdoc-data &mdash;install</p>
+
+<blockquote><p>= 1.9.2 : nothing to do! Yay!</p></blockquote>
+
+<p>Post-install message from meta_search:</p>
+
+<p><strong><em> Thanks for installing MetaSearch! </em></strong>
+Be sure to check out <a href="http://metautonomo.us/projects/metasearch/">http://metautonomo.us/projects/metasearch/</a> for a
+walkthrough of MetaSearch&rsquo;s features, and click the donate button if
+you&rsquo;re feeling especially appreciative. It&rsquo;d help me justify this
+&ldquo;open source&rdquo; stuff to my lovely wife. :)</p>
+
+<p>I broke a sweat here. Specially when the
+<strong>installing libv8</strong>
+ part took like 2 minutes and I didn’t knew if it was going to work.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -314,7 +549,7 @@ app/controllers/contact_controller.rb:11:in `create&#8217;</p>
 
 <blockquote><p>User,</p></blockquote>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#111;&#x75;&#114;&#x2e;&#115;&#101;&#x6e;&#100;&#x65;&#x72;&#46;&#101;&#109;&#97;&#x69;&#x6c;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#46;">&#111;&#117;&#x72;&#x2e;&#x73;&#101;&#110;&#100;&#x65;&#114;&#x2e;&#x65;&#x6d;&#97;&#x69;&#x6c;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6f;&#117;&#x72;&#x2e;&#x73;&#101;&#x6e;&#100;&#101;&#x72;&#46;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;&#46;">&#111;&#x75;&#x72;&#x2e;&#115;&#x65;&#x6e;&#x64;&#101;&#x72;&#x2e;&#x65;&#109;&#97;&#x69;&#108;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
 
 <p>Sunday, July 29, 2012 6:55:17 PM
 GMT</p>
@@ -641,52 +876,6 @@ meetings. And there is the chance there are shitloads of them and then you’re 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/07/this-grinded-my-gears-a-lot/">This Grinded My Gears. .. a LOT</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-07T22:00:00+02:00" pubdate data-updated="true">Jul 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://twitter.com/_TheAway/status/221114784672776193">A friend of mine tweeted yesterday</a> about a conversation he overheard when he was having a coffee at a bar.</p>
-
-<p>They were talking about computer specialists in general, stating that none of us is good, and
-outrageously they asked for a wage over 700€/month. Seriously, I still don’t know what angered me more: the disdain or the ridiculous wage.</p>
-
-<p>We work in a field of expertise that always asks for more and we must be learning new things always or we are useless. There are few lines of work where this happens. We go to the university and we graduate knowing that in 5/10 years tops all we learnt technology-related is completely anachronic. Of course there are exceptions
-IMHO.</p>
-
-<p>But what the f*ck were they expecting offering less than 700€? Of course, if you hire someone offering less than what an intern is worth, you can never expect to have things done!</p>
-
-<p>That conversation was wrong in so many ways I’d better stop thinking about it and enjoy my weekend. A weekend where, of course, I’ll be learning new things.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -704,6 +893,10 @@ IMHO.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/07/new-bikeshare-for-android/">New BikeShare! For Android</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/25/no-more-time-selling/">No More Time Selling</a>
       </li>
     
@@ -717,10 +910,6 @@ IMHO.</p>
     
       <li class="post">
         <a href="/blog/2013/06/10/and-this-is-how-you-sell-a-product/">And This Is How You Sell a Product</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/25/in-app-net/">In App.net!</a>
       </li>
     
   </ul>

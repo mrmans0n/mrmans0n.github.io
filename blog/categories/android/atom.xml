@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-06-25T18:38:24+02:00</updated>
+  <updated>2013-07-07T18:00:34+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New BikeShare! for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android/"/>
+    <updated>2013-07-07T17:55:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
+
+<p><img src="http://mrm.perry.es/promo_big.png" alt="New twitter background and promo info picture" /></p>
+
+<p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
+
+<p>First, <strong>the icon</strong>.</p>
+
+<p><img src="http://mrm.perry.es/icon_app_v2.png" alt="BikeShare for Android icon" /></p>
+
+<p>It looks gorgeous in my HTC One display. It has also a XXHDPI version, tested in a Nexus 10, and looks awesome too.</p>
+
+<p>Then, the <strong>tablet UI</strong>.</p>
+
+<p><img src="http://mrm.perry.es/tablet_ui.png" alt="Tablet UI on Nexus 7" /></p>
+
+<p>All the main activities have been changed too, for both tablet and phone versions. New animations, new and better information display, and better list performance.</p>
+
+<p>And the <strong>butter</strong> too.</p>
+
+<p>The app internal communications until now were a bit of a mess IMHO. Now, with the usage of <a href="http://square.github.io/otto/">Otto</a> and local intents the hassle is pretty much over. I was obsessed with the wrong patterns here, and the update process felt sluggish.</p>
+
+<p>The way the fragments were being used also required a lot of memory and made the UI felt slower than it should have been.</p>
+
+<p>The lists were using ArrayAdapter instead of BaseAdapter, and that also changed. No listings were supposed to be updating from a non-UI thread, so it was pointless.</p>
+
+<p>The whole reengineering purpose was for a purpose. I wanted to be able to change stuff more often, and the code should be cleaner. And now it is, finally.</p>
+
+<p>I&rsquo;m happy with the result. I hope the minor hot-fixes streak that usually follows a major release is minimal this time…</p>
+
+<p>You can download it from the usual place: <a href="https://play.google.com/store/apps/details?id=com.bikeshare&amp;feature=search_result">Google Play</a>.</p>
+
+<p>As if.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New additions to the family]]></title>
@@ -137,26 +178,6 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
 <p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
 
 <p>Some screenshots of the example project.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[At last! MapFragment is here!]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here/"/>
-    <updated>2012-12-03T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/12/03/at-last-mapfragment-is-here</id>
-    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html">http://android-developers.blogspot.fr/2012/12/new-google-maps-android-api-now-part-of.html</a></p>
-
-<p>We suffered in silence for lots of time, but Google at last heard our cries.
-<strong>MapFragment</strong>
- is here to stay!</p>
-
-<p>The new upgrade to the api features also
-<strong>PhotoSphere integration</strong>
-. but hey, that’s like the cherry on top of the cherry of a sundae.</p>
-
-<p>Ah, man, I feel relieved now. I’ve got something to do to BikeShare! in the following days… remove the hacky part and
-do it right. At last.</p>
 ]]></content>
   </entry>
   
