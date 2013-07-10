@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-07-07T18:00:34+02:00</updated>
+  <updated>2013-07-10T19:09:56+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to fix a broken Android Studio SDK installation]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/"/>
+    <updated>2013-07-10T18:58:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation</id>
+    <content type="html"><![CDATA[<p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="na">idea.config.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/config</span>
+</span><span class='line'><span class="na">idea.system.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/system</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New BikeShare! for Android]]></title>
@@ -468,27 +490,6 @@ IDE now that I’m stuck with Eclipse and Xcode.</p>
 
 <p><strong>They never were Opensource to begin with</strong>
 , but what the heck, they are simple and maybe someone will send some pull requests with improvements or fixes – In fact, you are encouraged to do so.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Do more, print less]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/12/06/do-more-print-less/"/>
-    <updated>2012-12-06T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/12/06/do-more-print-less</id>
-    <content type="html"><![CDATA[<p>I’ve come across many people who were always saying they were learning something but never accomplished anything. Always printing new tutorials, stashing them layer after layer in their tables, but never seemed to really get past transcribing a hello world in a new language. And a lot of trees were cut because of them and their paper heaps.</p>
-
-<p><strong>That “learning” method is wrong</strong>
-.</p>
-
-<p>You can’t learn by simply reading in our developer world. If you are learning a new design pattern, you have to implement in a real scenario. If you are learning a new language, you have to have an accomplishable goal neither easy or hard, just something in between. If you are learning a new technology, you have to put it into practice and experiment with it.</p>
-
-<p>Theory doesn’t work for most people, your coding brain isn’t made for that. You have to learn by being proactive, by
-<strong>doing things</strong>
-. Copying an example doesn’t work. You can use them as a base, sure, but you can’t just copy it. You have to play with it, experiment, change, try, fail, try again, fail again, and finally get what you want working.</p>
-
-<p>It was always this way with me: hitting a wall multiple times and then overcoming the obstacles. I can’t conceive any other way. And with all I’ve seen with the
-printing tutorials a gogo guys, experience agrees with me.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-07-07T18:00:34+02:00</updated>
+  <updated>2013-07-10T19:09:56+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to fix a broken Android Studio SDK installation]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/"/>
+    <updated>2013-07-10T18:58:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation</id>
+    <content type="html"><![CDATA[<p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<p><code>ini
+idea.config.path=~/.AndroidStudioPreview/config
+idea.system.path=~/.AndroidStudioPreview/system
+</code></p>
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New BikeShare! for Android]]></title>
@@ -154,30 +174,6 @@ SNAPSHOT working on your local machine.</p>
 
 <p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
 JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
-    <updated>2013-03-19T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
-    <content type="html"><![CDATA[<p>I’ve been working in a
-<strong>clustering code ready for Maps v2</strong>
-, as I didn’t found any full example I could use in some of my apps.</p>
-
-<p>So here you have it: a working example of
-<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
-
-<p>All the
-<strong>setup instructions are in GitHub</strong>
-.</p>
-
-<p>You are more than welcome to change things, report issues and make pull requests!</p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
-
-<p>Some screenshots of the example project.</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Nacho Lopez">
 
   
-  <meta name="description" content="I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android. It&rsquo;s been my first approach to tablet &hellip;">
+  <meta name="description" content="It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/">How to Fix a Broken Android Studio SDK Installation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-10T18:58:00+02:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="na">idea.config.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/config</span>
+</span><span class='line'><span class="na">idea.system.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/system</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -528,53 +577,6 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/06/bikeshare-for-ios/">BikeShare! For iOS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-06T22:00:00+02:00" pubdate data-updated="true">Apr 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
-
-<p>The wait seemed so long… 6 and a half days later,
-<strong>BikeShare! is on the App Store</strong>
-. As
-<a href="/shipping-as-fast-as-possible">I said it would</a> before.</p>
-
-<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
-
-<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
-
-<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -590,6 +592,10 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/">How to Fix a Broken Android Studio SDK Installation</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/07/new-bikeshare-for-android/">New BikeShare! For Android</a>
       </li>
     
@@ -603,10 +609,6 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
     
       <li class="post">
         <a href="/blog/2013/06/15/new-additions-to-the-family/">New Additions to the Family</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/10/and-this-is-how-you-sell-a-product/">And This Is How You Sell a Product</a>
       </li>
     
   </ul>
