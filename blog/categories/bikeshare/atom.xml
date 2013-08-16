@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bikeshare | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/bikeshare/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New BikeShare! for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android/"/>
+    <updated>2013-07-07T17:55:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
+
+<p><img src="http://mrm.perry.es/promo_big.png" alt="New twitter background and promo info picture" /></p>
+
+<p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
+
+<p>First, <strong>the icon</strong>.</p>
+
+<p><img src="http://mrm.perry.es/icon_app_v2.png" alt="BikeShare for Android icon" /></p>
+
+<p>It looks gorgeous in my HTC One display. It has also a XXHDPI version, tested in a Nexus 10, and looks awesome too.</p>
+
+<p>Then, the <strong>tablet UI</strong>.</p>
+
+<p><img src="http://mrm.perry.es/tablet_ui.png" alt="Tablet UI on Nexus 7" /></p>
+
+<p>All the main activities have been changed too, for both tablet and phone versions. New animations, new and better information display, and better list performance.</p>
+
+<p>And the <strong>butter</strong> too.</p>
+
+<p>The app internal communications until now were a bit of a mess IMHO. Now, with the usage of <a href="http://square.github.io/otto/">Otto</a> and local intents the hassle is pretty much over. I was obsessed with the wrong patterns here, and the update process felt sluggish.</p>
+
+<p>The way the fragments were being used also required a lot of memory and made the UI felt slower than it should have been.</p>
+
+<p>The lists were using ArrayAdapter instead of BaseAdapter, and that also changed. No listings were supposed to be updating from a non-UI thread, so it was pointless.</p>
+
+<p>The whole reengineering purpose was for a purpose. I wanted to be able to change stuff more often, and the code should be cleaner. And now it is, finally.</p>
+
+<p>I&rsquo;m happy with the result. I hope the minor hot-fixes streak that usually follows a major release is minimal this time…</p>
+
+<p>You can download it from the usual place: <a href="https://play.google.com/store/apps/details?id=com.bikeshare&amp;feature=search_result">Google Play</a>.</p>
+
+<p>As if.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! for iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios/"/>
+    <updated>2013-04-06T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
+
+<p>The wait seemed so long… 6 and a half days later,
+<strong>BikeShare! is on the App Store</strong>
+. As
+<a href="/shipping-as-fast-as-possible">I said it would</a> before.</p>
+
+<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
+
+<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
+
+<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! and its new features and UI improvements]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/11/18/bikeshare-and-its-new-features-and-ui-improvements/"/>
+    <updated>2012-11-18T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/11/18/bikeshare-and-its-new-features-and-ui-improvements</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://play.google.com/store/apps/details?id=com.bikeshare">https://play.google.com/store/apps/details?id=com.bikeshare</a></p>
+
+<p>Been working hard last week in my spare time, as
+<strong>I haven’t been able of disconnecting my brain after a month and a half non-stop working</strong>
+, in my beloved BikeShare! app.</p>
+
+<p>And I’ve accomplished a lot, in my kaizen and never-stop-learning style. I wanted to check out
+<strong>Heroku</strong>
+ for a rails app, and I wanted to use
+<strong>rails-api gem</strong>
+ for building some functionality without the web overhead in Rails, so I thought of building some services on top of BikeShare! such as
+<strong>comments for stations</strong>
+,
+<strong>problem reporting</strong>
+ and
+<strong>suggestions</strong>
+.</p>
+
+<p>Turns out I liked the experience very much so I’m already thinking of more
+magic I can do with it.</p>
+
+<p>That’s for server side. Client side I wanted to try
+<a href="http://www.springsource.org/spring-android">Spring for Android</a> for consuming my brand new
+REST service. So after some headaches with the
+<a href="http://jackson.codehaus.org/">Jackson</a> configuration needed for my DTOs I got it working. And it was awesome. With very little code I was able to consume all the
+REST methods I wanted in about 10 minutes of code.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/19/2012-11-18_17.38.28.png"><img src="http://mrm.perry.es/uploads/admin/image/image/19/thumb_2012-11-18_17.38.28.png" alt="" /></a>
+<a href="http://mrm.perry.es/uploads/admin/image/image/20/2012-11-18_17.36.22.png"><img src="http://mrm.perry.es/uploads/admin/image/image/20/thumb_2012-11-18_17.36.22.png" alt="" /></a></p>
+
+<p>The UI for comments is pretty simple, though I will be adding more sugar to it if it turns out to be used by people.</p>
+
+<p>I was gonna stop there for this major but I got rid of my lazyness and wanted to experiment a little more, now more UI based stuff. I’ve been wanting to use Android 3.0+ animations for quite a long time, and had starred
+<a href="http://nineoldandroids.com/">NineOldAndroids</a> in my GitHub for some time too, so it was time to try it for good.</p>
+
+<p>And what a pleasant surprise it was. I’ve been always whining about the animations in Android and how ugly the code for them had to be. But now that’s over. I’ve only used a few animation tricks in the app but it was a delight: simple and clean code, and pretty good performance too. But hey, let them come naturally.</p>
+
+<p>Then I realized
+<strong>I’ve come to despise the simple look of the lists of the app</strong>
+. First I tried to make a cooler favorites section. I like the Foursquare for Android look since the last major UI overhaul, so I tried to make something that resembled the “explore” tab from that app but with the look and feel of the app.</p>
+
+<p>But it’d be weird if only the favorite section had this style. What about the station list? It’s the most used part of the app, and it needed some love too.</p>
+
+<p>For starters, it was shameful it didn’t have any search capabilities. I always ended giving up when trying to add new stations to favorites, because I wasn’t able to find the stations far from home (or the current location whatsoever). That’s the first thing I did. Taking advantage of the recent support in
+<a href="http://actionbarsherlock.com/">ActionBarSherlock</a> of the SearchView it was pretty straightforward to implement.</p>
+
+<p>Then some new design was needed. So what about some “lite” version of the one already in favorites? Said and done.</p>
+
+<p>It’s as fast as before, and has some more relevant information added to it, such as the map background and the real name of the station (comes with the web service). In fact the searching is performed in both the name and the address of the station, so it’s easier to get the one you are looking for.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/17/2012-11-18_17.46.49.png"><img src="http://mrm.perry.es/uploads/admin/image/image/17/thumb_2012-11-18_17.46.49.png" alt="" /></a>
+<a href="http://mrm.perry.es/uploads/admin/image/image/18/2012-11-18_17.47.09.png"><img src="http://mrm.perry.es/uploads/admin/image/image/18/thumb_2012-11-18_17.47.09.png" alt="" /></a></p>
+
+<p>I really hope the users will like it, as I’m really proud of the result. Of course, in a week or so I’ll be pissed with a feature and I’ll want to change it. But hey, I also want the users to send suggestions and report problems with the respective new sections. That’s their raison d’être after all.</p>
+]]></content>
+  </entry>
+  
+</feed>

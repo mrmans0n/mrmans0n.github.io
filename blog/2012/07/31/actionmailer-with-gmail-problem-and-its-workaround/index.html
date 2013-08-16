@@ -1,0 +1,224 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ActionMailer with GMail problem and its workaround - Nacho Lopez</title>
+	<meta name="author" content="Nacho Lopez">
+
+	
+	<meta name="description" content="ActionMailer With GMail Problem and Its Workaround I had a little problem today with one of my managed sites, one that was using
+ActionMailer for &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Nacho Lopez</a></h1>
+  
+    <h2>Awesome stuff for Android, iOS and Rails</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Rants and ramblings of a senior mobile developer
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/112276988873423078640" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/mrmans0n" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mrmans0n" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">ActionMailer With GMail Problem and Its Workaround</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I had a little problem today with one of my managed sites, one that was using
+<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
+Contact Us form using GMail’s
+SMTP.</p>
+
+<p>But reading server logs wasn’t very enlightening.</p>
+
+<p>$ tail log/production.log
+Completed 500 Internal Server Error in 533ms
+Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+):
+app/controllers/contact_controller.rb:11:in `create&#8217;</p>
+
+<p>And that was all. That line of code was a simple…</p>
+
+<p>NotificationsMailer.new_message(@message).deliver</p>
+
+<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
+
+<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
+
+<blockquote><p>User,</p></blockquote>
+
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x6f;&#117;&#x72;&#46;&#115;&#x65;&#x6e;&#x64;&#101;&#x72;&#46;&#x65;&#109;&#x61;&#x69;&#108;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;&#x2e;">&#111;&#117;&#x72;&#x2e;&#x73;&#x65;&#110;&#x64;&#x65;&#114;&#x2e;&#101;&#109;&#97;&#105;&#x6c;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+
+<p>Sunday, July 29, 2012 6:55:17 PM
+GMT</p>
+
+<p>IP Address: 123.456.789.101</p>
+
+<p>Location: Paris, France</p>
+
+<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
+
+<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
+
+<p>Sincerely,</p>
+
+<p>The Google Accounts Team</p>
+
+<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
+<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
+, changed it in my configuration and everything worked again flawlessly.</p>
+
+<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Nacho Lopez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrm';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
+        var disqus_url = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32899498-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

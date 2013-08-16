@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: meetings | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/meetings/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meetings make a developer sad]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/07/09/meetings-make-a-developer-sad/"/>
+    <updated>2012-07-09T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/07/09/meetings-make-a-developer-sad</id>
+    <content type="html"><![CDATA[<p>But let me rephrase that. There are
+<strong>meetings</strong>
+ and there are
+meetings. And there is the chance there are shitloads of them and then you’re sad. Of course, daily meetings for status report are not up for discussion.</p>
+
+<p>When you are preparing a big estimation for a project where lots of things must be discussed, you should take whatever the time you need. That’s a fact.</p>
+
+<p>But too long meetings (without any kind of coffee time) or chained meetings is what drives us crazy. And specially when they are pointless. Yes, sure, we are psychotic and sociopaths who only like to code and not to socialize, whatever.</p>
+
+<p>I had a fearsome boss that made me tremble only by saying “let’s meet”. You knew you wouldn’t be able to get in the zone again that day, and your productivity was going to be absolutely nil. The meetings would be eternal, getting longer and longer for the most absurd things. He hadn’t a technical profile, but still…</p>
+
+<p>So, to conclude: Meetings,
+<strong>yes</strong>
+. Lots of them,
+<strong>no</strong>
+.</p>
+]]></content>
+  </entry>
+  
+</feed>

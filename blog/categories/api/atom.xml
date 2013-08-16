@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: api | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/api/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A basic Rails API with OAuth2]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2/"/>
+    <updated>2013-03-13T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">https://github.com/mrmans0n/oauth2-doorkeeper-for-api</a></p>
+
+<p>I’ve prepared (mostly for myself)
+<a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">a GitHub repo with a pretty basic Rails project featuring Bootstrap and Devise authentication</a> for the backend, and OAuth2 with Doorkeeper for the
+API. The
+API is prepared for versioning and has a pretty basic example for its use.</p>
+
+<p>Hopefully somebody other than me will find some use to it.</p>
+]]></content>
+  </entry>
+  
+</feed>

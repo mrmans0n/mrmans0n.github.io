@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: terminal | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/terminal/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deleting .svn references]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/06/21/deleting-svn-references/"/>
+    <updated>2012-06-21T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/06/21/deleting-svn-references</id>
+    <content type="html"><![CDATA[<p>I always forget this little snippet so…</p>
+
+<p>find . -name .svn -type d -print0 | xargs -0 rm -rf</p>
+
+<p>This will delete all .svn references in a directory and its subdirectories, no questions asked. Use with care.</p>
+]]></content>
+  </entry>
+  
+</feed>

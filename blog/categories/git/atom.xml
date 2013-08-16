@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Uploading existing unversioned code to a new repo on GitHub]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/05/13/uploading-existing-unversioned-code-to-a-new-repo-on-github/"/>
+    <updated>2012-05-13T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/05/13/uploading-existing-unversioned-code-to-a-new-repo-on-github</id>
+    <content type="html"><![CDATA[<p>I always seem to forget how to solve this problem, and it always starts the same way: me wanting to upload an already existent code to my repository. In case you never did this you should probably follow
+<a href="http://help.github.com/mac-set-up-git/">GitHub’s tutorial</a> first.</p>
+
+<p>Basically the setup is as follows:</p>
+
+<p>$ git init
+$ git commit -am &ldquo;Initial commit.&rdquo;
+$ git remote add origin git git@github.com:your_user/YourProject.git
+$ git push -u origin master</p>
+
+<p>But sometimes, if you’ve created the repository on GitHub and used their automatic generation of
+<strong>README.md</strong>
+ and
+<strong>.gitignore</strong>
+ files, you can get this fugly error:</p>
+
+<p>$ git push -u origin master
+To git@github.com:your_user/YourProject.git
+ ! [rejected]        master &ndash;> master (non-fast-forward)
+error: failed to push some refs to &lsquo;git@github.com:your_user/YourProject.git&rsquo;
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. &lsquo;git pull&rsquo;) before pushing again.  See the
+&lsquo;Note about fast-forwards&rsquo; section of &lsquo;git push &mdash;help&rsquo; for details.</p>
+
+<p>Meaning
+there is some stuff here that differs with your local repo and I don’t know what the fuck should I do with it.</p>
+
+<p>The solution is simple and I always seem to forget it. You should pull from the remote first, and then push it again. It goes like this:</p>
+
+<p>$ git pull origin master
+From git@github.com:your_user/YourProject.git
+ * branch            master     &ndash;> FETCH_HEAD
+Merge made by the &lsquo;recursive&rsquo; strategy.
+ .gitignore |   16 ++++++++++++++++
+ README.md  |    4 ++++
+ 2 files changed, 20 insertions(+), 0 deletions(&ndash;)
+ create mode 100644 .gitignore
+ create mode 100644 README.md</p>
+
+<p>And then:</p>
+
+<p>$ git push
+Counting objects: 112, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (98/98), done.
+Writing objects: 100% (111/111), 1.03 MiB, done.
+Total 111 (delta 18), reused 0 (delta 0)
+To git@github.com:your_user/YourProject.git
+   fcb5a5b..960bd64  master &ndash;> master</p>
+
+<p>Problem solved.</p>
+
+<p>But beware, following these steps with a GitHub generated
+<strong>.gitignore</strong>
+ file would result in the
+gitignored files being uploaded. Either you download or create your own
+<strong>.gitignore</strong>
+ file prior to the first commit, or you delete them manually, like this:</p>
+
+<p>$ git rm &mdash;cached filename_to_delete</p>
+
+<p>For individual files, or this way:</p>
+
+<p>$ git rm -r &mdash;cached directory_to_delete/</p>
+
+<p>for directories. Then you should commit and push:</p>
+
+<p>$ git commit -am &ldquo;Deleted .gitignore files remotely&rdquo;
+$ git push</p>
+
+<p>Another problem solved.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Displaying git information in Rails]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/04/25/displaying-git-information-in-rails/"/>
+    <updated>2012-04-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/04/25/displaying-git-information-in-rails</id>
+    <content type="html"><![CDATA[<p>Here is a code snippet that placed within an initializer (for example, in
+<strong>git_info.rb</strong>
+ at /config/initializers path) can print in your app useful info about the current version of your web app and when it was pushed.</p>
+
+<p>You just have to print them wherever you want.
+<strong>GIT_BRANCH</strong>
+ is the branch deployed,
+<strong>GIT_COMMIT</strong>
+ is the long
+SHA hash of the last commit while
+<strong>GIT_REVISION</strong>
+ is its short
+SHA, and
+<strong>GIT_LASTUPDATE</strong>
+ is the formatted time when the last commit was pushed.</p>
+]]></content>
+  </entry>
+  
+</feed>

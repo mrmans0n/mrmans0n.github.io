@@ -1,1 +1,647 @@
-My Octopress Page is coming soon &hellip;
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Nacho Lopez</title>
+	<meta name="author" content="Nacho Lopez">
+
+	
+	<meta name="description" content="Jul 10th, 2013 android, android-studio How to Fix a Broken Android Studio SDK Installation It just happened to me. If you are in a situation where &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://mrmans0n.github.io/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Nacho Lopez</a></h1>
+  
+    <h2>Awesome stuff for Android, iOS and Rails</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Rants and ramblings of a senior mobile developer
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/112276988873423078640" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/mrmans0n" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mrmans0n" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-10T18:58:00+02:00" data-updated="true" itemprop="datePublished">Jul 10<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/android-studio/'>android-studio</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/" itemprop="url">How to Fix a Broken Android Studio SDK Installation</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="na">idea.config.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/config</span>
+</span><span class='line'><span class="na">idea.system.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/system</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T17:55:00+02:00" data-updated="true" itemprop="datePublished">Jul 7<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/bikeshare/'>bikeshare</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/07/07/new-bikeshare-for-android/" itemprop="url">New BikeShare! For Android</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
+
+<p><img src="http://mrm.perry.es/promo_big.png" alt="New twitter background and promo info picture" /></p>
+
+<p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
+
+<p>First, <strong>the icon</strong>.</p>
+
+<p><img src="http://mrm.perry.es/icon_app_v2.png" alt="BikeShare for Android icon" /></p>
+
+<p>It looks gorgeous in my HTC One display. It has also a XXHDPI version, tested in a Nexus 10, and looks awesome too.</p>
+
+<p>Then, the <strong>tablet UI</strong>.</p>
+
+<p><img src="http://mrm.perry.es/tablet_ui.png" alt="Tablet UI on Nexus 7" /></p>
+
+<p>All the main activities have been changed too, for both tablet and phone versions. New animations, new and better information display, and better list performance.</p>
+
+<p>And the <strong>butter</strong> too.</p>
+
+<p>The app internal communications until now were a bit of a mess IMHO. Now, with the usage of <a href="http://square.github.io/otto/">Otto</a> and local intents the hassle is pretty much over. I was obsessed with the wrong patterns here, and the update process felt sluggish.</p>
+
+<p>The way the fragments were being used also required a lot of memory and made the UI felt slower than it should have been.</p>
+
+<p>The lists were using ArrayAdapter instead of BaseAdapter, and that also changed. No listings were supposed to be updating from a non-UI thread, so it was pointless.</p>
+
+<p>The whole reengineering purpose was for a purpose. I wanted to be able to change stuff more often, and the code should be cleaner. And now it is, finally.</p>
+
+<p>I&rsquo;m happy with the result. I hope the minor hot-fixes streak that usually follows a major release is minimal this time…</p>
+
+<p>You can download it from the usual place: <a href="https://play.google.com/store/apps/details?id=com.bikeshare&amp;feature=search_result">Google Play</a>.</p>
+
+<p>As if.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-25T18:37:00+02:00" data-updated="true" itemprop="datePublished">Jun 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bikeshare/'>bikeshare</a>, <a class='category' href='/blog/categories/random/'>random</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/25/no-more-time-selling/" itemprop="url">No More Time Selling</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-22T19:20:00+02:00" data-updated="true" itemprop="datePublished">Jun 22<span>nd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/random/'>random</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/22/changed-my-blog-to-octopress/" itemprop="url">Changed My Blog to Octopress</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Well, I&rsquo;m kind of bored with the design stuff on my blog, so I just wanted to spice up things a little. Also, I&rsquo;ve wanted to try <em>Octopress</em> for a while&hellip; So what the heck, I wrote some export functions to my old blog, and programmed a little import script that converted all that info into Octopress compliant posts. So here it is.</p>
+
+<p>Now I&rsquo;ll have to <em>find a new design</em> that makes me feel at home, and everything will be ready.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-15T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 15<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/htc-one/'>htc-one</a>, <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/iphone-4s/'>iphone-4s</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/15/new-additions-to-the-family/" itemprop="url">New Additions to the Family</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-10T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 10<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/apple/'>apple</a>, <a class='category' href='/blog/categories/mac-pro/'>mac-pro</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/06/10/and-this-is-how-you-sell-a-product/" itemprop="url">And This Is How You Sell a Product</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><em>Link</em>: <a href="http://www.apple.com/mac-pro/">http://www.apple.com/mac-pro/</a></p>
+
+<p>Despite what the impression today’s
+WWDC keynote left on me (not so great), one thing is clear:
+<a href="http://www.apple.com/mac-pro/">they know how to sell stuff</a>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-25T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/app-dot-net/'>app.net</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/25/in-app-net/" itemprop="url">In App.net!</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><em>Link</em>: <a href="https://alpha.app.net/nlopez">https://alpha.app.net/nlopez</a></p>
+
+<p>At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.</p>
+
+<p>So I’m
+<a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-17T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 17<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/maven/'>maven</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/" itemprop="url">Android Maven Building Borked With Latest ADT 22</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-04T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 4<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/nlopez-dot-io/'>nlopez.io</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/04/address-changed/" itemprop="url">Address Changed!</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Now instead of nlopez.in this site will be accessible through
+<a href="http://nlopez.io">nlopez.io</a>.</p>
+
+<p>The .in domain will work for some more time, though.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-25T22:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/rant/'>rant</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/04/25/android-s-camera-intent-killing-my-application/" itemprop="url">Android&#8217;s Camera Intent Killing My Application</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+    
+        <a href="/blog/page/2/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Nacho Lopez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrm';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32899498-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

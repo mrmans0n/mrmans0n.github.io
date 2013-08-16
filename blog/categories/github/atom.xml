@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A basic Rails API with OAuth2]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2/"/>
+    <updated>2013-03-13T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">https://github.com/mrmans0n/oauth2-doorkeeper-for-api</a></p>
+
+<p>I’ve prepared (mostly for myself)
+<a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">a GitHub repo with a pretty basic Rails project featuring Bootstrap and Devise authentication</a> for the backend, and OAuth2 with Doorkeeper for the
+API. The
+API is prepared for versioning and has a pretty basic example for its use.</p>
+
+<p>Hopefully somebody other than me will find some use to it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Premium services]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/08/02/premium-services/"/>
+    <updated>2012-08-02T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/08/02/premium-services</id>
+    <content type="html"><![CDATA[<p>I’m subscribed to some
+<strong>premium services</strong>
+, and there are two that are
+literally essential to me as a developer. I’m talking about
+<a href="http://www.spotify.con">Spotify</a> and
+<a href="http://github.com">GitHub</a>.</p>
+
+<p>I’ve been an
+<strong>Spotify</strong>
+ subscriber for more than two years. I always code with music, call it white noise, call it whatever you want, I just need something on the background to let me focus and reach
+the zone.</p>
+
+<p>My music varies, it depends on the day and my mood. For analysis and more-thinking-than-coding moments, I usually end up listening to some OSTs like Mass Effect (
+<a href="http://open.spotify.com/album/3f4qclJfQLXc1xapUxUEJq">1</a>, 2 and
+<a href="http://open.spotify.com/album/4AqNrJQ3uSoonTUgvBQHMX">3</a>), Gothic 3,
+<a href="http://open.spotify.com/artist/6cadOIa5DTh6a5mGo5r4bh">Trent Reznor + Atticus Ross</a> soundtracks (
+<a href="http://open.spotify.com/album/0mAK8JyX2On5kLC3VMMgm7">TGWTDT</a> /
+<a href="http://open.spotify.com/album/1ijkFiMeHopKkHyvQCWxUa">The Social Network</a>),
+<a href="http://open.spotify.com/artist/0YC192cP3KPCRWx8zr8MfZ">Hans Zimmer OSTs</a> or some medleys like
+<a href="http://open.spotify.com/album/6mpHl6so8tgC8TLGXb8e2O">Video Games Live</a> and
+<a href="http://open.spotify.com/album/3bBCofH4VxHokZ6fRCgbGx">The Greatest Video Game Music</a>. For the moments of
+really awesome and destroyer coding I prefer something a little bit electronic like
+<a href="http://open.spotify.com/artist/1GwxXgEc6oxCKQ5wykWXFs">Prodigy</a>,
+<a href="http://open.spotify.com/artist/7MqnCTCAX6SsIYYdJCQj9B">Pendulum</a> or even more dark stuff like
+<a href="http://open.spotify.com/artist/3V4IvzRQYP5mzuVtkcHgVa">KMFDM</a>,
+<a href="http://open.spotify.com/artist/2KaW48xlLnXC2v8tvyhWsa">Amaranthe</a> or
+<a href="http://open.spotify.com/artist/0tQn2q1TIEenLgodtb8Nhx">Zeromancer</a>. But most of the time I listen to metal bands and even punk/punk rock, depends on the mood. Of course, I’m talking about coding hours. I also use it in my free time, ain’t it awesome?</p>
+
+<p>Also, I’ve been a
+<strong>GitHub</strong>
+ subscriber for some months now. I needed some private repos and it gave me the push I needed to throw my money to the screen. I like the idea and philosophy a lot. It’s our very own (developer’s) social network, and for some time it’s been my second code-related site in number of visits. Of course, the first is
+<a href="http://www.stackoverflow.com">StackOverflow</a>.</p>
+
+<p>And
+<a href="http://octodex.github.com/">Octocat</a> is fucking awesome.</p>
+
+<p>I also use a lot
+<strong>Evernote</strong>
+, but still not at the level needed to pay for it. But give me time…</p>
+]]></content>
+  </entry>
+  
+</feed>

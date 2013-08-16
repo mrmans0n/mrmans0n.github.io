@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: html5 | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Stranger in a strange land, that is HTML5]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/10/27/stranger-in-a-strange-land-that-is-html5/"/>
+    <updated>2012-10-27T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/10/27/stranger-in-a-strange-land-that-is-html5</id>
+    <content type="html"><![CDATA[<p>Lately I’ve been working in a multiplatform app using HTML5, me being a native enthusiast.</p>
+
+<p>And yes, it’s
+<strong>cheaper and faster</strong>
+, and whatever you want… but
+<strong>I still don’t quite like it for “serious” apps</strong>
+. With serious I mean well crafted and smooth apps. I found discouraging the
+<strong>lack of control</strong>
+ you have, and everything you want to do right must use a bridge of communication with its native counterpart.</p>
+
+<p>I’m always being told that Titanium is cool, that PhoneGap is useful… I doubt it but I haven’t experienced it yet, because the app I’m working on will not use any kind of framework (besides jQuery).</p>
+
+<p>But hey, who am I to discuss this. Facebook is running away from it too! They should know what they are doing, right?</p>
+
+<p>At least I can state my opinion quite clearly: I prefer native all the way. Maybe it’s just me.</p>
+]]></content>
+  </entry>
+  
+</feed>

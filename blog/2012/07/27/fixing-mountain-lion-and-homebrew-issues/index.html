@@ -1,0 +1,217 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Fixing Mountain Lion and Homebrew issues - Nacho Lopez</title>
+	<meta name="author" content="Nacho Lopez">
+
+	
+	<meta name="description" content="Fixing Mountain Lion and Homebrew Issues Hiya. Like many of you I’ve just installed the brand new OS X version, Mountain Lion, but to my surprise it &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/2012/07/27/fixing-mountain-lion-and-homebrew-issues/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Nacho Lopez</a></h1>
+  
+    <h2>Awesome stuff for Android, iOS and Rails</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Rants and ramblings of a senior mobile developer
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/112276988873423078640" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/mrmans0n" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mrmans0n" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Fixing Mountain Lion and Homebrew Issues</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Hiya.</p>
+
+<p>Like many of you I’ve just installed the brand new OS X version, Mountain Lion, but to my surprise it borked my
+<a href="http://mxcl.github.com/homebrew/">Homebrew</a> installation, and with it my
+ImageMagick and even my
+git.</p>
+
+<p>After hours fighting I’ve found the solution to all my problems in a
+<a href="https://gist.github.com/1860902">gist</a></p>
+
+<p>Here it goes:</p>
+
+<p>Also remember to run this for upgrading all your soft.</p>
+
+<p>brew update
+brew upgrade</p>
+
+<p>Then I had problems installing
+git, Homebrew didn’t let me.</p>
+
+<p>~  brew update
+/usr/local/.git: Permission denied</p>
+
+<p>I’ve found the solution in this other
+<a href="https://gist.github.com/768518">gist</a>. As it’s just code, only by executing curl to its raw file the problem was solved.</p>
+
+<p>curl <a href="https://raw.github.com/gist/768518/c8ab96eab24829fa3bd8f8d4bba975f60c7d0079/fix_homebrew.rb">https://raw.github.com/gist/768518/c8ab96eab24829fa3bd8f8d4bba975f60c7d0079/fix_homebrew.rb</a> | ruby</p>
+
+<p>Then I tried to run my rails server, but RMagick was throwing some errors. I took a deep look and noticed ImageMagick was broken as well. So, time to Homebrew again.</p>
+
+<p>brew install imagemagick</p>
+
+<p>Got some problems also with linking because I came from some already-installed-but-not-properly-for-Mountain-Lion setup. But linking all the problematic stuff with -f flag did the trick. For example:</p>
+
+<p>brew link -f libtiff</p>
+
+<p>Then insisting and insisting with its installation, everything was properly installed again. Phew.</p>
+
+<p>Regards to all the authors of the gists I used. You guys are awesome.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Nacho Lopez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrm';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mrmans0n.github.io/blog/2012/07/27/fixing-mountain-lion-and-homebrew-issues/';
+        var disqus_url = 'http://mrmans0n.github.io/blog/2012/07/27/fixing-mountain-lion-and-homebrew-issues/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32899498-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

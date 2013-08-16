@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: android | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-08-16T12:28:36+02:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to fix a broken Android Studio SDK installation]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/"/>
+    <updated>2013-07-10T18:58:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation</id>
+    <content type="html"><![CDATA[<p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<p><code>ini
+idea.config.path=~/.AndroidStudioPreview/config
+idea.system.path=~/.AndroidStudioPreview/system
+</code></p>
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New BikeShare! for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android/"/>
+    <updated>2013-07-07T17:55:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
+
+<p><img src="http://mrm.perry.es/promo_big.png" alt="New twitter background and promo info picture" /></p>
+
+<p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
+
+<p>First, <strong>the icon</strong>.</p>
+
+<p><img src="http://mrm.perry.es/icon_app_v2.png" alt="BikeShare for Android icon" /></p>
+
+<p>It looks gorgeous in my HTC One display. It has also a XXHDPI version, tested in a Nexus 10, and looks awesome too.</p>
+
+<p>Then, the <strong>tablet UI</strong>.</p>
+
+<p><img src="http://mrm.perry.es/tablet_ui.png" alt="Tablet UI on Nexus 7" /></p>
+
+<p>All the main activities have been changed too, for both tablet and phone versions. New animations, new and better information display, and better list performance.</p>
+
+<p>And the <strong>butter</strong> too.</p>
+
+<p>The app internal communications until now were a bit of a mess IMHO. Now, with the usage of <a href="http://square.github.io/otto/">Otto</a> and local intents the hassle is pretty much over. I was obsessed with the wrong patterns here, and the update process felt sluggish.</p>
+
+<p>The way the fragments were being used also required a lot of memory and made the UI felt slower than it should have been.</p>
+
+<p>The lists were using ArrayAdapter instead of BaseAdapter, and that also changed. No listings were supposed to be updating from a non-UI thread, so it was pointless.</p>
+
+<p>The whole reengineering purpose was for a purpose. I wanted to be able to change stuff more often, and the code should be cleaner. And now it is, finally.</p>
+
+<p>I&rsquo;m happy with the result. I hope the minor hot-fixes streak that usually follows a major release is minimal this time…</p>
+
+<p>You can download it from the usual place: <a href="https://play.google.com/store/apps/details?id=com.bikeshare&amp;feature=search_result">Google Play</a>.</p>
+
+<p>As if.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New additions to the family]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family/"/>
+    <updated>2013-06-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family</id>
+    <content type="html"><![CDATA[<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
+    <updated>2013-05-17T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
+    <content type="html"><![CDATA[<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android's Camera Intent killing my Application]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application/"/>
+    <updated>2013-04-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application</id>
+    <content type="html"><![CDATA[<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+]]></content>
+  </entry>
+  
+</feed>
