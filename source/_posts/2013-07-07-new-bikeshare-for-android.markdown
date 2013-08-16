@@ -5,6 +5,7 @@ date: 2013-07-07 17:55
 comments: true
 categories: [android, bikeshare]
 featured: http://mrm.perry.es/promo_big.png
+sidebar: http://www.elvecinal.es/wp-content/uploads/2013/04/150413-parada-valenbisi.jpg
 ---
 
 I've recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android. 

@@ -18,4 +18,11 @@
 {% endif %}
 	<h1 class="title" itemprop="name">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
 	<div class="entry-content" itemprop="articleBody">{{ content }}</div>
+	{% if page.sidebar %}
+	<script type="text/javascript">
+			$(document).ready(function (){
+				$('.left-col').css("background-image","url('{{ page.sidebar }}')");
+			});
+	</script>
+	{% endif %}
 {% endif %}
