@@ -4,11 +4,10 @@ title: "New BikeShare! for Android"
 date: 2013-07-07 17:55
 comments: true
 categories: [android, bikeshare]
+featured: http://mrm.perry.es/promo_big.png
 ---
 
 I've recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android. 
-
-![New twitter background and promo info picture](http://mrm.perry.es/promo_big.png)
 
 It's been my first approach to tablet interfaces in my *off work* apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone. 
 
