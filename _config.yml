@@ -4,10 +4,10 @@
 
 url: http://mrmans0n.github.io
 title: Nacho Lopez
-subtitle: I do awesome stuff for iOS, Android and Rails
+subtitle: Awesome stuff for Android, iOS and Rails
 author: Nacho Lopez
 simple_search: http://google.com/search
-description: Nacho Lopez is a senior developer specialized in mobile applications, iOS and Android
+description: Rants and ramblings of a senior mobile developer
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: nacho@nlopez.io
 
 # ----------------------- #
 #    Jekyll & Plugins     #
