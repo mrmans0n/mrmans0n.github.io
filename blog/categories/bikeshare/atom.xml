@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bikeshare | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/bikeshare/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-08-16T13:11:28+02:00</updated>
+  <updated>2013-08-16T13:46:19+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -19,8 +19,6 @@
     <updated>2013-07-07T17:55:00+02:00</updated>
     <id>http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
-
-<p><img src="http://mrm.perry.es/promo_big.png" alt="New twitter background and promo info picture" /></p>
 
 <p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
 
