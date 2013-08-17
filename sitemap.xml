@@ -301,8 +301,14 @@
         <lastmod>2013-08-16T17:27:40+02:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://mrmans0n.github.io/blog/2013/08/17/is-fragmentation-really-that-much-of-a-problem-in-android/
+        </loc>
+        <lastmod>2013-08-17T17:48:35+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://mrmans0n.github.io/blog/archives/</loc>
-        <lastmod>2013-08-16T18:41:02+02:00</lastmod>
+        <lastmod>2013-08-17T17:48:35+02:00</lastmod>
     </url>
     <url>
         <loc>http://mrmans0n.github.io/blog/categories/</loc>
@@ -310,7 +316,7 @@
     </url>
     <url>
         <loc>http://mrmans0n.github.io/</loc>
-        <lastmod>2013-08-16T18:41:02+02:00</lastmod>
+        <lastmod>2013-08-17T17:48:35+02:00</lastmod>
     </url>
     <url>
         <loc>http://mrmans0n.github.io/robots.txt</loc>

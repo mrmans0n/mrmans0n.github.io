@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-08-17T11:44:24+02:00</updated>
+  <updated>2013-08-17T17:48:44+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Is fragmentation really that much of a problem in Android?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/08/17/is-fragmentation-really-that-much-of-a-problem-in-android/"/>
+    <updated>2013-08-17T17:38:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/08/17/is-fragmentation-really-that-much-of-a-problem-in-android</id>
+    <content type="html"><![CDATA[<p>I always read the same and never-ending articles / posts / tweets about Android&rsquo;s fragmentation. The same <a href="http://opensignal.com/reports/fragmentation.php">boring infographics</a>, the same Google Play pie charts with Android version penetration, and always the same argument about how the developers are crazy about it, like if it&rsquo;s impossible to code because of that reason. But hey, <strong>I&rsquo;m a developer, and I couldn&rsquo;t care less</strong>.</p>
+
+<p>I&rsquo;m not gonna say there isn&rsquo;t any fragmentation at all, it would be a huge lie. There is, of course. But through the years <strong>Android tools and framework have improved A LOT</strong>, and they embrace fragmentation. The compatibility libraries help with the interesting framework APIs. The XML resources help with layouts for different types of screens, making us to be able to code once and display the information in many different ways, or with   graphical resources, by using XML drawables.</p>
+
+<p>It just takes a little more to get used to, coming from iOS programming for example, where everything is thought to be <em>pixel perfect</em> (though that&rsquo;s changing too, with the AutoLayout and the rumors about new types of screens in the next iPhone iterations, but still). You can&rsquo;t use hardcoded pixels to measure. You don&rsquo;t have a pretty IDE assuring that your layout is going to look perfect everywhere. You just have to take that to heart and build your interfaces avoiding things like textures and fixed sizes, in a truly responsive way.</p>
+
+<p>It&rsquo;s a little harder to do it when talking about SDK support, as we know iOS versions have a lot of traction very fast. But, in my case, as <a href="http://www.mobivery.com">Mobivery</a> has the policy of supporting the two latest major versions by default, I can&rsquo;t  code at work and use the latest APIs either. So it&rsquo;s pretty much the same for me, I have to wait to use NSAttributedString in a native way too. Oh, but wait, it happens the same as in Android: there is a TTTAtributedString which does pretty much the same. Just like ActionBarSherlock or NineOldAndroids or many others I use for Android development.</p>
+
+<p>As a little exercise left to the reader, just try to develop any universal app in iOS and the same app in Android. You will see how the actual code is pretty much the same, with the same exceptions. And now <strong>try to do it with a pure HTML5 app, and then kill yourself</strong>.</p>
+
+<p>Each platform has its perks.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to fix a broken Android Studio SDK installation]]></title>
@@ -151,27 +170,6 @@ SDK layout, mainly moving all the build tools to another directory, with the pre
 
 <p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
 SNAPSHOT working on your local machine.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android's Camera Intent killing my Application]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application/"/>
-    <updated>2013-04-25T22:00:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application</id>
-    <content type="html"><![CDATA[<p>Working with the camera
-<strong>is always a pain in the ass</strong>
-. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
-
-<p>But things
-<strong>got weird.</strong></p>
-
-<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
-<strong>the SO was killing the application</strong>
-. And it was, indeed.</p>
-
-<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
-JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
 ]]></content>
   </entry>
   

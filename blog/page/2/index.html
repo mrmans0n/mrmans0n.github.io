@@ -9,7 +9,9 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Apr 6th, 2013 bikeshare, ios BikeShare! For iOS Link: https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8 The wait seemed so long… &hellip;">
+	<meta name="description" content="Apr 25th, 2013 android, rant Android&#8217;s Camera Intent Killing My Application Working with the camera
+is always a pain in the ass
+. But at least &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +99,53 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-25T22:00:00+02:00" data-updated="true" itemprop="datePublished">Apr 25<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/rant/'>rant</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/04/25/android-s-camera-intent-killing-my-application/" itemprop="url">Android&#8217;s Camera Intent Killing My Application</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -557,51 +606,6 @@ IDE to
 
 <p><strong>Hopefully when I’m back I’ll be better than before. Never stop learning and improving yourself.</strong>
  Kaizen!</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-09T22:00:00+01:00" data-updated="true" itemprop="datePublished">Dec 9<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/c-sharp/'>c-sharp</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/12/09/opensourced-some-old-stuff/" itemprop="url">Opensourced Some Old Stuff</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I’ve just found and posted in GitHub a pair of
-<strong>old and forgotten projects</strong>
- I had around my HD:
-<a href="https://github.com/mrmans0n/ThumbCreator">ThumbCreator</a> and
-<a href="https://github.com/mrmans0n/Patchwerk">Patchwerk</a>.</p>
-
-<p>Both were developed with Visual Studio (C#). You wouldn’t believe how much I miss that
-IDE now that I’m stuck with Eclipse and Xcode.</p>
-
-<p><strong>They never were Opensource to begin with</strong>
-, but what the heck, they are simple and maybe someone will send some pull requests with improvements or fixes – In fact, you are encouraged to do so.</p>
 
 		
 		

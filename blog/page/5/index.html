@@ -9,7 +9,8 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Aug 22nd, 2012 xcode My XCode 4 Skin I use a lot my IDEs during everyday’s work, so I try to minimize the strain done to my eyes. And I find it more &hellip;">
+	<meta name="description" content="Sep 4th, 2012 ios, malcom, objective-c Working With Malcom Library in iOS I’ve been working with
+Malcom library for quite some time at work, but I &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +98,118 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-04T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 4<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/malcom/'>malcom</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/04/working-with-malcom-library-in-ios/" itemprop="url">Working With Malcom Library in iOS</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’ve been working with
+<a href="https://github.com/MyMalcom/malcom-lib-ios">Malcom</a> library for quite some time at work, but I decided to use it for personal apps lately too.</p>
+
+<p>It’s what I call a
+<strong>problem-solver library</strong>
+, because with only one integration you have powerful analytics, a wrapper for your ads and
+VERY simplified notifications handling in iOS. You can take a peek to all of their features
+<a href="http://www.mymalcom.com/en/">in their website</a>.</p>
+
+<p>Programming-wise you only have to suffer a rather annoying configuration, but it’s totally worth your time. Once done, you can forget about it.</p>
+
+<h3>In your code</h3>
+
+<p>Use the static library downloaded from
+<a href="https://github.com/MyMalcom/malcom-lib-ios/tree/master/Libraries/static%20library/lib">this address</a> in your project, add these frameworks to your project (the real pain in the ass):</p>
+
+<p>*MediaPlayer.framework</p>
+
+<p>*AVFoundation.framework</p>
+
+<p>*CFNetwork.framework</p>
+
+<p>*SystemConfiguration.framework</p>
+
+<p>*MobileCoreServices.framework</p>
+
+<p>*QuartzCore.framework</p>
+
+<p>*CoreTelephony.framework</p>
+
+<p>*CoreLocation.framework</p>
+
+<p>*AudioToolbox.framework</p>
+
+<p>*MessageUI.framework</p>
+
+<p>*CoreGraphics.framework</p>
+
+<p>*libz.1.dylib</p>
+
+<p>*iAd.framework (only if you want ads from iAd in your project)Only two ministeps left.</p>
+
+<p>In your target, in your production scheme add in
+<strong>Other C Flags</strong>
+ section this flag:</p>
+
+<p>-DDISTRIBUTION=1</p>
+
+<p>And in
+<strong>Other link flags</strong>
+ add:</p>
+
+<p>-all_load -ObjC</p>
+
+<p>And, with everything configured properly, this simple code in
+<strong>application didFinishLaunchingWithOptions</strong>
+ of your
+<strong>AppDelegate</strong>
+ will do the trick:</p>
+
+<p>[MalcomLib initWithUUID:@&ldquo;MALCOM_GENERATED_APP_UUID&rdquo; andSecretKey:@&ldquo;YOUR_SECRET_KEY&rdquo; withAdId:@&ldquo;FILL_ONLY_IF_YOU_USE_ADS&rdquo;];</p>
+
+<h3>In the site</h3>
+
+<p>You can create a free account in
+<a href="https://malcom.mymalcom.com/en/registerform">their site</a>. Then you register your app, configure the modules you’d like to use and that’s all.</p>
+
+<h3>The magic</h3>
+
+<p>My most loved feature of it all: its push api. It takes away the annoyance of handling the apns server side. Take a look to its über simple
+API
+<a href="http://www-dev.mymalcom.com/resources-files/API-interna-APNS-v2_english.pdf">in this pdf file</a>.</p>
+
+<p>For example, with a simple curl like this one you can deliver a notification to all your users (in a sandbox environment).</p>
+
+<p>curl -i -H &ldquo;Accept: application/json&rdquo; -H &ldquo;Content-type: application/json&rdquo; -X POST -u my_malcom_login:my_malcom_password -d &lsquo;{&ldquo;push&rdquo;:{&ldquo;text&rdquo;:&ldquo;This is a test push message&rdquo;}}&rsquo;  <a href="https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push">https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push</a></p>
+
+<p>The push module is very complete, you can segment by user, by groups, tags, and whatever.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -610,7 +723,7 @@ app/controllers/contact_controller.rb:11:in `create&#8217;</p>
 
 <blockquote><p>User,</p></blockquote>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x6f;&#117;&#x72;&#46;&#115;&#x65;&#x6e;&#x64;&#x65;&#114;&#46;&#101;&#109;&#97;&#105;&#x6c;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;&#46;">&#111;&#x75;&#x72;&#46;&#x73;&#x65;&#x6e;&#x64;&#x65;&#114;&#x2e;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;&#x2e;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#111;&#x75;&#114;&#46;&#x73;&#101;&#110;&#x64;&#x65;&#114;&#x2e;&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;&#46;">&#x6f;&#117;&#114;&#x2e;&#115;&#x65;&#x6e;&#100;&#x65;&#x72;&#46;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
 
 <p>Sunday, July 29, 2012 6:55:17 PM
 GMT</p>
@@ -817,64 +930,6 @@ old-droiders are more content with the ones they already installed.</p>
 
 <p>My thoughts are: should we focus on the people who won’t download apps, or to the new adopters / people with brand new phones?
 IMHO the latter are much more interesting.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-15T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 15<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/bikeshare/'>bikeshare</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/07/15/presenting-my-new-android-app-bikeshare/" itemprop="url">Presenting My New Android App: BikeShare!</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I’ve been working in my free time lately coding a little app for
-<strong>Android 2.2+</strong>
- in order to train myself in some disciplines I’ve never had the chance to use, and… just because. Its name is
-<strong>BikeShare!</strong></p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/1/thumb_bikeshare_logo.png" alt="" /></p>
-
-<p>You can visit its web for more information:
-<a href="http://bikeshar.es">bikeshar.es</a></p>
-
-<p>For the lazy ones: it’s an app to use daily if you use public bikes in one of the 45 different supported cities. It allows you to favorite and see the details of all stations near you and helps you to find them if you don’t know the neighbourhood.</p>
-
-<p>I have a
-very big roadmap for this one, with lots of things I’d like to do, but I’ll see how is it working first. Don’t want to repeat past mistakes, when I only published things to the public after lots and lots and lots of features were done. Now
-<strong>I’ll start from a simple approach</strong>
- and I’ll see how it goes and what the users ask me to do.</p>
-
-<p>Probably one thing I’ll do either way will be to
-<strong>implement some widgets</strong>
- to the app.</p>
-
-<p>Well, I hope you like it – and you find it useful :)</p>
-
-<p><a href="http://play.google.com/store/apps/details?id=com.bikeshare"><img src="http://www.android.com/images/brand/get_it_on_play_logo_large.png" alt="Get it on Google Play" /></a></p>
 
 		
 		
