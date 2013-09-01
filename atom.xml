@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-08-18T14:28:58+02:00</updated>
+  <updated>2013-09-01T17:58:12+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Things I don't like about working for clients]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/"/>
+    <updated>2013-09-01T17:51:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients</id>
+    <content type="html"><![CDATA[<p>In my experience working for clients I&rsquo;ve come to realize that most of the time they don&rsquo;t want the best app they can have. Or, at least, they don’t act that way. Most of them ignore willingly the fact that you know best, that you want them to succeed because it is your passion and your job to do so, and they don&rsquo;t take your advice when they should.</p>
+
+<p>It has been really heartbreaking to see some apps, that were meant to be awesome, to go down the drain and fail because the stubbornness of their handlers.</p>
+
+<p>I’ve seen a client remove a perfectly valid tabbar and change it for a dashboard menu in an iOS app. Yes, in 2013. Fun fact: it happened in a published app, and the changelog in the App Store stated that it was an <em>usability improvement</em>. Nuts.</p>
+
+<p>Trying to change the way things are done in the platform is a typical situation. Why use a picker when you could do an accordion? Why use a list when you could do a dropdown control? Why rely on the system locale settings when you can use buttons and selectors for changing the app language? I can&rsquo;t express how many times and how loud I wanted to scream <strong>an app is NOT A WEBSITE</strong>.</p>
+
+<p>Also wanting to have the <strong>same exact behavior in Android and iOS</strong> is another instant classic. The tabbar position or the navbar layout are the most hurt in this situation. You end up with the title I&rsquo;m the middle in Android or a lot of buttons I&rsquo;m the right side on iOS. One could argue that it gives the app consistency, and that it might not feel right. <strong>You, sir, are no Facebook.</strong> Or Twitter. Or Foursquare. You are not a trendsetter. Probably <strong>the users will use a lot of other apps before they install yours.</strong> And that&rsquo;s what makes this a bad idea. Users are used to their platforms! Mr. Client, if you don&rsquo;t believe me, <a href="https://plus.google.com/114892667463719782631/posts/PXGZ48VaqHz">believe Matías Duarte</a>. I think <a href="http://en.wikipedia.org/wiki/Matias_Duarte">he knows his stuff</a>.</p>
+
+<p>There are also situations when a client ask you to replicate (or blatantly copy) an existent app, and the base app is fugly or has crappy usability. You then show your proposal, with the intended functionality but with a decent UX design&hellip; and gets rejected. They want to copy the crap. You insist, but it doesn&rsquo;t matter. <strong>So shit gets copied in the end</strong>, sadly for you.</p>
+
+<p>All of these problems and absurd situations could be solved with little to none work &ndash; <strong>just be opened to suggestions!</strong> We&rsquo;re in the same boat, we want to make you a likable and usable app with gorgeous design. Let us, please! <strong>We&rsquo;d like to love working in your app!</strong></p>
+
+<p>And, of course, there are good clients too. Not everything is black or white, there are different shades in-between. But, sadly, they are a (very welcomed) minority.</p>
+
+<p>Anyway, working in personal side projects as an escape is pretty encouraged for avoiding the burn out. So the next post will be about <strong>a new project I&rsquo;m excited about</strong> and with lots of OSS goodness!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Is fragmentation really that much of a problem in Android?]]></title>
@@ -472,22 +497,6 @@ IDE to
 
 <p>I’ve also posted this workaround in
 <a href="http://stackoverflow.com/questions/14088669/rails-api-app-no-methoderror-when-i-run-foreman-start/14276565#14276565">StackOverflow</a> for future reference.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Code detox]]></title>
-    <link href="http://mrmans0n.github.io/blog/2012/12/27/code-detox/"/>
-    <updated>2012-12-27T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2012/12/27/code-detox</id>
-    <content type="html"><![CDATA[<p>Due to some health problems (I just recently underwent surgery) I’m stuck for
-<strong>almost a month without being able to code</strong>
-, and even write this lines is an ordeal – I’m doing it using one hand only.</p>
-
-<p>Thanks to all that I’m being able to detox of my last months non-stop coding antics, and improving my skills by reading technical stuff and new libraries.</p>
-
-<p><strong>Hopefully when I’m back I’ll be better than before. Never stop learning and improving yourself.</strong>
- Kaizen!</p>
 ]]></content>
   </entry>
   

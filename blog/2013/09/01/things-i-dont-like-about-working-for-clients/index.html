@@ -5,12 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>ActionMailer with GMail problem and its workaround - Nacho Lopez</title>
+	<title>Things I don't like about working for clients - Nacho Lopez</title>
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="ActionMailer With GMail Problem and Its Workaround I had a little problem today with one of my managed sites, one that was using
-ActionMailer for &hellip;">
+	<meta name="description" content="Things I Don't Like About Working for Clients In my experience working for clients I&rsquo;ve come to realize that most of the time they don&rsquo;t &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ ActionMailer for &hellip;">
 
 	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/">
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -98,52 +97,24 @@ ActionMailer for &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<h1 class="title" itemprop="name">ActionMailer With GMail Problem and Its Workaround</h1>
-	<div class="entry-content" itemprop="articleBody"><p>I had a little problem today with one of my managed sites, one that was using
-<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
-Contact Us form using GMail’s
-SMTP.</p>
+	<h1 class="title" itemprop="name">Things I Don't Like About Working for Clients</h1>
+	<div class="entry-content" itemprop="articleBody"><p>In my experience working for clients I&rsquo;ve come to realize that most of the time they don&rsquo;t want the best app they can have. Or, at least, they don’t act that way. Most of them ignore willingly the fact that you know best, that you want them to succeed because it is your passion and your job to do so, and they don&rsquo;t take your advice when they should.</p>
 
-<p>But reading server logs wasn’t very enlightening.</p>
+<p>It has been really heartbreaking to see some apps, that were meant to be awesome, to go down the drain and fail because the stubbornness of their handlers.</p>
 
-<p>$ tail log/production.log
-Completed 500 Internal Server Error in 533ms
-Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
-):
-app/controllers/contact_controller.rb:11:in `create&#8217;</p>
+<p>I’ve seen a client remove a perfectly valid tabbar and change it for a dashboard menu in an iOS app. Yes, in 2013. Fun fact: it happened in a published app, and the changelog in the App Store stated that it was an <em>usability improvement</em>. Nuts.</p>
 
-<p>And that was all. That line of code was a simple…</p>
+<p>Trying to change the way things are done in the platform is a typical situation. Why use a picker when you could do an accordion? Why use a list when you could do a dropdown control? Why rely on the system locale settings when you can use buttons and selectors for changing the app language? I can&rsquo;t express how many times and how loud I wanted to scream <strong>an app is NOT A WEBSITE</strong>.</p>
 
-<p>NotificationsMailer.new_message(@message).deliver</p>
+<p>Also wanting to have the <strong>same exact behavior in Android and iOS</strong> is another instant classic. The tabbar position or the navbar layout are the most hurt in this situation. You end up with the title I&rsquo;m the middle in Android or a lot of buttons I&rsquo;m the right side on iOS. One could argue that it gives the app consistency, and that it might not feel right. <strong>You, sir, are no Facebook.</strong> Or Twitter. Or Foursquare. You are not a trendsetter. Probably <strong>the users will use a lot of other apps before they install yours.</strong> And that&rsquo;s what makes this a bad idea. Users are used to their platforms! Mr. Client, if you don&rsquo;t believe me, <a href="https://plus.google.com/114892667463719782631/posts/PXGZ48VaqHz">believe Matías Duarte</a>. I think <a href="http://en.wikipedia.org/wiki/Matias_Duarte">he knows his stuff</a>.</p>
 
-<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
+<p>There are also situations when a client ask you to replicate (or blatantly copy) an existent app, and the base app is fugly or has crappy usability. You then show your proposal, with the intended functionality but with a decent UX design&hellip; and gets rejected. They want to copy the crap. You insist, but it doesn&rsquo;t matter. <strong>So shit gets copied in the end</strong>, sadly for you.</p>
 
-<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
+<p>All of these problems and absurd situations could be solved with little to none work &ndash; <strong>just be opened to suggestions!</strong> We&rsquo;re in the same boat, we want to make you a likable and usable app with gorgeous design. Let us, please! <strong>We&rsquo;d like to love working in your app!</strong></p>
 
-<blockquote><p>User,</p></blockquote>
+<p>And, of course, there are good clients too. Not everything is black or white, there are different shades in-between. But, sadly, they are a (very welcomed) minority.</p>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x6f;&#x75;&#x72;&#46;&#x73;&#x65;&#x6e;&#100;&#x65;&#114;&#x2e;&#101;&#109;&#x61;&#105;&#108;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;&#x2e;">&#111;&#117;&#x72;&#46;&#x73;&#101;&#x6e;&#x64;&#101;&#x72;&#46;&#101;&#109;&#97;&#105;&#108;&#64;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;&#x2e;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
-
-<p>Sunday, July 29, 2012 6:55:17 PM
-GMT</p>
-
-<p>IP Address: 123.456.789.101</p>
-
-<p>Location: Paris, France</p>
-
-<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
-
-<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
-
-<p>Sincerely,</p>
-
-<p>The Google Accounts Team</p>
-
-<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
-<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
-, changed it in my configuration and everything worked again flawlessly.</p>
-
-<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+<p>Anyway, working in personal side projects as an escape is pretty encouraged for avoiding the burn out. So the next post will be about <strong>a new project I&rsquo;m excited about</strong> and with lots of OSS goodness!</p>
 </div>
 	
 
@@ -192,8 +163,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
-        var disqus_url = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
+        var disqus_identifier = 'http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/';
+        var disqus_url = 'http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/';
         var disqus_script = 'embed.js';
       
     (function () {
