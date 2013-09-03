@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-09-01T17:58:12+02:00</updated>
+  <updated>2013-09-03T23:02:19+02:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing localio]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
+    <updated>2013-09-03T22:26:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there.
+<strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now.
+The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format</a> for this to work, though.</p>
+
+<p>An example of Locfile:</p>
+
+<figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">output_path</span> <span class="s1">&#39;Resources/Localizables/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">source</span> <span class="ss">:google_drive</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:spreadsheet</span> <span class="o">=&gt;</span> <span class="s1">&#39;[Localizables] My Project!&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:login</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_email@gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_password&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">formatting</span> <span class="ss">:smart</span> <span class="c1"># This is optional, formatting :smart is used by default.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its <a href="https://github.com/mrmans0n/localio">Github repo</a>.</p>
+
+<p>Cheers!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Things I don't like about working for clients]]></title>
@@ -438,65 +478,6 @@ IDE to
 <a href="http://www.jetbrains.com/ruby/">RubyMine 5</a>, though I haven’t bought it yet (still on trial though).</p>
 
 <p>But AppCode still doesn’t do it for me.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Solving problems with rails-api and wrap_parameters]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters/"/>
-    <updated>2013-01-11T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters</id>
-    <content type="html"><![CDATA[<p>In the 0.0.3 version of
-<a href="https://github.com/rails-api/rails-api">rails-api</a> this issue is closed, but for previously generated code that doesn’t work anymore you have to do it manually.</p>
-
-<p>The crash I’m referring to is this one, that just happened to me while updating my gems in
-<a href="http://bikeshar.es">BikeShare</a> heroku app:</p>
-
-<p>rake aborted!</p>
-
-<pre><code>   undefined method `wrap_parameters' for ActionController::API:Class
-   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:8:in `block in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:26:in `block in on_load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `on_load'
-   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:7:in `&lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `block in load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:588:in `block (2 levels) in &lt;class:Engine&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `block in &lt;class:Engine&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `instance_exec'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `run'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:55:in `block in run_initializers'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `run_initializers'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:136:in `initialize!'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/railtie/configurable.rb:30:in `method_missing'
-   /tmp/build_25t936fvt5gh3/config/environment.rb:5:in `&lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `block in require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:103:in `require_environment!'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:93:in `block (2 levels) in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:60:in `block (3 levels) in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:29:in `block (2 levels) in &lt;top (required)&gt;'
-   Tasks: TOP =&gt; environment
-   (See full trace by running task with --trace)
-</code></pre>
-
-<p>If we read it carefully, it seems that it cannot find wrap_parameters method, so we have to make some changes in the file /config/initializers/wrap_parameters.rb, in the first block of code.</p>
-
-<p><strong>We must replace the /config/initializers/wrap_parameters.rb file with this one:</strong></p>
-
-<p>I’ve also posted this workaround in
-<a href="http://stackoverflow.com/questions/14088669/rails-api-app-no-methoderror-when-i-run-foreman-start/14276565#14276565">StackOverflow</a> for future reference.</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Jul 25th, 2012 android Android 4.0+ With More Adoption Than Expected in New Apps I’ve been a little bit surprised lately watching the stats of my &hellip;">
+	<meta name="description" content="Jul 27th, 2012 homebrew, mountainlion, osx Fixing Mountain Lion and Homebrew Issues Hiya. Like many of you I’ve just installed the brand new OS X &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,79 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-27T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 27<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/homebrew/'>homebrew</a>, <a class='category' href='/blog/categories/mountainlion/'>mountainlion</a>, <a class='category' href='/blog/categories/osx/'>osx</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/27/fixing-mountain-lion-and-homebrew-issues/" itemprop="url">Fixing Mountain Lion and Homebrew Issues</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Hiya.</p>
+
+<p>Like many of you I’ve just installed the brand new OS X version, Mountain Lion, but to my surprise it borked my
+<a href="http://mxcl.github.com/homebrew/">Homebrew</a> installation, and with it my
+ImageMagick and even my
+git.</p>
+
+<p>After hours fighting I’ve found the solution to all my problems in a
+<a href="https://gist.github.com/1860902">gist</a></p>
+
+<p>Here it goes:</p>
+
+<p>Also remember to run this for upgrading all your soft.</p>
+
+<p>brew update
+brew upgrade</p>
+
+<p>Then I had problems installing
+git, Homebrew didn’t let me.</p>
+
+<p>~  brew update
+/usr/local/.git: Permission denied</p>
+
+<p>I’ve found the solution in this other
+<a href="https://gist.github.com/768518">gist</a>. As it’s just code, only by executing curl to its raw file the problem was solved.</p>
+
+<p>curl <a href="https://raw.github.com/gist/768518/c8ab96eab24829fa3bd8f8d4bba975f60c7d0079/fix_homebrew.rb">https://raw.github.com/gist/768518/c8ab96eab24829fa3bd8f8d4bba975f60c7d0079/fix_homebrew.rb</a> | ruby</p>
+
+<p>Then I tried to run my rails server, but RMagick was throwing some errors. I took a deep look and noticed ImageMagick was broken as well. So, time to Homebrew again.</p>
+
+<p>brew install imagemagick</p>
+
+<p>Got some problems also with linking because I came from some already-installed-but-not-properly-for-Mountain-Lion setup. But linking all the problematic stuff with -f flag did the trick. For example:</p>
+
+<p>brew link -f libtiff</p>
+
+<p>Then insisting and insisting with its installation, everything was properly installed again. Phew.</p>
+
+<p>Regards to all the authors of the gists I used. You guys are awesome.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -555,111 +628,6 @@ JSON web services that doesn’t respect the format, just because javascript and
 <p>malformedJson.replaceAll(&ldquo;(\s)*([a-zA-Z0-9_]+?):&rdquo;, &ldquo;\&rdquo;$2\&ldquo;:&rdquo;);</p>
 
 <p>I’m not the most knowledgeable guy with regular expressions but that one is simple enough.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-13T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 13<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/05/13/uploading-existing-unversioned-code-to-a-new-repo-on-github/" itemprop="url">Uploading Existing Unversioned Code to a New Repo on GitHub</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I always seem to forget how to solve this problem, and it always starts the same way: me wanting to upload an already existent code to my repository. In case you never did this you should probably follow
-<a href="http://help.github.com/mac-set-up-git/">GitHub’s tutorial</a> first.</p>
-
-<p>Basically the setup is as follows:</p>
-
-<p>$ git init
-$ git commit -am &ldquo;Initial commit.&rdquo;
-$ git remote add origin git git@github.com:your_user/YourProject.git
-$ git push -u origin master</p>
-
-<p>But sometimes, if you’ve created the repository on GitHub and used their automatic generation of
-<strong>README.md</strong>
- and
-<strong>.gitignore</strong>
- files, you can get this fugly error:</p>
-
-<p>$ git push -u origin master
-To git@github.com:your_user/YourProject.git
- ! [rejected]        master &ndash;> master (non-fast-forward)
-error: failed to push some refs to &lsquo;git@github.com:your_user/YourProject.git&rsquo;
-To prevent you from losing history, non-fast-forward updates were rejected
-Merge the remote changes (e.g. &lsquo;git pull&rsquo;) before pushing again.  See the
-&lsquo;Note about fast-forwards&rsquo; section of &lsquo;git push &mdash;help&rsquo; for details.</p>
-
-<p>Meaning
-there is some stuff here that differs with your local repo and I don’t know what the fuck should I do with it.</p>
-
-<p>The solution is simple and I always seem to forget it. You should pull from the remote first, and then push it again. It goes like this:</p>
-
-<p>$ git pull origin master
-From git@github.com:your_user/YourProject.git
- * branch            master     &ndash;> FETCH_HEAD
-Merge made by the &lsquo;recursive&rsquo; strategy.
- .gitignore |   16 ++++++++++++++++
- README.md  |    4 ++++
- 2 files changed, 20 insertions(+), 0 deletions(&ndash;)
- create mode 100644 .gitignore
- create mode 100644 README.md</p>
-
-<p>And then:</p>
-
-<p>$ git push
-Counting objects: 112, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (98/98), done.
-Writing objects: 100% (111/111), 1.03 MiB, done.
-Total 111 (delta 18), reused 0 (delta 0)
-To git@github.com:your_user/YourProject.git
-   fcb5a5b..960bd64  master &ndash;> master</p>
-
-<p>Problem solved.</p>
-
-<p>But beware, following these steps with a GitHub generated
-<strong>.gitignore</strong>
- file would result in the
-gitignored files being uploaded. Either you download or create your own
-<strong>.gitignore</strong>
- file prior to the first commit, or you delete them manually, like this:</p>
-
-<p>$ git rm &mdash;cached filename_to_delete</p>
-
-<p>For individual files, or this way:</p>
-
-<p>$ git rm -r &mdash;cached directory_to_delete/</p>
-
-<p>for directories. Then you should commit and push:</p>
-
-<p>$ git commit -am &ldquo;Deleted .gitignore files remotely&rdquo;
-$ git push</p>
-
-<p>Another problem solved.</p>
 
 		
 		

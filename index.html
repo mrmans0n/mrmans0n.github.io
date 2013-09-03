@@ -9,7 +9,7 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Sep 1st, 2013 rant, work Things I Don&#8217;t Like About Working for Clients In my experience working for clients I&rsquo;ve come to realize that &hellip;">
+	<meta name="description" content="Sep 3rd, 2013 gem, i18n, localization, ruby Introducing Localio In my head there has been around a lot of times the possibility of contributing to &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,72 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-03T22:26:00+02:00" data-updated="true" itemprop="datePublished">Sep 3<span>rd</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/i18n/'>i18n</a>, <a class='category' href='/blog/categories/localization/'>localization</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/09/03/introducing-localio/" itemprop="url">Introducing Localio</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there.
+<strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now.
+The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format</a> for this to work, though.</p>
+
+<p>An example of Locfile:</p>
+
+<figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">output_path</span> <span class="s1">&#39;Resources/Localizables/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">source</span> <span class="ss">:google_drive</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:spreadsheet</span> <span class="o">=&gt;</span> <span class="s1">&#39;[Localizables] My Project!&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:login</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_email@gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_password&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">formatting</span> <span class="ss">:smart</span> <span class="c1"># This is optional, formatting :smart is used by default.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its <a href="https://github.com/mrmans0n/localio">Github repo</a>.</p>
+
+<p>Cheers!</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -509,86 +575,6 @@ WWDC keynote left on me (not so great), one thing is clear:
 
 <p>So I’m
 <a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-17T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 17<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/maven/'>maven</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/" itemprop="url">Android Maven Building Borked With Latest ADT 22</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>There were some major changes to Android
-SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
-
-<p>But since the version of
-<strong>maven-android-plugin</strong>
- almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
-<strong>WORK</strong>
- and stuff.</p>
-
-<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
-
-<p>And that should do the trick.</p>
-
-<p>You should change your pom to reflect it, of course. For example:</p>
-
-<p>[&hellip;]</p>
-
-<pre><code>&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
-            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;3.6.0&lt;/version&gt;
-            &lt;extensions&gt;true&lt;/extensions&gt;
-            &lt;configuration&gt;
-                &lt;sdk&gt;
-                    &lt;platform&gt;17&lt;/platform&gt;
-                &lt;/sdk&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-        &lt;plugin&gt;
-            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-            &lt;version&gt;2.5&lt;/version&gt;
-            &lt;configuration&gt;
-                &lt;source&gt;1.6&lt;/source&gt;
-                &lt;target&gt;1.6&lt;/target&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre>
-
-<p>[&hellip;]</p>
-
-<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
-SNAPSHOT working on your local machine.</p>
 
 		
 		

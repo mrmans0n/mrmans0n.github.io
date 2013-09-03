@@ -9,8 +9,8 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="May 4th, 2013 nlopez.io Address Changed! Now instead of nlopez.in this site will be accessible through
-nlopez.io. The .in domain will work for some &hellip;">
+	<meta name="description" content="May 17th, 2013 android, maven Android Maven Building Borked With Latest ADT 22 There were some major changes to Android
+SDK layout, mainly moving &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,86 @@ nlopez.io. The .in domain will work for some &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-17T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 17<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/maven/'>maven</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/" itemprop="url">Android Maven Building Borked With Latest ADT 22</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -516,91 +596,6 @@ IDE to
 <a href="http://www.jetbrains.com/ruby/">RubyMine 5</a>, though I haven’t bought it yet (still on trial though).</p>
 
 <p>But AppCode still doesn’t do it for me.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-11T22:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 11<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters/" itemprop="url">Solving Problems With Rails-api and Wrap_parameters</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>In the 0.0.3 version of
-<a href="https://github.com/rails-api/rails-api">rails-api</a> this issue is closed, but for previously generated code that doesn’t work anymore you have to do it manually.</p>
-
-<p>The crash I’m referring to is this one, that just happened to me while updating my gems in
-<a href="http://bikeshar.es">BikeShare</a> heroku app:</p>
-
-<p>rake aborted!</p>
-
-<pre><code>   undefined method `wrap_parameters' for ActionController::API:Class
-   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:8:in `block in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:26:in `block in on_load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `on_load'
-   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:7:in `&lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `block in load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:588:in `block (2 levels) in &lt;class:Engine&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `block in &lt;class:Engine&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `instance_exec'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `run'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:55:in `block in run_initializers'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `each'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `run_initializers'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:136:in `initialize!'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/railtie/configurable.rb:30:in `method_missing'
-   /tmp/build_25t936fvt5gh3/config/environment.rb:5:in `&lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `block in require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:103:in `require_environment!'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:93:in `block (2 levels) in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:60:in `block (3 levels) in &lt;top (required)&gt;'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
-   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:29:in `block (2 levels) in &lt;top (required)&gt;'
-   Tasks: TOP =&gt; environment
-   (See full trace by running task with --trace)
-</code></pre>
-
-<p>If we read it carefully, it seems that it cannot find wrap_parameters method, so we have to make some changes in the file /config/initializers/wrap_parameters.rb, in the first block of code.</p>
-
-<p><strong>We must replace the /config/initializers/wrap_parameters.rb file with this one:</strong></p>
-
-<p>I’ve also posted this workaround in
-<a href="http://stackoverflow.com/questions/14088669/rails-api-app-no-methoderror-when-i-run-foreman-start/14276565#14276565">StackOverflow</a> for future reference.</p>
 
 		
 		

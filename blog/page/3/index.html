@@ -9,8 +9,8 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Dec 27th, 2012 random Code Detox Due to some health problems (I just recently underwent surgery) I’m stuck for
-almost a month without being able to &hellip;">
+	<meta name="description" content="Jan 11th, 2013 rails Solving Problems With Rails-api and Wrap_parameters In the 0.0.3 version of
+rails-api this issue is closed, but for previously &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,91 @@ almost a month without being able to &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-11T22:00:00+01:00" data-updated="true" itemprop="datePublished">Jan 11<span>th</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/01/11/solving-problems-with-rails-api-and-wrap_parameters/" itemprop="url">Solving Problems With Rails-api and Wrap_parameters</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>In the 0.0.3 version of
+<a href="https://github.com/rails-api/rails-api">rails-api</a> this issue is closed, but for previously generated code that doesn’t work anymore you have to do it manually.</p>
+
+<p>The crash I’m referring to is this one, that just happened to me while updating my gems in
+<a href="http://bikeshar.es">BikeShare</a> heroku app:</p>
+
+<p>rake aborted!</p>
+
+<pre><code>   undefined method `wrap_parameters' for ActionController::API:Class
+   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:8:in `block in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `instance_eval'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:36:in `execute_hook'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:26:in `block in on_load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/lazy_load_hooks.rb:25:in `on_load'
+   /tmp/build_25t936fvt5gh3/config/initializers/wrap_parameters.rb:7:in `&lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `block in load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:245:in `load'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:588:in `block (2 levels) in &lt;class:Engine&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/engine.rb:587:in `block in &lt;class:Engine&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `instance_exec'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:30:in `run'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:55:in `block in run_initializers'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `each'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/initializable.rb:54:in `run_initializers'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:136:in `initialize!'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/railtie/configurable.rb:30:in `method_missing'
+   /tmp/build_25t936fvt5gh3/config/environment.rb:5:in `&lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `block in require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:236:in `load_dependency'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/activesupport-3.2.11/lib/active_support/dependencies.rb:251:in `require'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:103:in `require_environment!'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/railties-3.2.11/lib/rails/application.rb:297:in `block (2 levels) in initialize_tasks'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:93:in `block (2 levels) in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:60:in `block (3 levels) in &lt;top (required)&gt;'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:23:in `invoke_or_reboot_rake_task'
+   /tmp/build_25t936fvt5gh3/vendor/bundle/ruby/1.9.1/gems/actionpack-3.2.11/lib/sprockets/assets.rake:29:in `block (2 levels) in &lt;top (required)&gt;'
+   Tasks: TOP =&gt; environment
+   (See full trace by running task with --trace)
+</code></pre>
+
+<p>If we read it carefully, it seems that it cannot find wrap_parameters method, so we have to make some changes in the file /config/initializers/wrap_parameters.rb, in the first block of code.</p>
+
+<p><strong>We must replace the /config/initializers/wrap_parameters.rb file with this one:</strong></p>
+
+<p>I’ve also posted this workaround in
+<a href="http://stackoverflow.com/questions/14088669/rails-api-app-no-methoderror-when-i-run-foreman-start/14276565#14276565">StackOverflow</a> for future reference.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -555,55 +640,6 @@ REST methods I wanted in about 10 minutes of code.</p>
 <p>The contest is over now. I hope we’ll win but doesn’t really matter: it was fun and rewarding by itself.</p>
 
 <p>At the moment we can’t disclose what’s it about but I’ll comment something when it’s out.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-27T22:00:00+02:00" data-updated="true" itemprop="datePublished">Oct 27<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/jquery/'>jquery</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/10/27/stranger-in-a-strange-land-that-is-html5/" itemprop="url">Stranger in a Strange Land, That Is HTML5</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Lately I’ve been working in a multiplatform app using HTML5, me being a native enthusiast.</p>
-
-<p>And yes, it’s
-<strong>cheaper and faster</strong>
-, and whatever you want… but
-<strong>I still don’t quite like it for “serious” apps</strong>
-. With serious I mean well crafted and smooth apps. I found discouraging the
-<strong>lack of control</strong>
- you have, and everything you want to do right must use a bridge of communication with its native counterpart.</p>
-
-<p>I’m always being told that Titanium is cool, that PhoneGap is useful… I doubt it but I haven’t experienced it yet, because the app I’m working on will not use any kind of framework (besides jQuery).</p>
-
-<p>But hey, who am I to discuss this. Facebook is running away from it too! They should know what they are doing, right?</p>
-
-<p>At least I can state my opinion quite clearly: I prefer native all the way. Maybe it’s just me.</p>
 
 		
 		
