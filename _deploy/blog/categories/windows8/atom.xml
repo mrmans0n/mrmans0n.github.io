@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: windows8 | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/windows8/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Magic Trackpad doing its magic on Windows 8]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/10/15/magic-trackpad-doing-its-magic-on-windows-8/"/>
+    <updated>2012-10-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/10/15/magic-trackpad-doing-its-magic-on-windows-8</id>
+    <content type="html"><![CDATA[<p>Windows 8 is better with touch controls, or so they say… and now I’m able to try it.</p>
+
+<p><a href="http://www.trackpadmagic.com/magic-trackpad/download">Magic Trackpad Control Panel for Windows</a> allowed me to configure my Magic Trackpad to work with the brand new Windows 8, and worked perfectly. I have my two finger scroll now. Yeah.</p>
+
+<p>Now I’ll have to wait until I can configure &frac34; finger gestures, assign one of them to show the new Metro style part, and everything will be perfect.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Two days but finally Windows 8 is alive and running]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/23/two-days-but-finally-windows-8-is-alive-and-running/"/>
+    <updated>2012-09-23T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/23/two-days-but-finally-windows-8-is-alive-and-running</id>
+    <content type="html"><![CDATA[<p>Yeah. Like installing an OS is like achieving something. Didn’t feel this sense of accomplishment since I installed my first Slackware back in… 1999 or something.</p>
+
+<p>Turns out what Windows 8 didn’t liked was other HDs plugged in. And also didn’t liked my pendrive with an microSD card on it. And S.M.A.R.T. enabled in the
+BIOS.
+<strong>Windows 8 is picky</strong>
+.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/13/cables.jpg"><img src="http://mrm.perry.es/uploads/admin/image/image/13/thumb_cables.jpg" alt="" /></a></p>
+
+<p>So I unplugged all the HDs and everything else, and it installed in a jiff.</p>
+
+<p>In the end, I wasted a complete weekend. But what the hell, I’m gonna enjoy Visual Studio 2012, that’s for sure.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Windows 8 is an odyssey]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/23/installing-windows-8-is-an-odyssey/"/>
+    <updated>2012-09-23T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/23/installing-windows-8-is-an-odyssey</id>
+    <content type="html"><![CDATA[<p>Some days I downloaded (finally) my copy of
+<strong>Windows 8</strong>
+ from
+MSAA as always and I’ve spent a lot of hours day trying to install it. No fucking clue.</p>
+
+<p>I tried to update my Windows 7 partition, the installer didn’t reported any kind of problem, everything went smooth until the installer needed to restart the computer. Then it all went south.</p>
+
+<p>Of course, it crashed the existent Windows 7 installation and had to format it losing all my data there.</p>
+
+<p>But it doesn’t matter what I try, I always get stuck at the same place when trying to tell the installer which partition to use:</p>
+
+<p>We couldn&rsquo;t create a new partition or locate an existing one</p>
+
+<p>It’s funny, because I have 7 HDs in my desktop computer. Believe me, there are partitions.</p>
+
+<p>I’ve tried everything to get rid of my problem. Changed some
+AHCI stuff in my bios. Failed. Tried to set up the drive directly using
+diskpart in a command shell. Failed. I even unplugged all the other drives. Failed.</p>
+
+<p>Well, I’ll keep on trying. But I’m getting sick of it.</p>
+]]></content>
+  </entry>
+  
+</feed>

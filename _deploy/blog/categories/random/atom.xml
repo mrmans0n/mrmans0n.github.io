@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: random | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/random/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Changed my blog to Octopress]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress/"/>
+    <updated>2013-06-22T19:20:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;m kind of bored with the design stuff on my blog, so I just wanted to spice up things a little. Also, I&rsquo;ve wanted to try <em>Octopress</em> for a while&hellip; So what the heck, I wrote some export functions to my old blog, and programmed a little import script that converted all that info into Octopress compliant posts. So here it is.</p>
+
+<p>Now I&rsquo;ll have to <em>find a new design</em> that makes me feel at home, and everything will be ready.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is your code clean?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean</id>
+    <content type="html"><![CDATA[<p>I’ve been reading some technical stuff lately. My latest prey has been
+<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, by “Uncle Bob” Robert C. Martin.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/23/CleanCode.jpg" alt="" /></p>
+
+<p>It has been very revealing about a ton of stuff and made me think a lot about what I could improve, although I don’t 100% agree with everything Bob says. I’ve also applied some of the key points to the Android coding style I recently wrote for
+<a href="http://www.mobivery.com">Mobivery</a>, in the naming conventions for example.</p>
+
+<p>Well… It’s very recommended for everyone! I wish I read it in college.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code detox]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/12/27/code-detox/"/>
+    <updated>2012-12-27T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/12/27/code-detox</id>
+    <content type="html"><![CDATA[<p>Due to some health problems (I just recently underwent surgery) I’m stuck for
+<strong>almost a month without being able to code</strong>
+, and even write this lines is an ordeal – I’m doing it using one hand only.</p>
+
+<p>Thanks to all that I’m being able to detox of my last months non-stop coding antics, and improving my skills by reading technical stuff and new libraries.</p>
+
+<p><strong>Hopefully when I’m back I’ll be better than before. Never stop learning and improving yourself.</strong>
+ Kaizen!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Resistance to change]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/08/05/resistance-to-change/"/>
+    <updated>2012-08-05T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/08/05/resistance-to-change</id>
+    <content type="html"><![CDATA[<p>The title of this post could be misleading. I’m not gonna talk about the
+ever-existing resistance to change in requisites (even if you work in an agile environment).</p>
+
+<p>What I wanted to talk about is
+<strong>the resistance to change some of
+us developers have regarding to technology</strong>
+.</p>
+
+<p>In our world we need to be constantly learning, even if our work doesn’t need us to, but the sad truth is
+<strong>most of the people aren’t cut for this kind of thing</strong>
+ and take the course of the minimum effort. It’s common to see engineers stuck in cobol, fortran and with absolutely no interest in learning challenging stuff for them. Even from a practical standpoint that sucks.</p>
+
+<p>It is also common for us to whine
+a lot when our favorite
+IDE gets updated and improved, because we can’t find a shortcut or whatever, or when we want to change our
+VCS. We shouldn’t because we would have two problems then: the whining and the original problem.</p>
+
+<p>We have to keep learning, even if we’re not comfortable with it. If you want to be stuck, well, then maybe you should reconsider your career. No offense. Let’s get out of our comfort zone and improve ourselves!</p>
+]]></content>
+  </entry>
+  
+</feed>

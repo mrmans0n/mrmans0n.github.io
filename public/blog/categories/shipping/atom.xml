@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: shipping | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/shipping/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+</feed>

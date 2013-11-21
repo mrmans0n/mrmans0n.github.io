@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: contest | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/contest/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Coding contests are fun!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/11/14/coding-contests-are-fun/"/>
+    <updated>2012-11-14T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/11/14/coding-contests-are-fun</id>
+    <content type="html"><![CDATA[<p>Last month and a half we’ve been working on an “after-work” app for an internal contest in
+<a href="http://www.mobivery.com">Mobivery</a> just to see if we could make it.</p>
+
+<p><strong>We’ve worked our asses off</strong>
+, our weekends were excuses to work even more, but
+<strong>the result is awesome</strong>
+. We’ve done a multiplatform app with server side, all from scratch, and
+<strong>works</strong>
+. It’s even useful!</p>
+
+<p>I’ve personally been working in the Android app, and I’m pretty satisfied with the result. After all the usual annoyances of working for clients when it comes to a multiplatform native apps, when always the client wants to force you to do things in Android with an iOS style, it was a delight doing a truly Android-style app without random bitching.</p>
+
+<p>The contest is over now. I hope we’ll win but doesn’t really matter: it was fun and rewarding by itself.</p>
+
+<p>At the moment we can’t disclose what’s it about but I’ll comment something when it’s out.</p>
+]]></content>
+  </entry>
+  
+</feed>

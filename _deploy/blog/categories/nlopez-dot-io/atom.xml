@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nlopez.io | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/nlopez-dot-io/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Address changed!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/04/address-changed/"/>
+    <updated>2013-05-04T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/04/address-changed</id>
+    <content type="html"><![CDATA[<p>Now instead of nlopez.in this site will be accessible through
+<a href="http://nlopez.io">nlopez.io</a>.</p>
+
+<p>The .in domain will work for some more time, though.</p>
+]]></content>
+  </entry>
+  
+</feed>

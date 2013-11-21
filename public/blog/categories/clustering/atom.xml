@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: clustering | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/clustering/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
+    <updated>2013-03-19T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
+    <content type="html"><![CDATA[<p>I’ve been working in a
+<strong>clustering code ready for Maps v2</strong>
+, as I didn’t found any full example I could use in some of my apps.</p>
+
+<p>So here you have it: a working example of
+<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
+
+<p>All the
+<strong>setup instructions are in GitHub</strong>
+.</p>
+
+<p>You are more than welcome to change things, report issues and make pull requests!</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
+
+<p>Some screenshots of the example project.</p>
+]]></content>
+  </entry>
+  
+</feed>

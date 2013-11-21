@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: change | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/change/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Resistance to change]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/08/05/resistance-to-change/"/>
+    <updated>2012-08-05T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/08/05/resistance-to-change</id>
+    <content type="html"><![CDATA[<p>The title of this post could be misleading. I’m not gonna talk about the
+ever-existing resistance to change in requisites (even if you work in an agile environment).</p>
+
+<p>What I wanted to talk about is
+<strong>the resistance to change some of
+us developers have regarding to technology</strong>
+.</p>
+
+<p>In our world we need to be constantly learning, even if our work doesn’t need us to, but the sad truth is
+<strong>most of the people aren’t cut for this kind of thing</strong>
+ and take the course of the minimum effort. It’s common to see engineers stuck in cobol, fortran and with absolutely no interest in learning challenging stuff for them. Even from a practical standpoint that sucks.</p>
+
+<p>It is also common for us to whine
+a lot when our favorite
+IDE gets updated and improved, because we can’t find a shortcut or whatever, or when we want to change our
+VCS. We shouldn’t because we would have two problems then: the whining and the original problem.</p>
+
+<p>We have to keep learning, even if we’re not comfortable with it. If you want to be stuck, well, then maybe you should reconsider your career. No offense. Let’s get out of our comfort zone and improve ourselves!</p>
+]]></content>
+  </entry>
+  
+</feed>

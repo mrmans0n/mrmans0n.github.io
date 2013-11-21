@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Open Sourcing stuff]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff/"/>
+    <updated>2013-11-21T20:57:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve submitted some new versions of <a href="https://github.com/mrmans0n/localio">Localio</a> addressing bugs and adding some features (like <strong>XLSX support</strong>), but that&rsquo;s all in the ruby side.</p>
+
+<p>But being true to my roots, I&rsquo;ve been working on some libraries lately, all of them for <strong>Android</strong>. You might want to check them out&hellip;</p>
+
+<ul>
+<li><p><a href="https://github.com/mobivery/smart-location-lib">SmartLocation</a>: A library for making easier the integration with the new <strong>Location</strong> powered by <em>Google Play Services</em>, with a twist &ndash; adding the current activity performed by the user (on foot, on vehicle, standing still, etc) to the mix, so we can tweak the detection precision depending on that.</p></li>
+<li><p><a href="https://github.com/mrmans0n/clusterer">Clusterer</a>: A library version of some classes I have already open sourced, that perform <strong>clustering</strong> on Maps v2 for Android. I&rsquo;m working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example.</p></li>
+</ul>
+
+
+<p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Localio]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
+    <updated>2013-09-03T17:51:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+An example of Locfile:</p>
+
+<figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">platform</span> <span class="ss">:ios</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">output_path</span> <span class="s1">&#39;Resources/Localizables/&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">source</span> <span class="ss">:google_drive</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:spreadsheet</span> <span class="o">=&gt;</span> <span class="s1">&#39;[Localizables] My Project!&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:login</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_email@gmail.com&#39;</span><span class="p">,</span>
+</span><span class='line'>       <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="s1">&#39;your_password&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">formatting</span> <span class="ss">:smart</span> <span class="c1"># This is optional, formatting :smart is used by default.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its Github repo.
+Cheers!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Things I don't like about working for clients]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/"/>
+    <updated>2013-09-01T17:51:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients</id>
+    <content type="html"><![CDATA[<p>In my experience working for clients I&rsquo;ve come to realize that most of the time they don&rsquo;t want the best app they can have. Or, at least, they don’t act that way. Most of them ignore willingly the fact that you know best, that you want them to succeed because it is your passion and your job to do so, and they don&rsquo;t take your advice when they should.</p>
+
+<p>It has been really heartbreaking to see some apps, that were meant to be awesome, to go down the drain and fail because the stubbornness of their handlers.</p>
+
+<p>I’ve seen a client remove a perfectly valid tabbar and change it for a dashboard menu in an iOS app. Yes, in 2013. Fun fact: it happened in a published app, and the changelog in the App Store stated that it was an <em>usability improvement</em>. Nuts.</p>
+
+<p>Trying to change the way things are done in the platform is a typical situation. Why use a picker when you could do an accordion? Why use a list when you could do a dropdown control? Why rely on the system locale settings when you can use buttons and selectors for changing the app language? I can&rsquo;t express how many times and how loud I wanted to scream <strong>an app is NOT A WEBSITE</strong>.</p>
+
+<p>Also wanting to have the <strong>same exact behavior in Android and iOS</strong> is another instant classic. The tabbar position or the navbar layout are the most hurt in this situation. You end up with the title I&rsquo;m the middle in Android or a lot of buttons I&rsquo;m the right side on iOS. One could argue that it gives the app consistency, and that it might not feel right. <strong>You, sir, are no Facebook.</strong> Or Twitter. Or Foursquare. You are not a trendsetter. Probably <strong>the users will use a lot of other apps before they install yours.</strong> And that&rsquo;s what makes this a bad idea. Users are used to their platforms! Mr. Client, if you don&rsquo;t believe me, <a href="https://plus.google.com/114892667463719782631/posts/PXGZ48VaqHz">believe Matías Duarte</a>. I think <a href="http://en.wikipedia.org/wiki/Matias_Duarte">he knows his stuff</a>.</p>
+
+<p>There are also situations when a client ask you to replicate (or blatantly copy) an existent app, and the base app is fugly or has crappy usability. You then show your proposal, with the intended functionality but with a decent UX design&hellip; and gets rejected. They want to copy the crap. You insist, but it doesn&rsquo;t matter. <strong>So shit gets copied in the end</strong>, sadly for you.</p>
+
+<p>All of these problems and absurd situations could be solved with little to none work &ndash; <strong>just be opened to suggestions!</strong> We&rsquo;re in the same boat, we want to make you a likable and usable app with gorgeous design. Let us, please! <strong>We&rsquo;d like to love working in your app!</strong></p>
+
+<p>And, of course, there are good clients too. Not everything is black or white, there are different shades in-between. But, sadly, they are a (very welcomed) minority.</p>
+
+<p>Anyway, working in personal side projects as an escape is pretty encouraged for avoiding the burn out. So the next post will be about <strong>a new project I&rsquo;m excited about</strong> and with lots of OSS goodness!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is fragmentation really that much of a problem in Android?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/08/17/is-fragmentation-really-that-much-of-a-problem-in-android/"/>
+    <updated>2013-08-17T17:38:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/08/17/is-fragmentation-really-that-much-of-a-problem-in-android</id>
+    <content type="html"><![CDATA[<p>I always read the same and never-ending articles / posts / tweets about Android&rsquo;s fragmentation. The same <a href="http://opensignal.com/reports/fragmentation.php">boring infographics</a>, the same Google Play pie charts with Android version penetration, and always the same argument about how the developers are crazy about it, like if it&rsquo;s impossible to code because of that reason. But hey, <strong>I&rsquo;m a developer, and I couldn&rsquo;t care less</strong>.</p>
+
+<p>I&rsquo;m not gonna say there isn&rsquo;t any fragmentation at all, it would be a huge lie. There is, of course. But through the years <strong>Android tools and framework have improved A LOT</strong>, and they embrace fragmentation. The compatibility libraries help with the interesting framework APIs. The XML resources help with layouts for different types of screens, making us to be able to code once and display the information in many different ways, or with   graphical resources, by using XML drawables.</p>
+
+<p>It just takes a little more to get used to, coming from iOS programming for example, where everything is thought to be <em>pixel perfect</em> (though that&rsquo;s changing too, with the AutoLayout and the rumors about new types of screens in the next iPhone iterations, but still). You can&rsquo;t use hardcoded pixels to measure. You don&rsquo;t have a pretty IDE assuring that your layout is going to look perfect everywhere. You just have to take that to heart and build your interfaces avoiding things like textures and fixed sizes, in a truly responsive way.</p>
+
+<p>It&rsquo;s a little harder to do it when talking about SDK support, as we know iOS versions have a lot of traction very fast. But, in my case, as <a href="http://www.mobivery.com">Mobivery</a> has the policy of supporting the two latest major versions by default, I can&rsquo;t  code at work and use the latest APIs either. So it&rsquo;s pretty much the same for me, I have to wait to use NSAttributedString in a native way too. Oh, but wait, it happens the same as in Android: there is a TTTAtributedString which does pretty much the same. Just like ActionBarSherlock or NineOldAndroids or many others I use for Android development.</p>
+
+<p>As a little exercise left to the reader, just try to develop any universal app in iOS and the same app in Android. You will see how the actual code is pretty much the same, with the same exceptions. And now <strong>try to do it with a pure HTML5 app, and then kill yourself</strong>.</p>
+
+<p>Each platform has its perks.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to fix a broken Android Studio SDK installation]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation/"/>
+    <updated>2013-07-10T18:58:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/10/how-to-fix-a-broken-android-studio-sdk-installation</id>
+    <content type="html"><![CDATA[<p>It just happened to me. If you are in a situation where your Android Studio installation doesn&rsquo;t recognize any Android SDK (instead of a little andy, it shows a folder with a question mark over any Android SDK configured), you just have one diagnosis: <strong>your (hidden) configuration file is corrupted</strong>.</p>
+
+<p>The solution is pretty easy. You just have to add these two lines to your /Application/Android Studio.app/bin/idea.properties:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="na">idea.config.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/config</span>
+</span><span class='line'><span class="na">idea.system.path</span><span class="o">=</span><span class="s">~/.AndroidStudioPreview/system</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will be asked to reconfigure, as if it were the first execution of Android Studio.</p>
+
+<p>This saved my life. You&rsquo;re welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New BikeShare! for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android/"/>
+    <updated>2013-07-07T17:55:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/07/07/new-bikeshare-for-android</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently developed a brand new (rebuilt from scratch) version of BikeShare! for Android.</p>
+
+<p>It&rsquo;s been my first approach to tablet interfaces in my <em>off work</em> apps, and I really was thrilled to do so. The app suffered an UI overhaul, and its imagery was also redone.</p>
+
+<p>First, <strong>the icon</strong>.</p>
+
+<p><img src="http://mrm.perry.es/icon_app_v2.png" alt="BikeShare for Android icon" /></p>
+
+<p>It looks gorgeous in my HTC One display. It has also a XXHDPI version, tested in a Nexus 10, and looks awesome too.</p>
+
+<p>Then, the <strong>tablet UI</strong>.</p>
+
+<p><img src="http://mrm.perry.es/tablet_ui.png" alt="Tablet UI on Nexus 7" /></p>
+
+<p>All the main activities have been changed too, for both tablet and phone versions. New animations, new and better information display, and better list performance.</p>
+
+<p>And the <strong>butter</strong> too.</p>
+
+<p>The app internal communications until now were a bit of a mess IMHO. Now, with the usage of <a href="http://square.github.io/otto/">Otto</a> and local intents the hassle is pretty much over. I was obsessed with the wrong patterns here, and the update process felt sluggish.</p>
+
+<p>The way the fragments were being used also required a lot of memory and made the UI felt slower than it should have been.</p>
+
+<p>The lists were using ArrayAdapter instead of BaseAdapter, and that also changed. No listings were supposed to be updating from a non-UI thread, so it was pointless.</p>
+
+<p>The whole reengineering purpose was for a purpose. I wanted to be able to change stuff more often, and the code should be cleaner. And now it is, finally.</p>
+
+<p>I&rsquo;m happy with the result. I hope the minor hot-fixes streak that usually follows a major release is minimal this time…</p>
+
+<p>You can download it from the usual place: <a href="https://play.google.com/store/apps/details?id=com.bikeshare&amp;feature=search_result">Google Play</a>.</p>
+
+<p>As if.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[No more time selling]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling/"/>
+    <updated>2013-06-25T18:37:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/25/no-more-time-selling</id>
+    <content type="html"><![CDATA[<p>I haven&rsquo;t wrote any page in the new site about selling hours (ie <em>accepting freelancing jobs</em>) because <strong>I don&rsquo;t want to anymore</strong>. I already have a full time job developing apps for clients and <strong>I&rsquo;m kind of fed up</strong> with their whims and all the other oddities.</p>
+
+<p>So, as money is not an issue (and was the primary reason for accepting freelancing jobs), all that&rsquo;s left is the need for knowledge and <strong>the thrill that only building things can give to you</strong>. I&rsquo;ll continue with my side personal projects, improving them, developing new things&hellip; <strong>shipping stuff</strong>.</p>
+
+<p>For starters, a new big update for <a href="http://bikeshar.es">BikeShare!</a> is coming soon. It might not be the most used app in the world, but I&rsquo;m proud of it nevertheless. I will post about it when it&rsquo;s done, of course.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Changed my blog to Octopress]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress/"/>
+    <updated>2013-06-22T19:20:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/22/changed-my-blog-to-octopress</id>
+    <content type="html"><![CDATA[<p>Well, I&rsquo;m kind of bored with the design stuff on my blog, so I just wanted to spice up things a little. Also, I&rsquo;ve wanted to try <em>Octopress</em> for a while&hellip; So what the heck, I wrote some export functions to my old blog, and programmed a little import script that converted all that info into Octopress compliant posts. So here it is.</p>
+
+<p>Now I&rsquo;ll have to <em>find a new design</em> that makes me feel at home, and everything will be ready.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New additions to the family]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family/"/>
+    <updated>2013-06-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/15/new-additions-to-the-family</id>
+    <content type="html"><![CDATA[<p>I will be able to test my stuff in a new Android guinea pig, and boy… what a beautiful guinea pig the
+<strong>HTC One</strong>
+ is.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/29/HTC-One-blanco-02.jpg" alt="" /></p>
+
+<p>And, for the first time ever, Sense is not a bother. It’s just beautiful.</p>
+
+<p>But nevertheless I’m excited about the Google Edition when it comes at the end of this month.</p>
+
+<p>Also I’ve stumbled upon a brand new
+<strong>iPhone 4S</strong>
+, courtesy of
+<a href="http://www.mobivery.com">Mobivery</a>, for testing purposes.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/30/iphone-4s.jpg" alt="" /></p>
+
+<p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
+
+<p>Instrumentation tests, there I go!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[And this is how you sell a product]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/06/10/and-this-is-how-you-sell-a-product/"/>
+    <updated>2013-06-10T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/06/10/and-this-is-how-you-sell-a-product</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://www.apple.com/mac-pro/">http://www.apple.com/mac-pro/</a></p>
+
+<p>Despite what the impression today’s
+WWDC keynote left on me (not so great), one thing is clear:
+<a href="http://www.apple.com/mac-pro/">they know how to sell stuff</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[In App.net!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/25/in-app-net/"/>
+    <updated>2013-05-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/25/in-app-net</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://alpha.app.net/nlopez">https://alpha.app.net/nlopez</a></p>
+
+<p>At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.</p>
+
+<p>So I’m
+<a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
+    <updated>2013-05-17T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
+    <content type="html"><![CDATA[<p>There were some major changes to Android
+SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
+
+<p>But since the version of
+<strong>maven-android-plugin</strong>
+ almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
+<strong>WORK</strong>
+ and stuff.</p>
+
+<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
+
+<p>And that should do the trick.</p>
+
+<p>You should change your pom to reflect it, of course. For example:</p>
+
+<p>[&hellip;]</p>
+
+<pre><code>&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+                &lt;sdk&gt;
+                    &lt;platform&gt;17&lt;/platform&gt;
+                &lt;/sdk&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.5&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.6&lt;/source&gt;
+                &lt;target&gt;1.6&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+
+<p>[&hellip;]</p>
+
+<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
+SNAPSHOT working on your local machine.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Address changed!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/04/address-changed/"/>
+    <updated>2013-05-04T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/04/address-changed</id>
+    <content type="html"><![CDATA[<p>Now instead of nlopez.in this site will be accessible through
+<a href="http://nlopez.io">nlopez.io</a>.</p>
+
+<p>The .in domain will work for some more time, though.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android's Camera Intent killing my Application]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application/"/>
+    <updated>2013-04-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/25/android-s-camera-intent-killing-my-application</id>
+    <content type="html"><![CDATA[<p>Working with the camera
+<strong>is always a pain in the ass</strong>
+. But at least in Android we have Intents. So, with little code we are able to get a working 300×300 thumbnail or even a picture with the best quality the device can offer. So I used it for a project few days ago because the project was in a hurry.</p>
+
+<p>But things
+<strong>got weird.</strong></p>
+
+<p>The information stored in a Singleton was disappearing without a trace, and the information about sessions and current user of the app were nowhere to be found. Then a friend pointed me in the right direction, asking me to log something in the onCreate method of the current application just in case
+<strong>the SO was killing the application</strong>
+. And it was, indeed.</p>
+
+<p>I had to perform some nasty tricks in the Singleton storing the session information, such as persisting some of the objects in SharedPreferences in Strings by converting them to
+JSON, and the ones I couldn’t were implemented as Serializable objects and stored them in files in the application internal storage. It felt dirty and unnecessary, but had to be done. So if you can’t trust the system to persist your application memory data, I just don’t know what can you trust.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BikeShare! for iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios/"/>
+    <updated>2013-04-06T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/04/06/bikeshare-for-ios</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8">https://itunes.apple.com/us/app/bikeshare!/id628524734?l=es&amp;mt=8</a></p>
+
+<p>The wait seemed so long… 6 and a half days later,
+<strong>BikeShare! is on the App Store</strong>
+. As
+<a href="http://mrmans0n.github.io/shipping-as-fast-as-possible">I said it would</a> before.</p>
+
+<p><a href="http://bikeshar.es"><img src="http://mrm.perry.es/uploads/admin/image/image/28/promo_bikeshare_ios.png" alt="" /></a></p>
+
+<p>In fact, the wait time made me improve a lot the app I sent, so once it was released I uploaded a new version and started the cycle again… and “Waiting for Review”.</p>
+
+<p>Anyway, if you like riding a bike and your city has a public bike services, and you happen to have an iPhone, maybe this app will help you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shipping as fast as possible]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible/"/>
+    <updated>2013-03-30T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/30/shipping-as-fast-as-possible</id>
+    <content type="html"><![CDATA[<p>I’m taking
+<strong>a different approach</strong>
+ with my newest app,
+<strong>BikeShare! for iOS</strong>
+.</p>
+
+<p>I always wanted to have a lot of functionality done before I could even think about shipping, but it seems a really bad idea now. Sure, the app would be awesome when done… but
+<strong>when would that be</strong>
+? I have very little free time and a lot of projects going on, shifting my focus from time to time due priority changes or even boredom whims, so it’s hard to know about times.</p>
+
+<p>So I changed my mind. I decided on a basic core functionality and went with it. The 1.0 version will have that and nothing more.</p>
+
+<p>Then I will have some valuable info I might need to know before adding more functionality. With the core done and some stats mining frameworks set up, like
+<a href="http://www.mymalcom.com"><strong>Malcom</strong></a>, I can know for sure what my users might want to have in the next iterations.</p>
+
+<p>All the extra functionality, even the stuff to make the app different from others,
+<strong>will have to wait</strong>
+. And hopefully I’ll get some feedback from the users.</p>
+
+<p>And now, a teaser for you all.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
+
+<p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
+    <updated>2013-03-19T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
+    <content type="html"><![CDATA[<p>I’ve been working in a
+<strong>clustering code ready for Maps v2</strong>
+, as I didn’t found any full example I could use in some of my apps.</p>
+
+<p>So here you have it: a working example of
+<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
+
+<p>All the
+<strong>setup instructions are in GitHub</strong>
+.</p>
+
+<p>You are more than welcome to change things, report issues and make pull requests!</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
+
+<p>Some screenshots of the example project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A basic Rails API with OAuth2]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2/"/>
+    <updated>2013-03-13T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">https://github.com/mrmans0n/oauth2-doorkeeper-for-api</a></p>
+
+<p>I’ve prepared (mostly for myself)
+<a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">a GitHub repo with a pretty basic Rails project featuring Bootstrap and Devise authentication</a> for the backend, and OAuth2 with Doorkeeper for the
+API. The
+API is prepared for versioning and has a pretty basic example for its use.</p>
+
+<p>Hopefully somebody other than me will find some use to it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is your code clean?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean</id>
+    <content type="html"><![CDATA[<p>I’ve been reading some technical stuff lately. My latest prey has been
+<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, by “Uncle Bob” Robert C. Martin.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/23/CleanCode.jpg" alt="" /></p>
+
+<p>It has been very revealing about a ton of stuff and made me think a lot about what I could improve, although I don’t 100% agree with everything Bob says. I’ve also applied some of the key points to the Android coding style I recently wrote for
+<a href="http://www.mobivery.com">Mobivery</a>, in the naming conventions for example.</p>
+
+<p>Well… It’s very recommended for everyone! I wish I read it in college.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Interruptions suck!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck/"/>
+    <updated>2013-03-06T22:00:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/03/06/interruptions-suck</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="http://blog.ninlabs.com/2013/01/programmer-interrupted/">http://blog.ninlabs.com/2013/01/programmer-interrupted/</a></p>
+
+<p>Some time ago this article spread like wildfire, stating the scientific facts we all coders know but are too lazy to look for.</p>
+
+<p>What was my resolution then?</p>
+
+<p><a href="http://www.amazon.com/Sennheiser-HD-439-Auriculares-abiertos/dp/B005N8W1TM"><img src="http://mrm.perry.es/uploads/admin/image/image/24/thumb_sennheiser-439.jpg" alt="" /></a></p>
+
+<p>I bought them.</p>
+
+<p>I always try to get into the zone with good headphones and music (ahem, Spotify premium). That, and a little
+respect of the people around me do the magic. Also, closing Mail and Messages help a little. And caffeine. Aren’t we coders picky?</p>
+
+<p>An interrupted programmer is a buggy and angry one, and very prone to produce horrendous
+code smells our future selves would be suicidal with.
+<strong>Let us work, dammit!</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

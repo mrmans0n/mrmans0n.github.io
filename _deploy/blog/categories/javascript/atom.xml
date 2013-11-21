@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Stranger in a strange land, that is HTML5]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/10/27/stranger-in-a-strange-land-that-is-html5/"/>
+    <updated>2012-10-27T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/10/27/stranger-in-a-strange-land-that-is-html5</id>
+    <content type="html"><![CDATA[<p>Lately I’ve been working in a multiplatform app using HTML5, me being a native enthusiast.</p>
+
+<p>And yes, it’s
+<strong>cheaper and faster</strong>
+, and whatever you want… but
+<strong>I still don’t quite like it for “serious” apps</strong>
+. With serious I mean well crafted and smooth apps. I found discouraging the
+<strong>lack of control</strong>
+ you have, and everything you want to do right must use a bridge of communication with its native counterpart.</p>
+
+<p>I’m always being told that Titanium is cool, that PhoneGap is useful… I doubt it but I haven’t experienced it yet, because the app I’m working on will not use any kind of framework (besides jQuery).</p>
+
+<p>But hey, who am I to discuss this. Facebook is running away from it too! They should know what they are doing, right?</p>
+
+<p>At least I can state my opinion quite clearly: I prefer native all the way. Maybe it’s just me.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Launching cfernandez.me!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/06/20/launching-cfernandez-me/"/>
+    <updated>2012-06-20T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/06/20/launching-cfernandez-me</id>
+    <content type="html"><![CDATA[<p>At last, one of my latest works has come to light. It’s a website for a great videogame translator,
+<strong>Concha Fernández</strong>
+. Check it out!</p>
+
+<p>The url is
+<a href="http://www.cfernandez.me/">cfernandez.me</a></p>
+
+<p><img src="http://f.cl.ly/items/3X2p453Z1W1K3X1u3f2b/cfernandez.png" alt="" /></p>
+
+<p>If you are curious, I’ve used: The awesome Rails, the fluffy Bootstrap, the breathtaking Hype and some ugly JavaScript of my own.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple RSS reader for Rails]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/04/22/simple-rss-reader-for-rails/"/>
+    <updated>2012-04-22T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/04/22/simple-rss-reader-for-rails</id>
+    <content type="html"><![CDATA[<p>I wanted a little feed reader for displaying some titles and links in a web page and didn’t like the idea of using a gem that would give me a lot more than I needed. So I wrote a reader in
+<strong>jQuery</strong>
+ that would populate any div with a given id and voilà.</p>
+
+<p>As $.ajax doesn’t let you access external links, the parameter
+internalUrl comes in handy. I routed /blog_feed to a controller with a method I called
+<strong>blog</strong>
+. In there I read all the data and display it through a view.</p>
+
+<p>And that’s all. Simple idea and simple resolution. You can fork the gists and do whatever you want with them.</p>
+
+<p>Cheers.</p>
+]]></content>
+  </entry>
+  
+</feed>

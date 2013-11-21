@@ -1,0 +1,380 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Solving a hateful error with the installation of libv8 (3.3.10.4) - Nacho Lopez</title>
+	<meta name="author" content="Nacho Lopez">
+
+	
+	<meta name="description" content="Solving a Hateful Error With the Installation of Libv8 (3.3.10.4) I’ve been having problems with my latest Rails installation in my
+recently fresh &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/2012/08/20/solving-a-hateful-error-with-the-installation-of-libv8-3-3-10-4/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Nacho Lopez</a></h1>
+  
+    <h2>I code.</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    I do awesome stuff for Android, iOS and Rails.
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/112276988873423078640" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/mrmans0n" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mrmans0n" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+	<h1 class="title" itemprop="name">Solving a Hateful Error With the Installation of Libv8 (3.3.10.4)</h1>
+	<div class="entry-content" itemprop="articleBody"><p>I’ve been having problems with my latest Rails installation in my
+<strong>recently fresh installed</strong>
+ Mountain Lion while doing a
+<strong>bundle install</strong>
+.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Using rake (0.9.2.2)
+Using RedCloth (4.2.9)
+Using multi_json (1.2.0)
+Using activesupport (3.1.3)
+Using builder (3.0.0)
+Using i18n (0.6.0)
+Using activemodel (3.1.3)
+Using erubis (2.7.0)
+Using rack (1.3.6)
+Using rack-cache (1.2)
+Using rack-mount (0.8.3)
+Using rack-test (0.6.1)
+Using hike (1.2.1)
+Using tilt (1.3.3)
+Using sprockets (2.0.3)
+Using actionpack (3.1.3)
+Using mime-types (1.18)
+Using polyglot (0.3.3)
+Using treetop (1.4.10)
+Using mail (2.3.3)
+Using actionmailer (3.1.3)
+Using arel (2.2.3)
+Using tzinfo (0.3.32)
+Using activerecord (3.1.3)
+Using activeresource (3.1.3)
+Using ansi (1.4.2)
+Using bcrypt-ruby (3.0.1)
+Using will_paginate (3.0.3)
+Using bootstrap-will_paginate (0.0.7)
+Using bundler (1.1.5)
+Using coffee-script-source (1.2.0)
+Using execjs (1.3.0)
+Using coffee-script (2.2.0)
+Using rack-ssl (1.3.2)
+Using json (1.6.6)
+Using rdoc (3.12)
+Using thor (0.14.6)
+Using railties (3.1.3)
+Using coffee-rails (3.1.1)
+Using commonjs (0.2.5)
+Using gchartrb (0.8)
+Using jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.</p>
+
+<p>/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
+<strong><em> extconf.rb failed </em></strong>
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.</p>
+
+<p>Provided configuration options:</p>
+
+<pre><code>--with-opt-dir
+--without-opt-dir
+--with-opt-include
+--without-opt-include=${opt-dir}/include
+--with-opt-lib
+--without-opt-lib=${opt-dir}/lib
+--with-make-prog
+--without-make-prog
+--srcdir=.
+--curdir
+--ruby=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+</code></pre>
+
+<p>extconf.rb:13: uninitialized constant Gem (NameError)
+Checking for Python&hellip;</p>
+
+<p>Gem files will remain installed in /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4 for inspection.
+Results logged to /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4/ext/libv8/gem_make.out
+An error occured while installing libv8 (3.3.10.4), and Bundler cannot continue.
+Make sure that <code>gem install libv8 -v '3.3.10.4'</code> succeeds before bundling.</p>
+
+<p>After some headbanging against the wall, I’ve found that
+<a href="http://stackoverflow.com/questions/8126465/bundle-install-update-libv8-therubyracer-installation-fails-with-native-ex/8127559#8127559">it’s a common error</a> and I tried to solve it with some of the solutions there, like uninstalling therubyracer and libv8 gems. Didn’t worked.</p>
+
+<p>So I tried upgrading bundler.</p>
+
+<p>$ sudo gem install bundler &mdash;pre
+Successfully installed bundler-1.2.0.rc.2
+1 gem installed
+Installing ri documentation for bundler-1.2.0.rc.2&hellip;
+Installing RDoc documentation for bundler-1.2.0.rc.2&hellip;</p>
+
+<p>But didn’t do the trick. Then
+<strong>I checked my ruby and rails versions</strong>
+, and while rails was at its newest,
+<strong>my ruby installation was the one provided by Apple</strong>
+.</p>
+
+<p>$ ruby -v
+ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</p>
+
+<p>Then I realized I hadn’t installed rvm in my new installation of Mountain Lion, so
+<a href="https://rvm.io/rvm/install/">I did it as expected</a> : install it and use the newest ruby version.</p>
+
+<p>Then with this one…</p>
+
+<p>$ ruby -v
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.0.0]</p>
+
+<p>…I tried again to
+<strong>bundle install</strong>
+ and to my surprise, it was fixed. I lost precious work hours because of this, so I hope it helps you too.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Fetching git://github.com/seyhunak/twitter-bootstrap-rails.git
+remote: Counting objects: 2407, done.
+remote: Compressing objects: 100% (1221/1221), done.
+remote: Total 2407 (delta 1035), reused 2256 (delta 916)
+Receiving objects: 100% (2407/2407), 1.14 MiB | 616 KiB/s, done.
+Resolving deltas: 100% (1035/1035), done.
+Using rake (0.9.2.2)
+Installing RedCloth (4.2.9) with native extensions
+Installing multi_json (1.2.0)
+Installing activesupport (3.1.3)
+Installing builder (3.0.0)
+Installing i18n (0.6.0)
+Installing activemodel (3.1.3)
+Installing erubis (2.7.0)
+Installing rack (1.3.6)
+Installing rack-cache (1.2)
+Installing rack-mount (0.8.3)
+Installing rack-test (0.6.1)
+Installing hike (1.2.1)
+Installing tilt (1.3.3)
+Installing sprockets (2.0.3)
+Installing actionpack (3.1.3)
+Installing mime-types (1.18)
+Installing polyglot (0.3.3)
+Installing treetop (1.4.10)
+Installing mail (2.3.3)
+Installing actionmailer (3.1.3)
+Installing arel (2.2.3)
+Installing tzinfo (0.3.32)
+Installing activerecord (3.1.3)
+Installing activeresource (3.1.3)
+Installing ansi (1.4.2)
+Installing bcrypt-ruby (3.0.1) with native extensions
+Installing will_paginate (3.0.3)
+Installing bootstrap-will_paginate (0.0.7)
+Installing coffee-script-source (1.2.0)
+Installing execjs (1.3.0)
+Installing coffee-script (2.2.0)
+Installing rack-ssl (1.3.2)
+Installing json (1.6.6) with native extensions
+Installing rdoc (3.12)
+Installing thor (0.14.6)
+Installing railties (3.1.3)
+Installing coffee-rails (3.1.1)
+Installing commonjs (0.2.5)
+Installing gchartrb (0.8)
+Installing jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Installing therubyracer (0.10.0) with native extensions
+Installing less (2.1.0)
+Installing less-rails (2.2.0)
+Installing polyamorous (0.5.0)
+Installing meta_search (1.1.3)
+Installing mysql2 (0.3.11) with native extensions
+Using bundler (1.1.5)
+Installing rails (3.1.3)
+Installing sass (3.1.15)
+Installing sass-rails (3.1.6)
+Installing sqlite3 (1.3.5) with native extensions
+Installing turn (0.8.2)
+Using twitter-bootstrap-rails (2.0.4) from git://github.com/seyhunak/twitter-bootstrap-rails.git (at master)
+Installing uglifier (1.2.4)
+Your bundle is complete! Use <code>bundle show [gemname]</code> to see where a bundled gem is installed.
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:</p>
+
+<p>&lt;= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data &mdash;install
+ = 1.9.1 : gem install rdoc-data; rdoc-data &mdash;install</p>
+
+<blockquote><p>= 1.9.2 : nothing to do! Yay!</p></blockquote>
+
+<p>Post-install message from meta_search:</p>
+
+<p><strong><em> Thanks for installing MetaSearch! </em></strong>
+Be sure to check out <a href="http://metautonomo.us/projects/metasearch/">http://metautonomo.us/projects/metasearch/</a> for a
+walkthrough of MetaSearch&rsquo;s features, and click the donate button if
+you&rsquo;re feeling especially appreciative. It&rsquo;d help me justify this
+&ldquo;open source&rdquo; stuff to my lovely wife. :)</p>
+
+<p>I broke a sweat here. Specially when the
+<strong>installing libv8</strong>
+ part took like 2 minutes and I didn’t knew if it was going to work.</p>
+</div>
+	
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Nacho Lopez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a> with some modifications by <a href="http://nlopez.io">Nacho López</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrm';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mrmans0n.github.io/blog/2012/08/20/solving-a-hateful-error-with-the-installation-of-libv8-3-3-10-4/';
+        var disqus_url = 'http://mrmans0n.github.io/blog/2012/08/20/solving-a-hateful-error-with-the-installation-of-libv8-3-3-10-4/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32899498-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

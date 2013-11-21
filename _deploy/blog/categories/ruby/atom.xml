@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Open Sourcing stuff]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff/"/>
+    <updated>2013-11-21T20:57:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve submitted some new versions of <a href="https://github.com/mrmans0n/localio">Localio</a> addressing bugs and adding some features (like <strong>XLSX support</strong>), but that&rsquo;s all in the ruby side.</p>
+
+<p>But being true to my roots, I&rsquo;ve been working on some libraries lately, all of them for <strong>Android</strong>. You might want to check them out&hellip;</p>
+
+<ul>
+<li><p><a href="https://github.com/mobivery/smart-location-lib">SmartLocation</a>: A library for making easier the integration with the new <strong>Location</strong> powered by <em>Google Play Services</em>, with a twist &ndash; adding the current activity performed by the user (on foot, on vehicle, standing still, etc) to the mix, so we can tweak the detection precision depending on that.</p></li>
+<li><p><a href="https://github.com/mrmans0n/clusterer">Clusterer</a>: A library version of some classes I have already open sourced, that perform <strong>clustering</strong> on Maps v2 for Android. I&rsquo;m working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example.</p></li>
+</ul>
+
+
+<p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Localio]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
+    <updated>2013-09-03T17:51:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+An example of Locfile:</p>
+
+<p>``` ruby Locfile example
+platform :ios</p>
+
+<p>output_path &lsquo;Resources/Localizables/&rsquo;</p>
+
+<p>source :google_drive,</p>
+
+<pre><code>   :spreadsheet =&gt; '[Localizables] My Project!',
+   :login =&gt; 'your_email@gmail.com',
+   :password =&gt; 'your_password'
+</code></pre>
+
+<p>formatting :smart # This is optional, formatting :smart is used by default.
+```</p>
+
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its Github repo.
+Cheers!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ActionMailer with GMail problem and its workaround]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/"/>
+    <updated>2012-07-31T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround</id>
+    <content type="html"><![CDATA[<p>I had a little problem today with one of my managed sites, one that was using
+<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
+Contact Us form using GMail’s
+SMTP.</p>
+
+<p>But reading server logs wasn’t very enlightening.</p>
+
+<p>$ tail log/production.log
+Completed 500 Internal Server Error in 533ms
+Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+):
+app/controllers/contact_controller.rb:11:in `create'</p>
+
+<p>And that was all. That line of code was a simple…</p>
+
+<p>NotificationsMailer.new_message(@message).deliver</p>
+
+<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
+
+<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
+
+<blockquote><p>User,</p></blockquote>
+
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x6f;&#117;&#114;&#46;&#x73;&#x65;&#110;&#x64;&#101;&#x72;&#46;&#101;&#x6d;&#x61;&#x69;&#108;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#109;&#x2e;">&#111;&#x75;&#114;&#46;&#115;&#101;&#110;&#100;&#x65;&#114;&#46;&#x65;&#109;&#x61;&#x69;&#108;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+
+<p>Sunday, July 29, 2012 6:55:17 PM
+GMT</p>
+
+<p>IP Address: 123.456.789.101</p>
+
+<p>Location: Paris, France</p>
+
+<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
+
+<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
+
+<p>Sincerely,</p>
+
+<p>The Google Accounts Team</p>
+
+<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
+<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
+, changed it in my configuration and everything worked again flawlessly.</p>
+
+<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+]]></content>
+  </entry>
+  
+</feed>

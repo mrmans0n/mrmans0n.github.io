@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: app.net | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/app-dot-net/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[In App.net!]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/05/25/in-app-net/"/>
+    <updated>2013-05-25T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/05/25/in-app-net</id>
+    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://alpha.app.net/nlopez">https://alpha.app.net/nlopez</a></p>
+
+<p>At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.</p>
+
+<p>So I’m
+<a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
+]]></content>
+  </entry>
+  
+</feed>

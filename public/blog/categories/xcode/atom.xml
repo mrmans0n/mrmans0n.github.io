@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xcode | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/xcode/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why, Apple?]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/10/15/why-apple/"/>
+    <updated>2012-10-15T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/10/15/why-apple</id>
+    <content type="html"><![CDATA[<p>I’m always forgetting to install Xcode’s
+<strong>Command Line Tools</strong>
+ after every Xcode update.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/15/thumb_clt.png" alt="" /></p>
+
+<p>I mean, if I install it once, why shouldn’t it be installed automatically after each update? Is it really that difficult?</p>
+
+<p>I remember with love and fluffy feelings how my life was before all this. The command line tools were always there, you never had to do anything special… Ah, better times.</p>
+
+<p>This post was powered by an awful day frustration.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Can't compile perfectly good files in Xcode 4.5? ]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/10/03/can-t-compile-perfectly-good-files-in-xcode-4-5/"/>
+    <updated>2012-10-03T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/10/03/can-t-compile-perfectly-good-files-in-xcode-4-5</id>
+    <content type="html"><![CDATA[<p>This kept happening to me: perfect code that compiled before doesn’t even compile now. Any project.</p>
+
+<p>A major shitstorm.</p>
+
+<p>ld: in /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/usr/lib/system/libsystem_sim_m.dylib, can&rsquo;t open file, errno=-22 for architecture i386</p>
+
+<p>Turns out that an update of the
+<strong>Command Line Tools</strong>
+ that popped on my Xcode was one for version 4.5.1 but the update wasn’t still pushed to the Mac App Store. Waiting and installing it solved the problem.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/14/thumb_apple-xcode-icon.png" alt="" /></p>
+
+<p>Still, what a hard time it gave me.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My XCode 4 skin]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/08/22/my-xcode-4-skin/"/>
+    <updated>2012-08-22T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/08/22/my-xcode-4-skin</id>
+    <content type="html"><![CDATA[<p>I use a lot my IDEs during everyday’s work, so I try to minimize the strain done to my eyes. And I find it more comfortable if I use dark backgrounds, hence my themes.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/12/xcode_desktop.png"><img src="http://mrm.perry.es/uploads/admin/image/image/12/thumb_xcode_desktop.png" alt="" /></a></p>
+
+<p>My theme is based on
+<a href="http://developers.enormego.com/view/ego_xcode_theme_for_xcode_4_egov2">EGO v2</a> theme, but changing Menlo font for
+<a href="http://levien.com/type/myfonts/inconsolata.html">Inconsolata</a>.</p>
+
+<p>If you want to try, run this on a terminal with XCode closed.</p>
+
+<p>cd ~/Library/Fonts; curl -O <a href="http://levien.com/type/myfonts/Inconsolata.otf;">http://levien.com/type/myfonts/Inconsolata.otf;</a> mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes; cd ~/Library/Developer/Xcode/UserData/FontAndColorThemes; curl -O <a href="https://raw.github.com/gist/3427070/70427af513bc71b011ac65f847435fbe169d2170/EGOv2_Inconsolata.dvtcolortheme">https://raw.github.com/gist/3427070/70427af513bc71b011ac65f847435fbe169d2170/EGOv2_Inconsolata.dvtcolortheme</a></p>
+
+<p>And then activate it in
+<strong>Preferences / Fonts &amp; Colors</strong>
+. Regards!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Dropbox to synchronize Xcode 4 snippets]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/05/07/using-dropbox-to-synchronize-xcode-4-snippets/"/>
+    <updated>2012-05-07T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/05/07/using-dropbox-to-synchronize-xcode-4-snippets</id>
+    <content type="html"><![CDATA[<p>As many of you, devs, I have more than one coding spot: work, home, laptop… And it always bothers me the configuration of the
+IDE.</p>
+
+<p>I’m really fond of my coding snippets in Xcode and it was a big bother to keep them up to date, so I had to think of something… why don’t use a shared folder in Dropbox?</p>
+
+<p>First of all, create a folder within your Dropbox called
+<strong>CodeSnippets</strong>
+.</p>
+
+<p>Then you’ll have to
+<strong>delete</strong>
+ your current Xcode snippets folder. It’s located at  your user folder
+<strong>/Library/Developer/Xcode/UserData/CodeSnippets</strong>
+. Copy its contents (if you want to preserve the ones you already have) to the Dropbox folder you created.</p>
+
+<p>So now the only thing that’s left is linking both directories. Open a terminal and type this:</p>
+
+<p>ln -s ~/Dropbox/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets</p>
+
+<p>And there you go. You only have to repeat these steps in your other computers. You can also share this folder with your team if you want.</p>
+
+<p>Try to avoid any “conflicting copies” from Dropbox in its CodeSnippets directory. Already happened to me, and it kept Xcode crashing. Also, if you’re running Lion or something newer, the
+Library directory of your current user is not visible, so you’ll have to use something like
+<a href="http://allmaconline.com/desktop-utility-for-mac/">DesktopUtility</a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,959 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Nacho Lopez</title>
+	<meta name="author" content="Nacho Lopez">
+
+	
+	<meta name="description" content="Sep 15th, 2012 bikeshare Revamps and Refactors for a Lost User Last week I was rebuilding almost from scratch some parts of
+BikeShare!, my public &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/page/5/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+</div>
+<hgroup>
+  <h1><a href="/">Nacho Lopez</a></h1>
+  
+    <h2>I code.</h2>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    I do awesome stuff for Android, iOS and Rails.
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/112276988873423078640" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/mrmans0n" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/mrmans0n" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+<div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-15T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 15<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bikeshare/'>bikeshare</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/15/revamps-and-refactors-for-a-lost-user/" itemprop="url">Revamps and Refactors for a Lost User</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Last week I was rebuilding almost from scratch some parts of
+<a href="https://play.google.com/store/apps/details?id=com.bikeshare">BikeShare!</a>, my public sharing app for Android.</p>
+
+<p>Overall the app was working okay but some user pointed out some sluggish behavior and problems with location handling, that forced me to do an extensive refactor of the location listeners. He did so with an always hated one star rating.</p>
+
+<p>Moving from a class used in demand to a local service for handling the location with the app already in production wasn’t an easy task. Also I had the urge to tweak a little the user interface and improve some usability stuff, so a lot of time was invested in that area too.</p>
+
+<p>In short, a week and a half work used in solving issues pointed out by an already lost user. But now it’s better. And I’m glad he said so.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 10<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/10/every-cloud-has-a-silver-lining/" itemprop="url">Every Cloud Has a Silver Lining</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’ve just been notified my latest compilation of an app submitted to the App Store was
+<strong>rejected</strong>
+. Well, shit happens, kinda expected it after two days in review.</p>
+
+<p>But what startled me was the reason: they said the app couldn’t be used without logging in and for registration purposed I was requesting personal information, like e-mail. Well, could be a valid reason, but I wrote on the
+review notes that the app could be used without logging in, and registering was free. Ten days it was
+waiting for review, ten days for nothing.</p>
+
+<p>Thank god I didn’t have a deadline for that project. Now I’ll just enjoy patiently the wait. Ah, the wait.</p>
+
+<p>But
+<strong>looking on the bright side</strong>
+, I could upload an improved version as 1.0 for it, faster and more reliable. See? It wasn’t all bad. I’m not that cranky (well, not all the time). Heh.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-05T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 5<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/05/a-small-step-towards-a-bright-future-thanks-to-sony-and-jbq/" itemprop="url">A Small Step Towards a Bright Future Thanks to Sony and JBQ</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Tuesday
+<a href="http://developer.sonymobile.com/2012/09/03/sony-release-binaries-to-support-jbqs-vanilla-android-xperia-s-project-download/">Sony released the binaries</a> needed by a project started by no less than
+<strong>Jean-Baptiste Queru</strong>
+, Technical Lead of
+AOSP.
+<a href="https://android.googlesource.com/device/sony/lt26/+/master">The project</a> is creating a stock Android rom for the Xperia S smartphone.</p>
+
+<p>This means
+<strong>Google itself will be creating a stock rom for a non-nexus device</strong>
+ with all the benefits that has (like
+OTA updates).</p>
+
+<p>This rocks for two different reasons.</p>
+
+<p>First of all, Google is taking upon themselves the titanic task of mantaining more devices, even if they are not
+theirs, not a Nexus.</p>
+
+<p>Also, removing the custom launchers and personalization layers the manufacturers blend with their phones is
+<strong>always</strong>
+ good. Less load, less excuses and more pure Android flavor. After Ice Cream Sandwich UI revamp the custom layers are definitely not needed.</p>
+
+<p>If this applies to more devices in the future we might be seeing a way out in the impossible task of fighting the fragmentation. And this is awesome.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-04T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 4<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/malcom/'>malcom</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/04/working-with-malcom-library-in-ios/" itemprop="url">Working With Malcom Library in iOS</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’ve been working with
+<a href="https://github.com/MyMalcom/malcom-lib-ios">Malcom</a> library for quite some time at work, but I decided to use it for personal apps lately too.</p>
+
+<p>It’s what I call a
+<strong>problem-solver library</strong>
+, because with only one integration you have powerful analytics, a wrapper for your ads and
+VERY simplified notifications handling in iOS. You can take a peek to all of their features
+<a href="http://www.mymalcom.com/en/">in their website</a>.</p>
+
+<p>Programming-wise you only have to suffer a rather annoying configuration, but it’s totally worth your time. Once done, you can forget about it.</p>
+
+<h3>In your code</h3>
+
+<p>Use the static library downloaded from
+<a href="https://github.com/MyMalcom/malcom-lib-ios/tree/master/Libraries/static%20library/lib">this address</a> in your project, add these frameworks to your project (the real pain in the ass):</p>
+
+<p>*MediaPlayer.framework</p>
+
+<p>*AVFoundation.framework</p>
+
+<p>*CFNetwork.framework</p>
+
+<p>*SystemConfiguration.framework</p>
+
+<p>*MobileCoreServices.framework</p>
+
+<p>*QuartzCore.framework</p>
+
+<p>*CoreTelephony.framework</p>
+
+<p>*CoreLocation.framework</p>
+
+<p>*AudioToolbox.framework</p>
+
+<p>*MessageUI.framework</p>
+
+<p>*CoreGraphics.framework</p>
+
+<p>*libz.1.dylib</p>
+
+<p>*iAd.framework (only if you want ads from iAd in your project)Only two ministeps left.</p>
+
+<p>In your target, in your production scheme add in
+<strong>Other C Flags</strong>
+ section this flag:</p>
+
+<p>-DDISTRIBUTION=1</p>
+
+<p>And in
+<strong>Other link flags</strong>
+ add:</p>
+
+<p>-all_load -ObjC</p>
+
+<p>And, with everything configured properly, this simple code in
+<strong>application didFinishLaunchingWithOptions</strong>
+ of your
+<strong>AppDelegate</strong>
+ will do the trick:</p>
+
+<p>[MalcomLib initWithUUID:@&ldquo;MALCOM_GENERATED_APP_UUID&rdquo; andSecretKey:@&ldquo;YOUR_SECRET_KEY&rdquo; withAdId:@&ldquo;FILL_ONLY_IF_YOU_USE_ADS&rdquo;];</p>
+
+<h3>In the site</h3>
+
+<p>You can create a free account in
+<a href="https://malcom.mymalcom.com/en/registerform">their site</a>. Then you register your app, configure the modules you’d like to use and that’s all.</p>
+
+<h3>The magic</h3>
+
+<p>My most loved feature of it all: its push api. It takes away the annoyance of handling the apns server side. Take a look to its über simple
+API
+<a href="http://www-dev.mymalcom.com/resources-files/API-interna-APNS-v2_english.pdf">in this pdf file</a>.</p>
+
+<p>For example, with a simple curl like this one you can deliver a notification to all your users (in a sandbox environment).</p>
+
+<p>curl -i -H &ldquo;Accept: application/json&rdquo; -H &ldquo;Content-type: application/json&rdquo; -X POST -u my_malcom_login:my_malcom_password -d &lsquo;{&ldquo;push&rdquo;:{&ldquo;text&rdquo;:&ldquo;This is a test push message&rdquo;}}&rsquo;  <a href="https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push">https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push</a></p>
+
+<p>The push module is very complete, you can segment by user, by groups, tags, and whatever.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-22T22:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 22<span>nd</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/xcode/'>xcode</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/22/my-xcode-4-skin/" itemprop="url">My XCode 4 Skin</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I use a lot my IDEs during everyday’s work, so I try to minimize the strain done to my eyes. And I find it more comfortable if I use dark backgrounds, hence my themes.</p>
+
+<p><a href="http://mrm.perry.es/uploads/admin/image/image/12/xcode_desktop.png"><img src="http://mrm.perry.es/uploads/admin/image/image/12/thumb_xcode_desktop.png" alt="" /></a></p>
+
+<p>My theme is based on
+<a href="http://developers.enormego.com/view/ego_xcode_theme_for_xcode_4_egov2">EGO v2</a> theme, but changing Menlo font for
+<a href="http://levien.com/type/myfonts/inconsolata.html">Inconsolata</a>.</p>
+
+<p>If you want to try, run this on a terminal with XCode closed.</p>
+
+<p>cd ~/Library/Fonts; curl -O <a href="http://levien.com/type/myfonts/Inconsolata.otf;">http://levien.com/type/myfonts/Inconsolata.otf;</a> mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes; cd ~/Library/Developer/Xcode/UserData/FontAndColorThemes; curl -O <a href="https://raw.github.com/gist/3427070/70427af513bc71b011ac65f847435fbe169d2170/EGOv2_Inconsolata.dvtcolortheme">https://raw.github.com/gist/3427070/70427af513bc71b011ac65f847435fbe169d2170/EGOv2_Inconsolata.dvtcolortheme</a></p>
+
+<p>And then activate it in
+<strong>Preferences / Fonts &amp; Colors</strong>
+. Regards!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-20T22:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 20<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/libv8/'>libv8</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/20/solving-a-hateful-error-with-the-installation-of-libv8-3-3-10-4/" itemprop="url">Solving a Hateful Error With the Installation of Libv8 (3.3.10.4)</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’ve been having problems with my latest Rails installation in my
+<strong>recently fresh installed</strong>
+ Mountain Lion while doing a
+<strong>bundle install</strong>
+.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Using rake (0.9.2.2)
+Using RedCloth (4.2.9)
+Using multi_json (1.2.0)
+Using activesupport (3.1.3)
+Using builder (3.0.0)
+Using i18n (0.6.0)
+Using activemodel (3.1.3)
+Using erubis (2.7.0)
+Using rack (1.3.6)
+Using rack-cache (1.2)
+Using rack-mount (0.8.3)
+Using rack-test (0.6.1)
+Using hike (1.2.1)
+Using tilt (1.3.3)
+Using sprockets (2.0.3)
+Using actionpack (3.1.3)
+Using mime-types (1.18)
+Using polyglot (0.3.3)
+Using treetop (1.4.10)
+Using mail (2.3.3)
+Using actionmailer (3.1.3)
+Using arel (2.2.3)
+Using tzinfo (0.3.32)
+Using activerecord (3.1.3)
+Using activeresource (3.1.3)
+Using ansi (1.4.2)
+Using bcrypt-ruby (3.0.1)
+Using will_paginate (3.0.3)
+Using bootstrap-will_paginate (0.0.7)
+Using bundler (1.1.5)
+Using coffee-script-source (1.2.0)
+Using execjs (1.3.0)
+Using coffee-script (2.2.0)
+Using rack-ssl (1.3.2)
+Using json (1.6.6)
+Using rdoc (3.12)
+Using thor (0.14.6)
+Using railties (3.1.3)
+Using coffee-rails (3.1.1)
+Using commonjs (0.2.5)
+Using gchartrb (0.8)
+Using jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.</p>
+
+<p>/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
+<strong><em> extconf.rb failed </em></strong>
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.</p>
+
+<p>Provided configuration options:</p>
+
+<pre><code>--with-opt-dir
+--without-opt-dir
+--with-opt-include
+--without-opt-include=${opt-dir}/include
+--with-opt-lib
+--without-opt-lib=${opt-dir}/lib
+--with-make-prog
+--without-make-prog
+--srcdir=.
+--curdir
+--ruby=/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+</code></pre>
+
+<p>extconf.rb:13: uninitialized constant Gem (NameError)
+Checking for Python&hellip;</p>
+
+<p>Gem files will remain installed in /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4 for inspection.
+Results logged to /Users/mrm/.bundler/tmp/48692/gems/libv8-3.3.10.4/ext/libv8/gem_make.out
+An error occured while installing libv8 (3.3.10.4), and Bundler cannot continue.
+Make sure that <code>gem install libv8 -v '3.3.10.4'</code> succeeds before bundling.</p>
+
+<p>After some headbanging against the wall, I’ve found that
+<a href="http://stackoverflow.com/questions/8126465/bundle-install-update-libv8-therubyracer-installation-fails-with-native-ex/8127559#8127559">it’s a common error</a> and I tried to solve it with some of the solutions there, like uninstalling therubyracer and libv8 gems. Didn’t worked.</p>
+
+<p>So I tried upgrading bundler.</p>
+
+<p>$ sudo gem install bundler &mdash;pre
+Successfully installed bundler-1.2.0.rc.2
+1 gem installed
+Installing ri documentation for bundler-1.2.0.rc.2&hellip;
+Installing RDoc documentation for bundler-1.2.0.rc.2&hellip;</p>
+
+<p>But didn’t do the trick. Then
+<strong>I checked my ruby and rails versions</strong>
+, and while rails was at its newest,
+<strong>my ruby installation was the one provided by Apple</strong>
+.</p>
+
+<p>$ ruby -v
+ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</p>
+
+<p>Then I realized I hadn’t installed rvm in my new installation of Mountain Lion, so
+<a href="https://rvm.io/rvm/install/">I did it as expected</a> : install it and use the newest ruby version.</p>
+
+<p>Then with this one…</p>
+
+<p>$ ruby -v
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.0.0]</p>
+
+<p>…I tried again to
+<strong>bundle install</strong>
+ and to my surprise, it was fixed. I lost precious work hours because of this, so I hope it helps you too.</p>
+
+<p>$ bundle install
+Fetching gem metadata from <a href="http://rubygems.org/.......">http://rubygems.org/&#8230;&#8230;.</a>
+Fetching git://github.com/seyhunak/twitter-bootstrap-rails.git
+remote: Counting objects: 2407, done.
+remote: Compressing objects: 100% (1221/1221), done.
+remote: Total 2407 (delta 1035), reused 2256 (delta 916)
+Receiving objects: 100% (2407/2407), 1.14 MiB | 616 KiB/s, done.
+Resolving deltas: 100% (1035/1035), done.
+Using rake (0.9.2.2)
+Installing RedCloth (4.2.9) with native extensions
+Installing multi_json (1.2.0)
+Installing activesupport (3.1.3)
+Installing builder (3.0.0)
+Installing i18n (0.6.0)
+Installing activemodel (3.1.3)
+Installing erubis (2.7.0)
+Installing rack (1.3.6)
+Installing rack-cache (1.2)
+Installing rack-mount (0.8.3)
+Installing rack-test (0.6.1)
+Installing hike (1.2.1)
+Installing tilt (1.3.3)
+Installing sprockets (2.0.3)
+Installing actionpack (3.1.3)
+Installing mime-types (1.18)
+Installing polyglot (0.3.3)
+Installing treetop (1.4.10)
+Installing mail (2.3.3)
+Installing actionmailer (3.1.3)
+Installing arel (2.2.3)
+Installing tzinfo (0.3.32)
+Installing activerecord (3.1.3)
+Installing activeresource (3.1.3)
+Installing ansi (1.4.2)
+Installing bcrypt-ruby (3.0.1) with native extensions
+Installing will_paginate (3.0.3)
+Installing bootstrap-will_paginate (0.0.7)
+Installing coffee-script-source (1.2.0)
+Installing execjs (1.3.0)
+Installing coffee-script (2.2.0)
+Installing rack-ssl (1.3.2)
+Installing json (1.6.6) with native extensions
+Installing rdoc (3.12)
+Installing thor (0.14.6)
+Installing railties (3.1.3)
+Installing coffee-rails (3.1.1)
+Installing commonjs (0.2.5)
+Installing gchartrb (0.8)
+Installing jquery-rails (1.0.19)
+Installing libv8 (3.3.10.4) with native extensions
+Installing therubyracer (0.10.0) with native extensions
+Installing less (2.1.0)
+Installing less-rails (2.2.0)
+Installing polyamorous (0.5.0)
+Installing meta_search (1.1.3)
+Installing mysql2 (0.3.11) with native extensions
+Using bundler (1.1.5)
+Installing rails (3.1.3)
+Installing sass (3.1.15)
+Installing sass-rails (3.1.6)
+Installing sqlite3 (1.3.5) with native extensions
+Installing turn (0.8.2)
+Using twitter-bootstrap-rails (2.0.4) from git://github.com/seyhunak/twitter-bootstrap-rails.git (at master)
+Installing uglifier (1.2.4)
+Your bundle is complete! Use <code>bundle show [gemname]</code> to see where a bundled gem is installed.
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:</p>
+
+<p>&lt;= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data &mdash;install
+ = 1.9.1 : gem install rdoc-data; rdoc-data &mdash;install</p>
+
+<blockquote><p>= 1.9.2 : nothing to do! Yay!</p></blockquote>
+
+<p>Post-install message from meta_search:</p>
+
+<p><strong><em> Thanks for installing MetaSearch! </em></strong>
+Be sure to check out <a href="http://metautonomo.us/projects/metasearch/">http://metautonomo.us/projects/metasearch/</a> for a
+walkthrough of MetaSearch&rsquo;s features, and click the donate button if
+you&rsquo;re feeling especially appreciative. It&rsquo;d help me justify this
+&ldquo;open source&rdquo; stuff to my lovely wife. :)</p>
+
+<p>I broke a sweat here. Specially when the
+<strong>installing libv8</strong>
+ part took like 2 minutes and I didn’t knew if it was going to work.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-16T22:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 16<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/design/'>design</a>, <a class='category' href='/blog/categories/pinterest/'>pinterest</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/16/doing-things-right-is-worth-mentioning/" itemprop="url">Doing Things Right Is Worth Mentioning</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’m always being told that
+<strong>it’s too difficult and even impossible make good interfaces and beautiful apps in Android</strong>
+. And I always say the same: given the time and the thought needed, it is more than possible.</p>
+
+<p>Lately more and more
+multi-platform apps are embracing
+<strong>Holo</strong>
+, and they are doing it right. For example, the last iteration of
+<a href="https://foursquare.com">foursquare</a> it’s a good example of a famous app doing things better.</p>
+
+<p>The most recent app, and the reason I’m writing this is
+<strong>Pinterest</strong>
+.</p>
+
+<p><img src="http://mrm.perry.es/uploads/admin/image/image/11/thumb_pinterest.png" alt="" /></p>
+
+<p>They released their iOS app long time ago and Android was left behind, but I think it was worth, because
+<a href="https://play.google.com/store/apps/details?id=com.pinterest">they just released their Android app</a> and it’s
+gorgeous. Custom smooth animations, clever use of the Action Bar, slick design… It’s really a delight. It’s an example to follow, really, even with its rough edges (due to novelty).</p>
+
+<p>Too bad I don’t care about the social network itself.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T22:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 5<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/change/'>change</a>, <a class='category' href='/blog/categories/random/'>random</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/05/resistance-to-change/" itemprop="url">Resistance to Change</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>The title of this post could be misleading. I’m not gonna talk about the
+ever-existing resistance to change in requisites (even if you work in an agile environment).</p>
+
+<p>What I wanted to talk about is
+<strong>the resistance to change some of
+us developers have regarding to technology</strong>
+.</p>
+
+<p>In our world we need to be constantly learning, even if our work doesn’t need us to, but the sad truth is
+<strong>most of the people aren’t cut for this kind of thing</strong>
+ and take the course of the minimum effort. It’s common to see engineers stuck in cobol, fortran and with absolutely no interest in learning challenging stuff for them. Even from a practical standpoint that sucks.</p>
+
+<p>It is also common for us to whine
+a lot when our favorite
+IDE gets updated and improved, because we can’t find a shortcut or whatever, or when we want to change our
+VCS. We shouldn’t because we would have two problems then: the whining and the original problem.</p>
+
+<p>We have to keep learning, even if we’re not comfortable with it. If you want to be stuck, well, then maybe you should reconsider your career. No offense. Let’s get out of our comfort zone and improve ourselves!</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T22:00:00+02:00" data-updated="true" itemprop="datePublished">Aug 2<span>nd</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/premium/'>premium</a>, <a class='category' href='/blog/categories/spotify/'>spotify</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/08/02/premium-services/" itemprop="url">Premium Services</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I’m subscribed to some
+<strong>premium services</strong>
+, and there are two that are
+literally essential to me as a developer. I’m talking about
+<a href="http://www.spotify.con">Spotify</a> and
+<a href="http://github.com">GitHub</a>.</p>
+
+<p>I’ve been an
+<strong>Spotify</strong>
+ subscriber for more than two years. I always code with music, call it white noise, call it whatever you want, I just need something on the background to let me focus and reach
+the zone.</p>
+
+<p>My music varies, it depends on the day and my mood. For analysis and more-thinking-than-coding moments, I usually end up listening to some OSTs like Mass Effect (
+<a href="http://open.spotify.com/album/3f4qclJfQLXc1xapUxUEJq">1</a>, 2 and
+<a href="http://open.spotify.com/album/4AqNrJQ3uSoonTUgvBQHMX">3</a>), Gothic 3,
+<a href="http://open.spotify.com/artist/6cadOIa5DTh6a5mGo5r4bh">Trent Reznor + Atticus Ross</a> soundtracks (
+<a href="http://open.spotify.com/album/0mAK8JyX2On5kLC3VMMgm7">TGWTDT</a> /
+<a href="http://open.spotify.com/album/1ijkFiMeHopKkHyvQCWxUa">The Social Network</a>),
+<a href="http://open.spotify.com/artist/0YC192cP3KPCRWx8zr8MfZ">Hans Zimmer OSTs</a> or some medleys like
+<a href="http://open.spotify.com/album/6mpHl6so8tgC8TLGXb8e2O">Video Games Live</a> and
+<a href="http://open.spotify.com/album/3bBCofH4VxHokZ6fRCgbGx">The Greatest Video Game Music</a>. For the moments of
+really awesome and destroyer coding I prefer something a little bit electronic like
+<a href="http://open.spotify.com/artist/1GwxXgEc6oxCKQ5wykWXFs">Prodigy</a>,
+<a href="http://open.spotify.com/artist/7MqnCTCAX6SsIYYdJCQj9B">Pendulum</a> or even more dark stuff like
+<a href="http://open.spotify.com/artist/3V4IvzRQYP5mzuVtkcHgVa">KMFDM</a>,
+<a href="http://open.spotify.com/artist/2KaW48xlLnXC2v8tvyhWsa">Amaranthe</a> or
+<a href="http://open.spotify.com/artist/0tQn2q1TIEenLgodtb8Nhx">Zeromancer</a>. But most of the time I listen to metal bands and even punk/punk rock, depends on the mood. Of course, I’m talking about coding hours. I also use it in my free time, ain’t it awesome?</p>
+
+<p>Also, I’ve been a
+<strong>GitHub</strong>
+ subscriber for some months now. I needed some private repos and it gave me the push I needed to throw my money to the screen. I like the idea and philosophy a lot. It’s our very own (developer’s) social network, and for some time it’s been my second code-related site in number of visits. Of course, the first is
+<a href="http://www.stackoverflow.com">StackOverflow</a>.</p>
+
+<p>And
+<a href="http://octodex.github.com/">Octocat</a> is fucking awesome.</p>
+
+<p>I also use a lot
+<strong>Evernote</strong>
+, but still not at the level needed to pay for it. But give me time…</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-31T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 31<span>st</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/actionmailer/'>actionmailer</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/" itemprop="url">ActionMailer With GMail Problem and Its Workaround</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I had a little problem today with one of my managed sites, one that was using
+<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
+Contact Us form using GMail’s
+SMTP.</p>
+
+<p>But reading server logs wasn’t very enlightening.</p>
+
+<p>$ tail log/production.log
+Completed 500 Internal Server Error in 533ms
+Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+):
+app/controllers/contact_controller.rb:11:in `create&#8217;</p>
+
+<p>And that was all. That line of code was a simple…</p>
+
+<p>NotificationsMailer.new_message(@message).deliver</p>
+
+<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
+
+<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
+
+<blockquote><p>User,</p></blockquote>
+
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#111;&#x75;&#114;&#46;&#115;&#x65;&#110;&#100;&#x65;&#114;&#x2e;&#101;&#x6d;&#97;&#105;&#108;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;&#x2e;">&#111;&#117;&#x72;&#46;&#115;&#101;&#110;&#100;&#x65;&#114;&#46;&#x65;&#x6d;&#x61;&#105;&#x6c;&#64;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+
+<p>Sunday, July 29, 2012 6:55:17 PM
+GMT</p>
+
+<p>IP Address: 123.456.789.101</p>
+
+<p>Location: Paris, France</p>
+
+<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
+
+<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
+
+<p>Sincerely,</p>
+
+<p>The Google Accounts Team</p>
+
+<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
+<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
+, changed it in my configuration and everything worked again flawlessly.</p>
+
+<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+
+		
+		
+	</div>
+
+</article>
+
+</div>
+<nav id="pagenavi">
+    
+        <a href="/blog/page/4/" class="prev">Prev</a>
+    
+    
+        <a href="/blog/page/6/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Nacho Lopez -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a> with some modifications by <a href="http://nlopez.io">Nacho López</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'mrm';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32899498-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

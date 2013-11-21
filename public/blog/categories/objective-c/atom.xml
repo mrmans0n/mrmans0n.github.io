@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: objective-c | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/objective-c/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-11-21T21:28:56+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Working with Malcom library in iOS]]></title>
+    <link href="http://mrmans0n.github.io/blog/2012/09/04/working-with-malcom-library-in-ios/"/>
+    <updated>2012-09-04T22:00:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2012/09/04/working-with-malcom-library-in-ios</id>
+    <content type="html"><![CDATA[<p>I’ve been working with
+<a href="https://github.com/MyMalcom/malcom-lib-ios">Malcom</a> library for quite some time at work, but I decided to use it for personal apps lately too.</p>
+
+<p>It’s what I call a
+<strong>problem-solver library</strong>
+, because with only one integration you have powerful analytics, a wrapper for your ads and
+VERY simplified notifications handling in iOS. You can take a peek to all of their features
+<a href="http://www.mymalcom.com/en/">in their website</a>.</p>
+
+<p>Programming-wise you only have to suffer a rather annoying configuration, but it’s totally worth your time. Once done, you can forget about it.</p>
+
+<h3>In your code</h3>
+
+<p>Use the static library downloaded from
+<a href="https://github.com/MyMalcom/malcom-lib-ios/tree/master/Libraries/static%20library/lib">this address</a> in your project, add these frameworks to your project (the real pain in the ass):</p>
+
+<p>*MediaPlayer.framework</p>
+
+<p>*AVFoundation.framework</p>
+
+<p>*CFNetwork.framework</p>
+
+<p>*SystemConfiguration.framework</p>
+
+<p>*MobileCoreServices.framework</p>
+
+<p>*QuartzCore.framework</p>
+
+<p>*CoreTelephony.framework</p>
+
+<p>*CoreLocation.framework</p>
+
+<p>*AudioToolbox.framework</p>
+
+<p>*MessageUI.framework</p>
+
+<p>*CoreGraphics.framework</p>
+
+<p>*libz.1.dylib</p>
+
+<p>*iAd.framework (only if you want ads from iAd in your project)Only two ministeps left.</p>
+
+<p>In your target, in your production scheme add in
+<strong>Other C Flags</strong>
+ section this flag:</p>
+
+<p>-DDISTRIBUTION=1</p>
+
+<p>And in
+<strong>Other link flags</strong>
+ add:</p>
+
+<p>-all_load -ObjC</p>
+
+<p>And, with everything configured properly, this simple code in
+<strong>application didFinishLaunchingWithOptions</strong>
+ of your
+<strong>AppDelegate</strong>
+ will do the trick:</p>
+
+<p>[MalcomLib initWithUUID:@&ldquo;MALCOM_GENERATED_APP_UUID&rdquo; andSecretKey:@&ldquo;YOUR_SECRET_KEY&rdquo; withAdId:@&ldquo;FILL_ONLY_IF_YOU_USE_ADS&rdquo;];</p>
+
+<h3>In the site</h3>
+
+<p>You can create a free account in
+<a href="https://malcom.mymalcom.com/en/registerform">their site</a>. Then you register your app, configure the modules you’d like to use and that’s all.</p>
+
+<h3>The magic</h3>
+
+<p>My most loved feature of it all: its push api. It takes away the annoyance of handling the apns server side. Take a look to its über simple
+API
+<a href="http://www-dev.mymalcom.com/resources-files/API-interna-APNS-v2_english.pdf">in this pdf file</a>.</p>
+
+<p>For example, with a simple curl like this one you can deliver a notification to all your users (in a sandbox environment).</p>
+
+<p>curl -i -H &ldquo;Accept: application/json&rdquo; -H &ldquo;Content-type: application/json&rdquo; -X POST -u my_malcom_login:my_malcom_password -d &lsquo;{&ldquo;push&rdquo;:{&ldquo;text&rdquo;:&ldquo;This is a test push message&rdquo;}}&rsquo;  <a href="https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push">https://api.mymalcom.com/v2-SANDBOX/apns/applications/MALCOM_GENERATED_APP_UUID/push</a></p>
+
+<p>The push module is very complete, you can segment by user, by groups, tags, and whatever.</p>
+]]></content>
+  </entry>
+  
+</feed>
