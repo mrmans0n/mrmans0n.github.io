@@ -9,7 +9,7 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Jul 27th, 2012 homebrew, mountainlion, osx Fixing Mountain Lion and Homebrew Issues Hiya. Like many of you I’ve just installed the brand new OS X &hellip;">
+	<meta name="description" content="Jul 30th, 2012 random, rant Why Do People Who Can&#8217;t Read Buy Smartphones? I know one must keep the cool in these situations but they make it &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,6 +97,55 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 30<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/random/'>random</a>, <a class='category' href='/blog/categories/rant/'>rant</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/30/why-do-people-who-can-t-read-buy-smartphones/" itemprop="url">Why Do People Who Can&#8217;t Read Buy Smartphones?</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I know one must keep the cool in these situations but they make it hard. At least I know I must not answer, just ignoring them does the trick.</p>
+
+<p>Ah, well, haven’t said it yet. I’m talking about the people who
+<strong>punish your app</strong>
+ in the stores (App Store and Google Play mainly) just because the app doesn’t do this or that: they just downloaded your app by its name and didn’t read the
+<strong>very first line of the description</strong>
+.
+“Oh, it’s crap, you can’t
+XXXX with this shit” it’s one of the most repeated statements, and of course it comes with the typical
+<strong>one star</strong>
+ rating.</p>
+
+<p>There are a lot of useful comments though, the ones suggesting new features you haven’t even thought of are a perfect example. They are encouraged. Though even if you add the feature requested, some people don’t bother to update their comments, and it also bugs me a little bit. At least in the App Store you can see at first glance the comments of the current version because the others are a little bit hidden.</p>
+
+<p>Well, that’s about everything I wanted to rant about today.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -584,50 +633,6 @@ XML defined attributes.</p>
 <p>The hacky way that saved my ass today is this.</p>
 
 <p>Worked like a charm.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-05T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 5<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/json/'>json</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/06/05/fixing-malformed-json-strings-without-quotation-marks-in-its-attribute-name/" itemprop="url">Fixing Malformed JSON Strings Without Quotation Marks in Its Attribute Name</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Sometimes you find
-JSON web services that doesn’t respect the format, just because javascript and some parsers also work that way. But you want to use it with a parser that only allows strict implementations.</p>
-
-<p>So here you have a little piece of code that saved my butt (in Java). It uses String class
-<strong>replaceAll</strong>
- method.</p>
-
-<p>malformedJson.replaceAll(&ldquo;(\s)*([a-zA-Z0-9_]+?):&rdquo;, &ldquo;\&rdquo;$2\&ldquo;:&rdquo;);</p>
-
-<p>I’m not the most knowledgeable guy with regular expressions but that one is simple enough.</p>
 
 		
 		

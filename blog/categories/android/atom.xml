@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-09-03T23:02:19+02:00</updated>
+  <updated>2013-11-29T18:15:45+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Open Sourcing stuff]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff/"/>
+    <updated>2013-11-21T20:57:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve submitted some new versions of <a href="https://github.com/mrmans0n/localio">Localio</a> addressing bugs and adding some features (like <strong>XLSX support</strong>), but that&rsquo;s all in the ruby side.</p>
+
+<p>But being true to my roots, I&rsquo;ve been working on some libraries lately, all of them for <strong>Android</strong>. You might want to check them out&hellip;</p>
+
+<ul>
+<li><p><a href="https://github.com/mobivery/smart-location-lib">SmartLocation</a>: A library for making easier the integration with the new <strong>Location</strong> powered by <em>Google Play Services</em>, with a twist &ndash; adding the current activity performed by the user (on foot, on vehicle, standing still, etc) to the mix, so we can tweak the detection precision depending on that.</p></li>
+<li><p><a href="https://github.com/mrmans0n/clusterer">Clusterer</a>: A library version of some classes I have already open sourced, that perform <strong>clustering</strong> on Maps v2 for Android. I&rsquo;m working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example.</p></li>
+</ul>
+
+
+<p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Is fragmentation really that much of a problem in Android?]]></title>
@@ -116,60 +135,6 @@ idea.system.path=~/.AndroidStudioPreview/system
 <p>The dual core in iOS is a must since iOS 6, my old iPhone 4 couldn’t keep up at all (and when I tried iOS 7 beta 1 there, I swear I saw the iPhone phisically sweat). So pretty excited to try my stuff in there too, and see it runs smoothly.</p>
 
 <p>Instrumentation tests, there I go!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android maven building borked with latest ADT 22]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22/"/>
-    <updated>2013-05-17T22:00:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/05/17/android-maven-building-borked-with-latest-adt-22</id>
-    <content type="html"><![CDATA[<p>There were some major changes to Android
-SDK layout, mainly moving all the build tools to another directory, with the pretty self-explanatory name “build-tools”.</p>
-
-<p>But since the version of
-<strong>maven-android-plugin</strong>
- almost everybody uses at the moment (3.5.0) can’t handle this, we have to fix it – and be able to
-<strong>WORK</strong>
- and stuff.</p>
-
-<p>Pretty simple, just get the new stable version (at this moment is 3.6.0).</p>
-
-<p>And that should do the trick.</p>
-
-<p>You should change your pom to reflect it, of course. For example:</p>
-
-<p>[&hellip;]</p>
-
-<pre><code>&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
-            &lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;3.6.0&lt;/version&gt;
-            &lt;extensions&gt;true&lt;/extensions&gt;
-            &lt;configuration&gt;
-                &lt;sdk&gt;
-                    &lt;platform&gt;17&lt;/platform&gt;
-                &lt;/sdk&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-        &lt;plugin&gt;
-            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-            &lt;version&gt;2.5&lt;/version&gt;
-            &lt;configuration&gt;
-                &lt;source&gt;1.6&lt;/source&gt;
-                &lt;target&gt;1.6&lt;/target&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;
-</code></pre>
-
-<p>[&hellip;]</p>
-
-<p>This article was fixed when 3.6.0 came up, as it explained before how to get 3.5.4-
-SNAPSHOT working on your local machine.</p>
 ]]></content>
   </entry>
   

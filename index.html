@@ -9,7 +9,7 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Sep 3rd, 2013 gem, i18n, localization, ruby Introducing Localio In my head there has been around a lot of times the possibility of contributing to &hellip;">
+	<meta name="description" content="Nov 21st, 2013 android, clusterer, gem, library, localio, open source, ruby, smart location Open Sourcing Stuff I&rsquo;ve submitted some new &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -113,7 +113,52 @@
   
 
 
-<time datetime="2013-09-03T22:26:00+02:00" data-updated="true" itemprop="datePublished">Sep 3<span>rd</span>, 2013</time></div>
+<time datetime="2013-11-21T20:57:00+01:00" data-updated="true" itemprop="datePublished">Nov 21<span>st</span>, 2013</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/clusterer/'>clusterer</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/library/'>library</a>, <a class='category' href='/blog/categories/localio/'>localio</a>, <a class='category' href='/blog/categories/open-source/'>open source</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/smart-location/'>smart location</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2013/11/21/open-sourcing-stuff/" itemprop="url">Open Sourcing Stuff</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I&rsquo;ve submitted some new versions of <a href="https://github.com/mrmans0n/localio">Localio</a> addressing bugs and adding some features (like <strong>XLSX support</strong>), but that&rsquo;s all in the ruby side.</p>
+
+<p>But being true to my roots, I&rsquo;ve been working on some libraries lately, all of them for <strong>Android</strong>. You might want to check them out&hellip;</p>
+
+<ul>
+<li><p><a href="https://github.com/mobivery/smart-location-lib">SmartLocation</a>: A library for making easier the integration with the new <strong>Location</strong> powered by <em>Google Play Services</em>, with a twist &ndash; adding the current activity performed by the user (on foot, on vehicle, standing still, etc) to the mix, so we can tweak the detection precision depending on that.</p></li>
+<li><p><a href="https://github.com/mrmans0n/clusterer">Clusterer</a>: A library version of some classes I have already open sourced, that perform <strong>clustering</strong> on Maps v2 for Android. I&rsquo;m working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example.</p></li>
+</ul>
+
+
+<p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-03T17:51:00+02:00" data-updated="true" itemprop="datePublished">Sep 3<span>rd</span>, 2013</time></div>
 		<div class="tags">
 
 
@@ -125,11 +170,8 @@
 	</div>
 	<h1 class="title" itemprop="name"><a href="/blog/2013/09/03/introducing-localio/" itemprop="url">Introducing Localio</a></h1>
 	<div class="entry-content" itemprop="articleBody">
-		<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there.
-<strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now.
-The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format</a> for this to work, though.</p>
-
-<p>An example of Locfile:</p>
+		<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+An example of Locfile:</p>
 
 <figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -154,9 +196,8 @@ The localization information is processed from a Google Drive spreadsheet or a l
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its <a href="https://github.com/mrmans0n/localio">Github repo</a>.</p>
-
-<p>Cheers!</p>
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its Github repo.
+Cheers!</p>
 
 		
 		
@@ -535,46 +576,6 @@ The localization information is processed from a Google Drive spreadsheet or a l
 <p>Despite what the impression today’s
 WWDC keynote left on me (not so great), one thing is clear:
 <a href="http://www.apple.com/mac-pro/">they know how to sell stuff</a>.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-25T22:00:00+02:00" data-updated="true" itemprop="datePublished">May 25<span>th</span>, 2013</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/app-dot-net/'>app.net</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/05/25/in-app-net/" itemprop="url">In App.net!</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><em>Link</em>: <a href="https://alpha.app.net/nlopez">https://alpha.app.net/nlopez</a></p>
-
-<p>At last I’ve got an App.net account, so I’ll be posting about technology and code in there too.</p>
-
-<p>So I’m
-<a href="https://alpha.app.net/nlopez">@nlopez</a>, feel free to talk to me in there too.</p>
 
 		
 		

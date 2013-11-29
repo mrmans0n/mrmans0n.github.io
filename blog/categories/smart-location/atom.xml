@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: gem | Nacho Lopez]]></title>
-  <link href="http://mrmans0n.github.io/blog/categories/gem/atom.xml" rel="self"/>
+  <title><![CDATA[Category: smart location | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/smart-location/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
   <updated>2013-11-29T18:15:45+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
@@ -29,34 +29,6 @@
 
 
 <p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Introducing Localio]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
-    <updated>2013-09-03T17:51:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
-    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
-An example of Locfile:</p>
-
-<p>``` ruby Locfile example
-platform :ios</p>
-
-<p>output_path &lsquo;Resources/Localizables/&rsquo;</p>
-
-<p>source :google_drive,</p>
-
-<pre><code>   :spreadsheet =&gt; '[Localizables] My Project!',
-   :login =&gt; 'your_email@gmail.com',
-   :password =&gt; 'your_password'
-</code></pre>
-
-<p>formatting :smart # This is optional, formatting :smart is used by default.
-```</p>
-
-<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its Github repo.
-Cheers!</p>
 ]]></content>
   </entry>
   

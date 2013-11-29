@@ -9,8 +9,8 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Sep 10th, 2012 ios Every Cloud Has a Silver Lining I’ve just been notified my latest compilation of an app submitted to the App Store was
-rejected &hellip;">
+	<meta name="description" content="Sep 15th, 2012 bikeshare Revamps and Refactors for a Lost User Last week I was rebuilding almost from scratch some parts of
+BikeShare!, my public &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,48 @@ rejected &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-15T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 15<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bikeshare/'>bikeshare</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/15/revamps-and-refactors-for-a-lost-user/" itemprop="url">Revamps and Refactors for a Lost User</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Last week I was rebuilding almost from scratch some parts of
+<a href="https://play.google.com/store/apps/details?id=com.bikeshare">BikeShare!</a>, my public sharing app for Android.</p>
+
+<p>Overall the app was working okay but some user pointed out some sluggish behavior and problems with location handling, that forced me to do an extensive refactor of the location listeners. He did so with an always hated one star rating.</p>
+
+<p>Moving from a class used in demand to a local service for handling the location with the app already in production wasn’t an easy task. Also I had the urge to tweak a little the user interface and improve some usability stuff, so a lot of time was invested in that area too.</p>
+
+<p>In short, a week and a half work used in solving issues pointed out by an already lost user. But now it’s better. And I’m glad he said so.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -826,7 +868,7 @@ app/controllers/contact_controller.rb:11:in `create&#8217;</p>
 
 <blockquote><p>User,</p></blockquote>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x6f;&#117;&#x72;&#x2e;&#115;&#x65;&#x6e;&#x64;&#101;&#114;&#x2e;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;&#46;">&#x6f;&#117;&#114;&#46;&#x73;&#x65;&#110;&#100;&#x65;&#x72;&#x2e;&#101;&#109;&#x61;&#x69;&#x6c;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#111;&#117;&#114;&#x2e;&#x73;&#x65;&#x6e;&#x64;&#x65;&#x72;&#x2e;&#101;&#109;&#x61;&#x69;&#108;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;&#x2e;">&#111;&#x75;&#x72;&#x2e;&#115;&#x65;&#x6e;&#x64;&#101;&#114;&#x2e;&#x65;&#x6d;&#97;&#105;&#x6c;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
 
 <p>Sunday, July 29, 2012 6:55:17 PM
 GMT</p>
@@ -848,55 +890,6 @@ GMT</p>
 , changed it in my configuration and everything worked again flawlessly.</p>
 
 <p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 30<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/random/'>random</a>, <a class='category' href='/blog/categories/rant/'>rant</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/07/30/why-do-people-who-can-t-read-buy-smartphones/" itemprop="url">Why Do People Who Can&#8217;t Read Buy Smartphones?</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I know one must keep the cool in these situations but they make it hard. At least I know I must not answer, just ignoring them does the trick.</p>
-
-<p>Ah, well, haven’t said it yet. I’m talking about the people who
-<strong>punish your app</strong>
- in the stores (App Store and Google Play mainly) just because the app doesn’t do this or that: they just downloaded your app by its name and didn’t read the
-<strong>very first line of the description</strong>
-.
-“Oh, it’s crap, you can’t
-XXXX with this shit” it’s one of the most repeated statements, and of course it comes with the typical
-<strong>one star</strong>
- rating.</p>
-
-<p>There are a lot of useful comments though, the ones suggesting new features you haven’t even thought of are a perfect example. They are encouraged. Though even if you add the feature requested, some people don’t bother to update their comments, and it also bugs me a little bit. At least in the App Store you can see at first glance the comments of the current version because the others are a little bit hidden.</p>
-
-<p>Well, that’s about everything I wanted to rant about today.</p>
 
 		
 		

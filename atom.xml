@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-09-03T23:02:19+02:00</updated>
+  <updated>2013-11-29T18:15:45+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -14,15 +14,31 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Introducing localio]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
-    <updated>2013-09-03T22:26:00+02:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
-    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there.
-<strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now.
-The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format</a> for this to work, though.</p>
+    <title type="html"><![CDATA[Open Sourcing stuff]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff/"/>
+    <updated>2013-11-21T20:57:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/11/21/open-sourcing-stuff</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve submitted some new versions of <a href="https://github.com/mrmans0n/localio">Localio</a> addressing bugs and adding some features (like <strong>XLSX support</strong>), but that&rsquo;s all in the ruby side.</p>
 
-<p>An example of Locfile:</p>
+<p>But being true to my roots, I&rsquo;ve been working on some libraries lately, all of them for <strong>Android</strong>. You might want to check them out&hellip;</p>
+
+<ul>
+<li><p><a href="https://github.com/mobivery/smart-location-lib">SmartLocation</a>: A library for making easier the integration with the new <strong>Location</strong> powered by <em>Google Play Services</em>, with a twist &ndash; adding the current activity performed by the user (on foot, on vehicle, standing still, etc) to the mix, so we can tweak the detection precision depending on that.</p></li>
+<li><p><a href="https://github.com/mrmans0n/clusterer">Clusterer</a>: A library version of some classes I have already open sourced, that perform <strong>clustering</strong> on Maps v2 for Android. I&rsquo;m working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example.</p></li>
+</ul>
+
+
+<p>Anyway I&rsquo;ll keep on working on these, as it helps me with dealing with <a href="http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/">the ordeal that is working for clients</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introducing Localio]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
+    <updated>2013-09-03T17:51:00+02:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+An example of Locfile:</p>
 
 <figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -47,9 +63,8 @@ The localization information is processed from a Google Drive spreadsheet or a l
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its <a href="https://github.com/mrmans0n/localio">Github repo</a>.</p>
-
-<p>Cheers!</p>
+<p>Anyway, you can <a href="http://rubygems.org/gems/localio">install the gem</a> and give it a try. Checkout the <a href="https://github.com/mrmans0n/localio/blob/master/README.md">README</a> file for some documentation. You can also contribute to its Github repo.
+Cheers!</p>
 ]]></content>
   </entry>
   
@@ -454,30 +469,6 @@ respect of the people around me do the magic. Also, closing Mail and Messages he
 <p>An interrupted programmer is a buggy and angry one, and very prone to produce horrendous
 code smells our future selves would be suicidal with.
 <strong>Let us work, dammit!</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ditching Eclipse, at last]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/02/11/ditching-eclipse-at-last/"/>
-    <updated>2013-02-11T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/02/11/ditching-eclipse-at-last</id>
-    <content type="html"><![CDATA[<p>I’m kind of
-<strong>fed up with Eclipse</strong>
-. I acknowledge it’s a good
-IDE, but too broad and too cluttered for me.</p>
-
-<p>So after I returned to work after my forced leave, I finally got to put in practice one of my new year resolutions: switch to
-<a href="http://www.jetbrains.com/idea/">IntelliJ
-IDEA</a>. And when I finally got it to work with my maven setup it was all joy and happiness tears.</p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/22/darcula-minimized.png" alt="" /></p>
-
-<p>And also switched my Ruby / Rails
-IDE to
-<a href="http://www.jetbrains.com/ruby/">RubyMine 5</a>, though I haven’t bought it yet (still on trial though).</p>
-
-<p>But AppCode still doesn’t do it for me.</p>
 ]]></content>
   </entry>
   
