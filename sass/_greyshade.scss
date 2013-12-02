@@ -191,17 +191,55 @@ body {
 		}
 		#header {
 			width: 100%;
-			padding: 20% 0% 0% 15%;
+			padding: 15% 0% 0% 15%;
+            #title {
+                margin-top: 20px;
+            }
 			#main-nav {
-				margin-top: 10px;
+				margin-top: 20px;
 			}
 			.profilepic {
-				img {
-					border-radius: 50%;
-					-moz-border-radius: 50%;
-					-webkit-border-radius: 50%;
-				}
+				height: 220px;
+                width: 220px;
+
+                -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+                	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+                	box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+
+                	-webkit-border-radius: 20px;
+                	-moz-border-radius: 20px;
+                	border-radius: 20px;
+                    
+                    filter         : contrast(1) sepia(0.2);
+                    -webkit-filter : contrast(1) sepia(0.2);
+                    -moz-filter    : contrast(1) sepia(0.2);
 			}
+            
+            .profilepic:hover {
+            	-webkit-transition: 1s;
+            	-moz-transition: 1s;
+            	transition: 1s;
+                filter: none;
+                -webkit-filter: none;
+                -moz-filter: none;  
+                -webkit-border-radius: 30em;
+                	-moz-border-radius: 30em;
+                	border-radius: 30em; 
+            }
+            .profilepic:after {
+                	-webkit-transition: 1s;
+                	-moz-transition: 1s;
+                	transition: 1s;
+
+                	-webkit-border-radius: 30em;
+                	-moz-border-radius: 30em;
+                	border-radius: 30em;
+            }
+            .profilepic:hover:after {
+                background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 80, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)));
+                background: -moz-radial-gradient(50% 50%, circle, rgba(0,0,0,0) 40px, rgba(0,0,0,1) 80px);   
+            }
+            
 			a {
 				color: #EFEFEF;
 				text-shadow: 0 1px #333;
