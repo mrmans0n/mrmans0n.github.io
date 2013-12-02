@@ -181,11 +181,11 @@ body {
 		-ms-transition: all .2s ease-in;
 		transition: all .2s ease-in;
 		height: 100%;
-		
+        
 	    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
 		background-size: cover;
 		background-repeat: no-repeat;	
-		
+        
 		.intrude-less {
 			width: 80%;
 		}
@@ -210,9 +210,9 @@ body {
                 	-moz-border-radius: 20px;
                 	border-radius: 20px;
                     
-                    filter         : contrast(1) sepia(0.2);
-                    -webkit-filter : contrast(1) sepia(0.2);
-                    -moz-filter    : contrast(1) sepia(0.2);
+                    filter         : contrast(1.5) sepia(0.2) blur(1);
+                    -webkit-filter : contrast(1.5) sepia(0.2) blur(1);
+                    -moz-filter    : contrast(1.5) sepia(0.2) blur(1);
 			}
             
             .profilepic:hover {
