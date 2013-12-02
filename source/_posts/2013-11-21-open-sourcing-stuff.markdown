@@ -14,4 +14,4 @@ But being true to my roots, I've been working on some libraries lately, all of t
 
 * [Clusterer](https://github.com/mrmans0n/clusterer): A library version of some classes I have already open sourced, that perform **clustering** on Maps v2 for Android. I'm working on an update in a branch that switches from a linear clustering algorithm to another version using quad trees, that is being developed right now, as Thoughtbot guys showed in their iOS example. 
 
-Anyway I'll keep on working on these, as it helps me with dealing with [the ordeal that is working for clients](http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/).
+Anyway I'll keep on working on these, as it helps me dealing with [the ordeal that is working for clients](http://nlopez.io/blog/2013/09/01/things-i-dont-like-about-working-for-clients/).
