@@ -4,7 +4,7 @@
   <title><![CDATA[Category: actionmailer | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/actionmailer/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-02T12:09:57+01:00</updated>
+  <updated>2013-12-02T12:13:27+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -41,7 +41,7 @@ app/controllers/contact_controller.rb:11:in `create'</p>
 
 <blockquote><p>User,</p></blockquote>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#111;&#x75;&#114;&#46;&#x73;&#x65;&#x6e;&#100;&#x65;&#114;&#46;&#x65;&#109;&#97;&#105;&#x6c;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;&#x2e;">&#111;&#117;&#x72;&#x2e;&#115;&#101;&#x6e;&#100;&#x65;&#x72;&#x2e;&#x65;&#109;&#x61;&#105;&#108;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x6f;&#x75;&#114;&#x2e;&#115;&#101;&#x6e;&#x64;&#101;&#x72;&#46;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#x6d;&#46;">&#x6f;&#117;&#x72;&#46;&#x73;&#101;&#x6e;&#x64;&#x65;&#x72;&#46;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;&#x2e;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
 
 <p>Sunday, July 29, 2012 6:55:17 PM
 GMT</p>
