@@ -42,11 +42,12 @@ JSON web services that doesn &hellip;">
 	<script src="/javascripts/md5.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+            var imageUrl = "http://www.gravatar.com/avatar/" + MD5("nacho@nlopez.io") + "?s=220";
+            $('.profilepic').css("background-image", "url("+imageUrl+")")
 		});
 	</script>
 </div>
-<hgroup>
+<hgroup id="title">
   <h1><a href="/">Nacho Lopez</a></h1>
   
     <h2>I code.</h2>
