@@ -42,16 +42,20 @@ body {
 
 	#main-nav {
 		float: none;
-		margin-left: 0px;
+		margin: 0px;
 
 		ul {
+            display: inline-block;
+            font-weight: bold;
 			li {
-				margin-left: 0px;
-				display: block;
-				a {
-					padding: 0px 0px;
-				}
+                list-style-type: none;
+                vertical-align: baseline;
+                margin-left: 0px;
 			}
+            li:before {
+                content: " ↬ ";
+                font-size: 20px;
+            }
 		}
 	}
 }
@@ -181,24 +185,31 @@ body {
 		-ms-transition: all .2s ease-in;
 		transition: all .2s ease-in;
 		height: 100%;
-        
+                
 	    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
 		background-size: cover;
 		background-repeat: no-repeat;	
         
 		.intrude-less {
 			width: 80%;
+            margin: auto auto;
+            text-align: center;
+            
 		}
 		#header {
 			width: 100%;
-			padding: 15% 0% 0% 15%;
+			// padding: 15% 0% 0% 15%;
             #title {
                 margin-top: 20px;
             }
 			#main-nav {
 				margin-top: 20px;
 			}
+            .aboutme {
+                margin-top: 10px;
+            }
 			.profilepic {
+                margin: auto auto;
 				height: 220px;
                 width: 220px;
 
@@ -252,12 +263,15 @@ body {
 				text-shadow: 0 1px #333;
 			}
 			#sub-nav {
-				margin-top: 10px;
-				.search::before {
-				left: 10px;
-				}
+				margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                
 				.social {
-					margin-bottom: 10px;
+                    margin-top: 10px;
+					margin-bottom: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
 				}
 			}
 		}
@@ -305,7 +319,7 @@ body {
 				margin: auto auto;
 			}
 			#header {
-				padding: 40px 0px;
+				//padding: 40px 0px;
 				text-align: center;
 				#sub-nav{
 					display: block;
