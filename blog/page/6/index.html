@@ -9,7 +9,7 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Jul 30th, 2012 random, rant Why Do People Who Can&#8217;t Read Buy Smartphones? I know one must keep the cool in these situations but they make it &hellip;">
+	<meta name="description" content="Jul 31st, 2012 actionmailer, rails, ruby ActionMailer With GMail Problem and Its Workaround I had a little problem today with one of my managed &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,85 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-31T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 31<span>st</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/actionmailer/'>actionmailer</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/" itemprop="url">ActionMailer With GMail Problem and Its Workaround</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I had a little problem today with one of my managed sites, one that was using
+<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
+Contact Us form using GMail’s
+SMTP.</p>
+
+<p>But reading server logs wasn’t very enlightening.</p>
+
+<p>$ tail log/production.log
+Completed 500 Internal Server Error in 533ms
+Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
+):
+app/controllers/contact_controller.rb:11:in `create&#8217;</p>
+
+<p>And that was all. That line of code was a simple…</p>
+
+<p>NotificationsMailer.new_message(@message).deliver</p>
+
+<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
+
+<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
+
+<blockquote><p>User,</p></blockquote>
+
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x6f;&#117;&#x72;&#46;&#x73;&#x65;&#110;&#100;&#x65;&#114;&#46;&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;&#46;">&#111;&#x75;&#114;&#46;&#115;&#101;&#x6e;&#x64;&#x65;&#114;&#x2e;&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+
+<p>Sunday, July 29, 2012 6:55:17 PM
+GMT</p>
+
+<p>IP Address: 123.456.789.101</p>
+
+<p>Location: Paris, France</p>
+
+<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
+
+<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
+
+<p>Sincerely,</p>
+
+<p>The Google Accounts Team</p>
+
+<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
+<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
+, changed it in my configuration and everything worked again flawlessly.</p>
+
+<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -575,65 +654,6 @@ IDE.</p>
 <p><img src="http://f.cl.ly/items/3X2p453Z1W1K3X1u3f2b/cfernandez.png" alt="" /></p>
 
 <p>If you are curious, I’ve used: The awesome Rails, the fluffy Bootstrap, the breathtaking Hype and some ugly JavaScript of my own.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-13T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 13<span>th</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/reflection/'>reflection</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/06/13/changing-values-of-attributes-in-android-only-accessible-by-xml/" itemprop="url">Changing Values of Attributes in Android Only Accessible by XML</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I had to use today the
-<strong>cropToPadding</strong>
- attribute for an ImageView in Android. It’s the way to go if you want to mimic
-Aspect Fill scaling with Clipped Subviews from iOS, by using it and
-<strong>centerCrop</strong>
- as scaleType.</p>
-
-<p>For example, if I wanted to do it from a layout, it would be like this.</p>
-
-<p>Pretty simple.</p>
-
-<p>But the problem is… can I do this programmatically?</p>
-
-<p>The short answer is
-not directly. You have no setCropToPadding(true) in the
-API for
-<a href="http://developer.android.com/reference/android/widget/ImageView.html">ImageView</a>.</p>
-
-<p>So, if you want to set a value using a non-existent accessor, you have to do either inflating a style
-XML or with a little hack. I’m not fond of hacks because they tend to give you problems with unreleased versions of the OS, but in this case, it’s kind of a big deal working it out with
-XML defined attributes.</p>
-
-<p>The hacky way that saved my ass today is this.</p>
-
-<p>Worked like a charm.</p>
 
 		
 		

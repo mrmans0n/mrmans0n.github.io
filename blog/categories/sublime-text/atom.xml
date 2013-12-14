@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sublime-text | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/sublime-text/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-12-14T17:42:32+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text 3 configuration]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/12/14/sublime-text-3-configuration/"/>
+    <updated>2013-12-14T17:37:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/12/14/sublime-text-3-configuration</id>
+    <content type="html"><![CDATA[<p>Well, as I did in the past with the <a href="http://nlopez.io/blog/2012/05/07/using-dropbox-to-synchronize-xcode-4-snippets/">Xcode snippets</a> I&rsquo;m going to share with everyone my <a href="http://www.sublimetext.com/">Sublime Text 3</a> <a href="https://github.com/mrmans0n/sublime-text-3-config">configuration files in GitHub</a>.</p>
+
+<p>It&rsquo;s pretty simple, it has a pretty common dark theme (RailsCasts style) and some key maps I use all the time. Nothing worth going crazy or whatever.</p>
+
+<p>Anyway, for the curious people, I have it available in <a href="https://github.com/mrmans0n/sublime-text-3-config">a public GitHub repository</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,8 +9,8 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Jun 5th, 2012 java, json Fixing Malformed JSON Strings Without Quotation Marks in Its Attribute Name Sometimes you find
-JSON web services that doesn &hellip;">
+	<meta name="description" content="Jun 13th, 2012 android, java, reflection Changing Values of Attributes in Android Only Accessible by XML I had to use today the
+cropToPadding &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +99,65 @@ JSON web services that doesn &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-13T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jun 13<span>th</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/reflection/'>reflection</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/06/13/changing-values-of-attributes-in-android-only-accessible-by-xml/" itemprop="url">Changing Values of Attributes in Android Only Accessible by XML</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I had to use today the
+<strong>cropToPadding</strong>
+ attribute for an ImageView in Android. It’s the way to go if you want to mimic
+Aspect Fill scaling with Clipped Subviews from iOS, by using it and
+<strong>centerCrop</strong>
+ as scaleType.</p>
+
+<p>For example, if I wanted to do it from a layout, it would be like this.</p>
+
+<p>Pretty simple.</p>
+
+<p>But the problem is… can I do this programmatically?</p>
+
+<p>The short answer is
+not directly. You have no setCropToPadding(true) in the
+API for
+<a href="http://developer.android.com/reference/android/widget/ImageView.html">ImageView</a>.</p>
+
+<p>So, if you want to set a value using a non-existent accessor, you have to do either inflating a style
+XML or with a little hack. I’m not fond of hacks because they tend to give you problems with unreleased versions of the OS, but in this case, it’s kind of a big deal working it out with
+XML defined attributes.</p>
+
+<p>The hacky way that saved my ass today is this.</p>
+
+<p>Worked like a charm.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

@@ -9,8 +9,9 @@
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="Sep 15th, 2012 bikeshare Revamps and Refactors for a Lost User Last week I was rebuilding almost from scratch some parts of
-BikeShare!, my public &hellip;">
+	<meta name="description" content="Sep 23rd, 2012 windows8 Installing Windows 8 Is an Odyssey Some days I downloaded (finally) my copy of
+Windows 8 from
+MSAA as always and I’ve spent &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,6 +100,60 @@ BikeShare!, my public &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-23T22:00:00+02:00" data-updated="true" itemprop="datePublished">Sep 23<span>rd</span>, 2012</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/blog/categories/windows8/'>windows8</a>
+
+
+</div>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/blog/2012/09/23/installing-windows-8-is-an-odyssey/" itemprop="url">Installing Windows 8 Is an Odyssey</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Some days I downloaded (finally) my copy of
+<strong>Windows 8</strong>
+ from
+MSAA as always and I’ve spent a lot of hours day trying to install it. No fucking clue.</p>
+
+<p>I tried to update my Windows 7 partition, the installer didn’t reported any kind of problem, everything went smooth until the installer needed to restart the computer. Then it all went south.</p>
+
+<p>Of course, it crashed the existent Windows 7 installation and had to format it losing all my data there.</p>
+
+<p>But it doesn’t matter what I try, I always get stuck at the same place when trying to tell the installer which partition to use:</p>
+
+<p>We couldn&rsquo;t create a new partition or locate an existing one</p>
+
+<p>It’s funny, because I have 7 HDs in my desktop computer. Believe me, there are partitions.</p>
+
+<p>I’ve tried everything to get rid of my problem. Changed some
+AHCI stuff in my bios. Failed. Tried to set up the drive directly using
+diskpart in a command shell. Failed. I even unplugged all the other drives. Failed.</p>
+
+<p>Well, I’ll keep on trying. But I’m getting sick of it.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -812,85 +867,6 @@ really awesome and destroyer coding I prefer something a little bit electronic l
 <p>I also use a lot
 <strong>Evernote</strong>
 , but still not at the level needed to pay for it. But give me time…</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T22:00:00+02:00" data-updated="true" itemprop="datePublished">Jul 31<span>st</span>, 2012</time></div>
-		<div class="tags">
-
-
-	<a class='category' href='/blog/categories/actionmailer/'>actionmailer</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-		
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/" itemprop="url">ActionMailer With GMail Problem and Its Workaround</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>I had a little problem today with one of my managed sites, one that was using
-<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
-Contact Us form using GMail’s
-SMTP.</p>
-
-<p>But reading server logs wasn’t very enlightening.</p>
-
-<p>$ tail log/production.log
-Completed 500 Internal Server Error in 533ms
-Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
-):
-app/controllers/contact_controller.rb:11:in `create&#8217;</p>
-
-<p>And that was all. That line of code was a simple…</p>
-
-<p>NotificationsMailer.new_message(@message).deliver</p>
-
-<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
-
-<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
-
-<blockquote><p>User,</p></blockquote>
-
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#111;&#117;&#114;&#x2e;&#x73;&#101;&#110;&#x64;&#x65;&#114;&#x2e;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#46;">&#111;&#117;&#114;&#46;&#115;&#x65;&#110;&#x64;&#101;&#114;&#46;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
-
-<p>Sunday, July 29, 2012 6:55:17 PM
-GMT</p>
-
-<p>IP Address: 123.456.789.101</p>
-
-<p>Location: Paris, France</p>
-
-<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
-
-<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
-
-<p>Sincerely,</p>
-
-<p>The Google Accounts Team</p>
-
-<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
-<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
-, changed it in my configuration and everything worked again flawlessly.</p>
-
-<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
 
 		
 		

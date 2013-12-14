@@ -5,12 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>ActionMailer with GMail problem and its workaround - Nacho Lopez</title>
+	<title>Sublime Text 3 configuration - Nacho Lopez</title>
 	<meta name="author" content="Nacho Lopez">
 
 	
-	<meta name="description" content="ActionMailer With GMail Problem and Its Workaround I had a little problem today with one of my managed sites, one that was using
-ActionMailer for &hellip;">
+	<meta name="description" content="Sublime Text 3 Configuration Well, as I did in the past with the Xcode snippets I&rsquo;m going to share with everyone my Sublime Text 3 &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ ActionMailer for &hellip;">
 
 	<link href="/atom.xml" rel="alternate" title="Nacho Lopez" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/">
+	<link rel="canonical" href="http://mrmans0n.github.io/blog/2013/12/14/sublime-text-3-configuration/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -99,52 +98,12 @@ ActionMailer for &hellip;">
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-	<h1 class="title" itemprop="name">ActionMailer With GMail Problem and Its Workaround</h1>
-	<div class="entry-content" itemprop="articleBody"><p>I had a little problem today with one of my managed sites, one that was using
-<a href="http://api.rubyonrails.org/classes/ActionMailer/Base.html">ActionMailer</a> for sending mails in a
-Contact Us form using GMail’s
-SMTP.</p>
+	<h1 class="title" itemprop="name">Sublime Text 3 Configuration</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Well, as I did in the past with the <a href="http://nlopez.io/blog/2012/05/07/using-dropbox-to-synchronize-xcode-4-snippets/">Xcode snippets</a> I&rsquo;m going to share with everyone my <a href="http://www.sublimetext.com/">Sublime Text 3</a> <a href="https://github.com/mrmans0n/sublime-text-3-config">configuration files in GitHub</a>.</p>
 
-<p>But reading server logs wasn’t very enlightening.</p>
+<p>It&rsquo;s pretty simple, it has a pretty common dark theme (RailsCasts style) and some key maps I use all the time. Nothing worth going crazy or whatever.</p>
 
-<p>$ tail log/production.log
-Completed 500 Internal Server Error in 533ms
-Net::SMTPAuthenticationError (535-5.7.1 Please log in with your web browser and then try again. Learn more at
-):
-app/controllers/contact_controller.rb:11:in `create&#8217;</p>
-
-<p>And that was all. That line of code was a simple…</p>
-
-<p>NotificationsMailer.new_message(@message).deliver</p>
-
-<p>…so I investigated a lot of workarounds, double-checked my configurations and everything seemed perfect.</p>
-
-<p>But then it came to me. I logged to the account that was being used to send all the mails, and this was on the inbox.</p>
-
-<blockquote><p>User,</p></blockquote>
-
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x6f;&#117;&#x72;&#46;&#x73;&#x65;&#110;&#100;&#x65;&#114;&#46;&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;&#46;">&#111;&#x75;&#114;&#46;&#115;&#101;&#x6e;&#x64;&#x65;&#114;&#x2e;&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
-
-<p>Sunday, July 29, 2012 6:55:17 PM
-GMT</p>
-
-<p>IP Address: 123.456.789.101</p>
-
-<p>Location: Paris, France</p>
-
-<p>If you do not recognize this sign-in attempt, someone else might be trying to access your account. You should sign in to your account and reset your password immediately. Find out how at <a href="http://support.google.com/accounts?p=reset_pw">http://support.google.com/accounts?p=reset_pw</a></p>
-
-<p>If this was you, and you want to give this application access to your account, complete the troubleshooting steps listed at <a href="http://support.google.com/mail?p=client_login">http://support.google.com/mail?p=client_login</a></p>
-
-<p>Sincerely,</p>
-
-<p>The Google Accounts Team</p>
-
-<p>I investigated a bit and realized that my account wasn’t using 2-step verification.
-<strong>So I configured the account with 2-step verification and created a specific password for my web app</strong>
-, changed it in my configuration and everything worked again flawlessly.</p>
-
-<p>PD: If you are wondering what’s my configuration in config/application.rb, here it goes, in case it helps you.</p>
+<p>Anyway, for the curious people, I have it available in <a href="https://github.com/mrmans0n/sublime-text-3-config">a public GitHub repository</a>.</p>
 </div>
 	
 
@@ -193,8 +152,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
-        var disqus_url = 'http://mrmans0n.github.io/blog/2012/07/31/actionmailer-with-gmail-problem-and-its-workaround/';
+        var disqus_identifier = 'http://mrmans0n.github.io/blog/2013/12/14/sublime-text-3-configuration/';
+        var disqus_url = 'http://mrmans0n.github.io/blog/2013/12/14/sublime-text-3-configuration/';
         var disqus_script = 'embed.js';
       
     (function () {
