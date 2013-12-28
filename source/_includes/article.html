@@ -25,4 +25,8 @@
 			});
 	</script>
 	{% endif %}
+	{% if page.githubrepo %}
+	<br/>
+	<div class="github-widget" data-repo="{{page.githubrepo}}"></div>
+	{% endif %}
 {% endif %}

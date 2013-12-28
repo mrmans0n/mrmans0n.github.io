@@ -4,9 +4,12 @@ title: "Introducing Localio"
 date: 2013-09-03 17:51
 comments: true
 categories: ["gem", "i18n", "localization", "ruby"]
+githubrepo: mrmans0n/localio
 ---
 
-In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. **Localio** is an automatic localizable file generator. It reads a certain type of file, called **Locfile**, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. [Those spreadsheets must have a specific format for this to work, though.](https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0)
+In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. **Localio** is an automatic localizable file generator. 
+
+It reads a certain type of file, called **Locfile**, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. [Those spreadsheets must have a specific format for this to work, though.](https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0)
 An example of Locfile:
 
 ``` ruby Locfile example
