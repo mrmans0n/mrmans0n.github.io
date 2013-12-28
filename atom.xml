@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-14T19:21:54+01:00</updated>
+  <updated>2013-12-28T17:57:43+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Proxy for Readability's Parse API]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api/"/>
+    <updated>2013-12-28T12:07:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api</id>
+    <content type="html"><![CDATA[<p>I created <a href="https://github.com/mrmans0n/site-mobilizer">this very little tiny project in Sinatra</a> for being able to obscure the usage of the <a href="https://www.readability.com/developers/api/parser">Readability&rsquo;s Parser API</a> token, as suggested in their documentation.</p>
+
+<p>So, if you had any intention to use this, well&hellip; the little work you had to do is already taken care of.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sublime Text 3 configuration]]></title>
@@ -50,7 +61,9 @@
     <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
     <updated>2013-09-03T17:51:00+02:00</updated>
     <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
-    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator.</p>
+
+<p>It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
 An example of Locfile:</p>
 
 <figure class='code'><figcaption><span>Locfile example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -441,23 +454,6 @@ API. The
 API is prepared for versioning and has a pretty basic example for its use.</p>
 
 <p>Hopefully somebody other than me will find some use to it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Is your code clean?]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean/"/>
-    <updated>2013-03-06T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/03/06/is-your-code-clean</id>
-    <content type="html"><![CDATA[<p>I’ve been reading some technical stuff lately. My latest prey has been
-<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a>, by “Uncle Bob” Robert C. Martin.</p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/23/CleanCode.jpg" alt="" /></p>
-
-<p>It has been very revealing about a ton of stuff and made me think a lot about what I could improve, although I don’t 100% agree with everything Bob says. I’ve also applied some of the key points to the Android coding style I recently wrote for
-<a href="http://www.mobivery.com">Mobivery</a>, in the naming conventions for example.</p>
-
-<p>Well… It’s very recommended for everyone! I wish I read it in college.</p>
 ]]></content>
   </entry>
   

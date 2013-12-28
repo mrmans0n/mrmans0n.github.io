@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: readability | Nacho Lopez]]></title>
+  <link href="http://mrmans0n.github.io/blog/categories/readability/atom.xml" rel="self"/>
+  <link href="http://mrmans0n.github.io/"/>
+  <updated>2013-12-28T17:57:43+01:00</updated>
+  <id>http://mrmans0n.github.io/</id>
+  <author>
+    <name><![CDATA[Nacho Lopez]]></name>
+    <email><![CDATA[nacho@nlopez.io]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Proxy for Readability's Parse API]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api/"/>
+    <updated>2013-12-28T12:07:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api</id>
+    <content type="html"><![CDATA[<p>I created <a href="https://github.com/mrmans0n/site-mobilizer">this very little tiny project in Sinatra</a> for being able to obscure the usage of the <a href="https://www.readability.com/developers/api/parser">Readability&rsquo;s Parser API</a> token, as suggested in their documentation.</p>
+
+<p>So, if you had any intention to use this, well&hellip; the little work you had to do is already taken care of.</p>
+]]></content>
+  </entry>
+  
+</feed>

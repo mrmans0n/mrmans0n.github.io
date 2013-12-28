@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-14T19:21:54+01:00</updated>
+  <updated>2013-12-28T17:57:43+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Proxy for Readability's Parse API]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api/"/>
+    <updated>2013-12-28T12:07:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/12/28/proxy-for-readabilitys-parse-api</id>
+    <content type="html"><![CDATA[<p>I created <a href="https://github.com/mrmans0n/site-mobilizer">this very little tiny project in Sinatra</a> for being able to obscure the usage of the <a href="https://www.readability.com/developers/api/parser">Readability&rsquo;s Parser API</a> token, as suggested in their documentation.</p>
+
+<p>So, if you had any intention to use this, well&hellip; the little work you had to do is already taken care of.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Open Sourcing stuff]]></title>
@@ -37,7 +48,9 @@
     <link href="http://mrmans0n.github.io/blog/2013/09/03/introducing-localio/"/>
     <updated>2013-09-03T17:51:00+02:00</updated>
     <id>http://mrmans0n.github.io/blog/2013/09/03/introducing-localio</id>
-    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator. It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
+    <content type="html"><![CDATA[<p>In my head there has been around a lot of times the possibility of contributing to the OSS community with some gem, so here goes my first contribution there. <strong>Localio</strong> is an automatic localizable file generator.</p>
+
+<p>It reads a certain type of file, called <strong>Locfile</strong>, and process it so the different localization files for your app are automatically generated. Android, iOS, Rails and JSON are supported now. The localization information is processed from a Google Drive spreadsheet or a local excel file. <a href="https://docs.google.com/spreadsheet/ccc?key=0AmX_w4-5HkOgdFFoZ19iSUlRSERnQTJ4NVZiblo2UXc#gid=0">Those spreadsheets must have a specific format for this to work, though.</a>
 An example of Locfile:</p>
 
 <p>``` ruby Locfile example
@@ -88,7 +101,7 @@ app/controllers/contact_controller.rb:11:in `create'</p>
 
 <blockquote><p>User,</p></blockquote>
 
-<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x6f;&#x75;&#114;&#46;&#115;&#101;&#110;&#100;&#x65;&#x72;&#x2e;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#111;&#x6d;&#46;">&#x6f;&#x75;&#114;&#x2e;&#115;&#x65;&#x6e;&#100;&#x65;&#x72;&#x2e;&#101;&#x6d;&#97;&#x69;&#x6c;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#46;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
+<p>Someone recently tried to use an application to sign in to your Google Account, <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x6f;&#117;&#114;&#x2e;&#115;&#x65;&#110;&#x64;&#x65;&#114;&#x2e;&#101;&#109;&#x61;&#105;&#108;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;&#46;">&#111;&#x75;&#x72;&#46;&#x73;&#x65;&#110;&#100;&#x65;&#x72;&#46;&#101;&#109;&#x61;&#x69;&#108;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;&#x2e;</a> We prevented the sign-in attempt in case this was a hijacker trying to access your account. Please review the details of the sign-in attempt:</p>
 
 <p>Sunday, July 29, 2012 6:55:17 PM
 GMT</p>
