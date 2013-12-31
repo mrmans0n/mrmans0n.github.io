@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-29T13:35:02+01:00</updated>
+  <updated>2013-12-31T12:00:59+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My 2013 in code]]></title>
+    <link href="http://mrmans0n.github.io/blog/2013/12/31/my-2013-in-code/"/>
+    <updated>2013-12-31T11:23:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2013/12/31/my-2013-in-code</id>
+    <content type="html"><![CDATA[<p>This year has been good to me, in code and in personal life. Got to improve some personal projects, did some interesting things at work, and received pretty good news.</p>
+
+<p>I finally got to give back, releasing some opensource projects like <a href="http://github.com/mrmans0n/localio">localio</a>, <a href="http://github.com/mrmans0n/clusterer">clusterer</a> or <a href="http://github.com/mobivery/smart-location-lib">smart-location-lib</a>.</p>
+
+<p><img src="http://mrm.perry.es/2013-github.png" alt="GitHub contributions" /></p>
+
+<p>I also had the most interesting vacation trip ever, got to think about what I want to do with my life and have a nice time.</p>
+
+<p>On the dark side, I also experimented what we usually call <strong>burnout</strong> in summer. The solution was easy, as seen in the contribution &ldquo;punch card&rdquo;, I used my vacation time to do other stuff and finally got my shit together. And that&rsquo;s behind me now &ndash; now I&rsquo;m even on a coding streak!</p>
+
+<p>I&rsquo;m really looking forward to what 2014 has in store for me.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Proxy for Readability's Parse API]]></title>
@@ -438,22 +457,6 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
 <p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
 
 <p>Some screenshots of the example project.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A basic Rails API with OAuth2]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2/"/>
-    <updated>2013-03-13T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/03/13/a-basic-rails-api-with-oauth2</id>
-    <content type="html"><![CDATA[<p><em>Link</em>: <a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">https://github.com/mrmans0n/oauth2-doorkeeper-for-api</a></p>
-
-<p>I’ve prepared (mostly for myself)
-<a href="https://github.com/mrmans0n/oauth2-doorkeeper-for-api">a GitHub repo with a pretty basic Rails project featuring Bootstrap and Devise authentication</a> for the backend, and OAuth2 with Doorkeeper for the
-API. The
-API is prepared for versioning and has a pretty basic example for its use.</p>
-
-<p>Hopefully somebody other than me will find some use to it.</p>
 ]]></content>
   </entry>
   
