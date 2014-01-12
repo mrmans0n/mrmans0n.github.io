@@ -4,7 +4,7 @@
   <title><![CDATA[Category: intellij | Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/blog/categories/intellij/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-31T12:00:59+01:00</updated>
+  <updated>2014-01-12T19:29:28+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Annotations @ViewById Generator plugin for Android Studio / IntelliJ IDEA]]></title>
+    <link href="http://mrmans0n.github.io/blog/2014/01/12/android-annotations-at-viewbyid-generator-plugin-for-android-studio-slash-intellij-idea/"/>
+    <updated>2014-01-12T19:21:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2014/01/12/android-annotations-at-viewbyid-generator-plugin-for-android-studio-slash-intellij-idea</id>
+    <content type="html"><![CDATA[<p>I released a little plugin this week for being used in Android Studio or IntelliJ, for being able to generate automatically the <code>@ViewById</code> annotations from the awesome <a href="http://androidannotations.org">Android Annotations</a>.</p>
+
+<p>You can access the menu by clicking on a layout id like R.layout.your_layout_name, selecting <strong>Generate</strong> and it will be there.</p>
+
+<p><img src="http://mrm.perry.es/viewbyid-intellij-plugin.png" alt="" /></p>
+
+<p>Take a look in <a href="http://plugins.jetbrains.com/plugin/7376">here</a> or look for it in the official IDE repositories.</p>
+
+<p>The project is <a href="https://github.com/mrmans0n/android-viewbyid-generator">open sourced</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ditching Eclipse, at last]]></title>

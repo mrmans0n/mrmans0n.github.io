@@ -4,7 +4,7 @@
   <title><![CDATA[Nacho Lopez]]></title>
   <link href="http://mrmans0n.github.io/atom.xml" rel="self"/>
   <link href="http://mrmans0n.github.io/"/>
-  <updated>2013-12-31T12:00:59+01:00</updated>
+  <updated>2014-01-12T19:29:28+01:00</updated>
   <id>http://mrmans0n.github.io/</id>
   <author>
     <name><![CDATA[Nacho Lopez]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Annotations @ViewById Generator plugin for Android Studio / IntelliJ IDEA]]></title>
+    <link href="http://mrmans0n.github.io/blog/2014/01/12/android-annotations-at-viewbyid-generator-plugin-for-android-studio-slash-intellij-idea/"/>
+    <updated>2014-01-12T19:21:00+01:00</updated>
+    <id>http://mrmans0n.github.io/blog/2014/01/12/android-annotations-at-viewbyid-generator-plugin-for-android-studio-slash-intellij-idea</id>
+    <content type="html"><![CDATA[<p>I released a little plugin this week for being used in Android Studio or IntelliJ, for being able to generate automatically the <code>@ViewById</code> annotations from the awesome <a href="http://androidannotations.org">Android Annotations</a>.</p>
+
+<p>You can access the menu by clicking on a layout id like R.layout.your_layout_name, selecting <strong>Generate</strong> and it will be there.</p>
+
+<p><img src="http://mrm.perry.es/viewbyid-intellij-plugin.png" alt="" /></p>
+
+<p>Take a look in <a href="http://plugins.jetbrains.com/plugin/7376">here</a> or look for it in the official IDE repositories.</p>
+
+<p>The project is <a href="https://github.com/mrmans0n/android-viewbyid-generator">open sourced</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My 2013 in code]]></title>
@@ -433,30 +450,6 @@ JSON, and the ones I couldn’t were implemented as Serializable objects and sto
 <p><img src="http://mrm.perry.es/uploads/admin/image/image/27/bikeshare-ios-sneak-peek.png" alt="" /></p>
 
 <p>The app is In Review, hopefully in one week or two will be rockin’ on the App Store.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Clustering in Maps v2 for Android]]></title>
-    <link href="http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android/"/>
-    <updated>2013-03-19T22:00:00+01:00</updated>
-    <id>http://mrmans0n.github.io/blog/2013/03/19/clustering-in-maps-v2-for-android</id>
-    <content type="html"><![CDATA[<p>I’ve been working in a
-<strong>clustering code ready for Maps v2</strong>
-, as I didn’t found any full example I could use in some of my apps.</p>
-
-<p>So here you have it: a working example of
-<a href="https://github.com/mrmans0n/android-maps-v2-clustering">Clustering in Maps v2 for Android</a> for use in your projects.</p>
-
-<p>All the
-<strong>setup instructions are in GitHub</strong>
-.</p>
-
-<p>You are more than welcome to change things, report issues and make pull requests!</p>
-
-<p><img src="http://mrm.perry.es/uploads/admin/image/image/26/clusterer_2.png" alt="" /></p>
-
-<p>Some screenshots of the example project.</p>
 ]]></content>
   </entry>
   
